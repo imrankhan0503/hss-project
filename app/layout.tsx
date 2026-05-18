@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
+import Footer from "@/components/Footer/footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -10,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Hässelby Strands Sjöscoutkår",
-  description: "Upptäck havet, utveckla ledarskap och skapalivslånga minnen tillsammans med oss.",
+  description: "Upptäck havet, utveckla ledarskap och skapa livslånga minnen tillsammans med oss.",
 };
 
 export default function RootLayout({
@@ -20,10 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="sv"
       className={`${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <main className="flex-1">{children}</main>
+        <Footer locale="sv" />
+      </body>
     </html>
   );
 }

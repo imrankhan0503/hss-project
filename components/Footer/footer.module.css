@@ -1,0 +1,301 @@
+.footer {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  color: #00355f;
+}
+
+/* Community banner */
+
+.banner {
+  background-color: #00355f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  flex-wrap: wrap;
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bannerIcon {
+  width: 2.75rem;
+  height: 2.75rem;
+  color: #f4ab00;
+  flex-shrink: 0;
+}
+
+.bannerHeading {
+  margin: 0;
+  color: #f4ab00;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.bannerSubtext {
+  margin: 0.1rem 0 0;
+  color: #f4ab00;
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.bannerCta {
+  display: inline-block;
+  background-color: #f4ab00;
+  color: #00355f;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.65rem 1.75rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.bannerCta:hover {
+  background-color: #e09c00;
+  transform: translateY(-1px);
+}
+
+.bannerCta:active {
+  transform: translateY(0);
+}
+
+/* Main body */
+
+.body {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 3rem;
+  padding: 2.5rem 2rem;
+  align-items: flex-start;
+}
+
+/* Brand */
+
+.brand {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.logoImg {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brandName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00355f;
+  line-height: 1.3;
+}
+
+.brandTagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #00355f;
+  font-weight: 400;
+}
+
+/* Contact */
+
+.contactCol {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.colHeading {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00355f;
+}
+
+.contactLink {
+  display: block;
+  color: #00355f;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.15s;
+}
+
+.contactLink:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.address {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #00355f;
+  line-height: 1.5;
+}
+
+/* Social */
+
+.socialCol {
+  flex: 1 1 140px;
+  min-width: 120px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #00355f;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.socialLink svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.socialLink:hover {
+  color: #f4ab00;
+  transform: translateY(-2px);
+}
+
+/* Bottom bar */
+
+.bottomBar {
+  background-color: #ffffff;
+  border-top: 1px solid #d1dbe6;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+}
+
+.bottomTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #00355f;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.legalLink {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #00355f;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.legalLink:hover {
+  opacity: 0.65;
+  text-decoration: underline;
+}
+
+/* Partners */
+
+.partnerRow {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  padding: 0 2rem;
+}
+
+.partnerLabel {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #00355f;
+}
+
+.partnerName {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #00355f;
+}
+
+/* Responsive — mobile (< 640 px) */
+
+@media (max-width: 639px) {
+  .banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1rem;
+  }
+
+  .bannerCta {
+    align-self: flex-start;
+  }
+
+  .body {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1.75rem;
+  }
+
+  .bottomBar {
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .bottomTop {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+  }
+
+  .legalLinks {
+    gap: 1rem;
+  }
+
+  .partnerRow {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Responsive — tablet (640 px – 1023 px)*/
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .body {
+    padding: 2rem 1.5rem;
+  }
+
+  .banner {
+    padding: 1.25rem 1.5rem;
+  }
+}
