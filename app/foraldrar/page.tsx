@@ -1,12 +1,12 @@
 import Image from "next/image";
-import AnmalInterestTop from "../../assets/images/anmal-bg/anmal-bg-top.svg"
+import ForaldrarTop from "../../assets/images/for-foraldrar-top/for-foraldrar-top.svg"
 
 const Page = () => {
   return (
     <div className="w-full">
 
       <Image 
-             src={AnmalInterestTop}
+             src={ForaldrarTop}
               alt="anmal-interest background image"
               width={1440}
               height={253.731}

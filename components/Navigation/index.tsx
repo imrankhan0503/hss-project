@@ -42,10 +42,10 @@ const Navigation = () => {
             <div className="hidden md:flex items-center gap-6">
 
                 <NavItem title="Hem" link="/" active={pathname === "/"} />
-                <NavItem title="Anmäl Intresse" link="/anmal-intresse" active={pathname === "/interest"} />
-                <NavItem title="Vår Flotta" link="/fleet" active={pathname === "/fleet"} />
-                <NavItem title="Verksamhet" link="/activities" active={pathname === "/activities"} />
-                <NavItem title="För Föräldrar" link="/parents" active={pathname === "/parents"} />
+                <NavItem title="Anmäl Intresse" link="/anmal-intresse" active={pathname === "/anmal-intresse"} />
+                <NavItem title="Vår Flotta" link="/var-flotta" active={pathname === "/var-flotta"} />
+                <NavItem title="Verksamhet" link="/verksamhet" active={pathname === "/verksamhet"} />
+                <NavItem title="För Föräldrar" link="/foraldrar" active={pathname === "/foraldrar"} />
 
                 <NavItem title="Gå med" link="/join" highlighted />
 
@@ -79,10 +79,10 @@ const Navigation = () => {
                 <div className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col gap-2 p-4 md:hidden z-50">
 
                     <NavItem title="Hem" link="/" active={pathname === "/"} />
-                    <NavItem title="Anmäl Intresse" link="/anmal-intresse" active={pathname === "/interest"} />
-                    <NavItem title="Vår Flotta" link="/fleet" active={pathname === "/fleet"} />
-                    <NavItem title="Verksamhet" link="/activities" active={pathname === "/activities"} />
-                    <NavItem title="För Föräldrar" link="/parents" active={pathname === "/parents"} />
+                    <NavItem title="Anmäl Intresse" link="/anmal-intresse" active={pathname === "/anmal-intresse"} />
+                    <NavItem title="Vår Flotta" link="/var-flotta" active={pathname === "/var-flotta"} />
+                    <NavItem title="Verksamhet" link="/verksamhet" active={pathname === "/verksamhet"} />
+                    <NavItem title="För Föräldrar" link="/foraldrar" active={pathname === "/foraldrar"} />
 
                 </div>
             )}
