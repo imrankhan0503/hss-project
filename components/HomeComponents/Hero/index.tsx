@@ -1,10 +1,11 @@
 import BackgroundImage from '@/assets/images/background/home-bg.png'
+import Image from 'next/image';
 import Link from 'next/link';
 
 const HomeHero = () => {
   return (
     <section className="relative w-full h-[250px] md:h-[741px] overflow-hidden">
-      <img className="w-full h-full left-0 top-0 absolute object-cover" src={BackgroundImage.src} alt="a girl tying a knot" />
+      <Image className="w-full h-full left-0 top-0 absolute object-cover" src={BackgroundImage} alt="a girl tying a knot" />
       <div className="inset-0 absolute bg-(--hero-overlay)/60"></div>
       <div className="relative z-10 max-w-7xl mx-auto h-full flex flex-col justify-center px-8 md:px-20 text-background">
         <h1 className="max-w-md text-xl md:text-5xl font-bold leading-tight md:leading-[65px]">
