@@ -42,7 +42,7 @@ const Navigation = () => {
             <div className="hidden md:flex items-center gap-6">
 
                 <NavItem title="Hem" link="/" active={pathname === "/"} />
-                <NavItem title="Anmäl Intresse" link="/interest" active={pathname === "/interest"} />
+                <NavItem title="Anmäl Intresse" link="/anmal-intresse" active={pathname === "/interest"} />
                 <NavItem title="Vår Flotta" link="/fleet" active={pathname === "/fleet"} />
                 <NavItem title="Verksamhet" link="/activities" active={pathname === "/activities"} />
                 <NavItem title="För Föräldrar" link="/parents" active={pathname === "/parents"} />
@@ -57,7 +57,7 @@ const Navigation = () => {
                 {/* CTA always visible */}
                 <NavItem title="Gå med" link="/join" highlighted />
 
-                {/* Hamburger (SVG) */}
+                {/* Hamburger */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
@@ -79,7 +79,7 @@ const Navigation = () => {
                 <div className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col gap-2 p-4 md:hidden z-50">
 
                     <NavItem title="Hem" link="/" active={pathname === "/"} />
-                    <NavItem title="Anmäl Intresse" link="/interest" active={pathname === "/interest"} />
+                    <NavItem title="Anmäl Intresse" link="/anmal-intresse" active={pathname === "/interest"} />
                     <NavItem title="Vår Flotta" link="/fleet" active={pathname === "/fleet"} />
                     <NavItem title="Verksamhet" link="/activities" active={pathname === "/activities"} />
                     <NavItem title="För Föräldrar" link="/parents" active={pathname === "/parents"} />
