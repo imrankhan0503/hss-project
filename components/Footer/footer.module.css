@@ -1,15 +1,11 @@
-/* ─────────────────────────────────────────
-   footer.module.css
-   ───────────────────────────────────────── */
-
 .footer {
   width: 100%;
   font-family: "Inter", sans-serif;
   color: #00355f;
-  overflow: hidden; /* prevents decorative page elements bleeding in */
+  overflow: hidden; 
 }
 
-/* ── Shared inner wrapper (max-width + centering) ── */
+/* ── Shared inner wrapper ── */
 .bannerInner,
 .bodyInner,
 .bottomInner {
@@ -18,9 +14,7 @@
   width: 100%;
 }
 
-/* ─────────────────────────────────────────
-   Community banner
-   ───────────────────────────────────────── */
+/* Community banner */
 
 .banner {
   background-color: #00355f;
@@ -45,8 +39,7 @@
   width: 2.75rem;
   height: 2.75rem;
   flex-shrink: 0;
-  /* The SVG uses #F4AB00 fill natively — no color override needed */
-}
+ }
 
 .bannerHeading {
   margin: 0;
@@ -87,9 +80,7 @@
   transform: translateY(0);
 }
 
-/* ─────────────────────────────────────────
-   Main body
-   ───────────────────────────────────────── */
+/*  Main body */
 
 .body {
   background-color: #ffffff;
@@ -194,13 +185,11 @@
   justify-content: center;
   color: #00355f;
   transition: color 0.2s ease, transform 0.15s ease;
-  /* Fixed 32×32 bounding box so all icons appear identical in size */
   width: 2rem;
   height: 2rem;
   flex-shrink: 0;
 }
 
-/* Force every SVG inside to fill the fixed bounding box */
 .socialLink svg {
   width: 100%;
   height: 100%;
@@ -212,14 +201,11 @@
   transform: translateY(-2px);
 }
 
-/* ─────────────────────────────────────────
-   Bottom bar
-   ───────────────────────────────────────── */
+/* Bottom bar */
 
 .bottomBar {
   background-color: #ffffff;
-  /* Full-width 2px divider line between body and bottom bar */
-  border-top: 2px solid #00355f;
+  border-top: 3px solid #00355f;
   padding: 1.25rem 2rem;
 }
 
@@ -364,7 +350,6 @@
     padding: 1.25rem 1.5rem;
   }
 
-  /* Two-column grid: brand + contact side by side, social below */
   .bodyInner {
     display: grid;
     grid-template-columns: 1fr 1fr;

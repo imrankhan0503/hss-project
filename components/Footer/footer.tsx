@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import HSSLogo from "@/assets/images/logo/HSSLogo.png";
-import BiChat from "@/assets/images/bi_chat.svg"; // ← your chat icon asset
+import BiChat from "@/assets/images/icons/bi_chat.svg";
 import styles from "./footer.module.css";
 
 const translations = {
@@ -59,7 +59,6 @@ export default function Footer({ locale = "sv" }: FooterProps) {
       <div className={styles.banner}>
         <div className={styles.bannerInner}>
           <div className={styles.bannerContent}>
-            {/* Your bi_chat.svg asset */}
             <Image
               src={BiChat}
               alt=""
@@ -129,7 +128,7 @@ export default function Footer({ locale = "sv" }: FooterProps) {
 
             <div className={styles.socialIcons}>
 
-              {/* Instagram — typcn_social-instagram.svg */}
+              
               <a
                 href="https://www.instagram.com/hss_scout/"
                 target="_blank"
@@ -152,7 +151,6 @@ export default function Footer({ locale = "sv" }: FooterProps) {
                 </svg>
               </a>
 
-              {/* YouTube — Vector.svg */}
               <a
                 href="https://www.youtube.com/@hasselbystrandssjoscoutkar4026"
                 target="_blank"
@@ -175,7 +173,6 @@ export default function Footer({ locale = "sv" }: FooterProps) {
                 </svg>
               </a>
 
-              {/* Facebook — stash_social-facebook-solid.svg */}
               <a
                 href="https://www.facebook.com/HSSScout"
                 target="_blank"
