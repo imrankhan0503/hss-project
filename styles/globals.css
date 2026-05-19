@@ -9,16 +9,24 @@
   --primary-color: #00355F;
   --secondary-color: #F4AB00;
   --section-background: #00355F;
+  --hero-overlay: #002F54;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--primary-color);
+  --color-primary: var(--primary-color);
+  --color-secondary: var(--secondary-color);
+  --color-section: var(--section-background);
+  --color-hero-overlay: var(--hero-overlay);
+  --color-card-one: var(--card-category-one-background);
+  --color-card-two: var(--card-category-two-background);
+  --color-card-three: var(--card-category-three-background);
+  --color-card-four: var(--card-category-four-background);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-inter);
 }
 
-*{
+* {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
