@@ -1,18 +1,37 @@
+/* ─────────────────────────────────────────
+   footer.module.css
+   ───────────────────────────────────────── */
+
 .footer {
   width: 100%;
   font-family: "Inter", sans-serif;
   color: #00355f;
+  overflow: hidden; /* prevents decorative page elements bleeding in */
 }
 
-/* Community banner */
+/* ── Shared inner wrapper (max-width + centering) ── */
+.bannerInner,
+.bodyInner,
+.bottomInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────
+   Community banner
+   ───────────────────────────────────────── */
 
 .banner {
   background-color: #00355f;
+  padding: 1.25rem 2rem;
+}
+
+.bannerInner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.25rem 2rem;
   flex-wrap: wrap;
 }
 
@@ -25,8 +44,8 @@
 .bannerIcon {
   width: 2.75rem;
   height: 2.75rem;
-  color: #f4ab00;
   flex-shrink: 0;
+  /* The SVG uses #F4AB00 fill natively — no color override needed */
 }
 
 .bannerHeading {
@@ -68,18 +87,23 @@
   transform: translateY(0);
 }
 
-/* Main body */
+/* ─────────────────────────────────────────
+   Main body
+   ───────────────────────────────────────── */
 
 .body {
   background-color: #ffffff;
+  padding: 2.5rem 2rem;
+}
+
+.bodyInner {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem 3rem;
-  padding: 2.5rem 2rem;
   align-items: flex-start;
 }
 
-/* Brand */
+/* ── Brand column ── */
 
 .brand {
   flex: 1 1 220px;
@@ -96,6 +120,9 @@
 .logoImg {
   border-radius: 50%;
   object-fit: cover;
+  width: 72px !important;
+  height: 72px !important;
+  flex-shrink: 0;
 }
 
 .brandName {
@@ -112,7 +139,7 @@
   font-weight: 400;
 }
 
-/* Contact */
+/* ── Contact column ── */
 
 .contactCol {
   flex: 1 1 200px;
@@ -147,7 +174,7 @@
   line-height: 1.5;
 }
 
-/* Social */
+/* ── Social column ── */
 
 .socialCol {
   flex: 1 1 140px;
@@ -167,11 +194,17 @@
   justify-content: center;
   color: #00355f;
   transition: color 0.2s ease, transform 0.15s ease;
-}
-
-.socialLink svg {
+  /* Fixed 32×32 bounding box so all icons appear identical in size */
   width: 2rem;
   height: 2rem;
+  flex-shrink: 0;
+}
+
+/* Force every SVG inside to fill the fixed bounding box */
+.socialLink svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .socialLink:hover {
@@ -179,16 +212,21 @@
   transform: translateY(-2px);
 }
 
-/* Bottom bar */
+/* ─────────────────────────────────────────
+   Bottom bar
+   ───────────────────────────────────────── */
 
 .bottomBar {
   background-color: #ffffff;
-  border-top: 1px solid #d1dbe6;
-  width: 100%;
+  /* Full-width 2px divider line between body and bottom bar */
+  border-top: 2px solid #00355f;
+  padding: 1.25rem 2rem;
+}
+
+.bottomInner {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.25rem 0;
+  gap: 1rem;
 }
 
 .bottomTop {
@@ -197,7 +235,6 @@
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  padding: 0 2rem;
 }
 
 .copyright {
@@ -225,15 +262,13 @@
   text-decoration: underline;
 }
 
-/* Partners */
+/* ── Partners ── */
 
 .partnerRow {
   display: flex;
   align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
-
-  padding: 0 2rem;
 }
 
 .partnerLabel {
@@ -248,34 +283,55 @@
   color: #00355f;
 }
 
-/* Responsive — mobile (< 640 px) */
+/* ─────────────────────────────────────────
+   Responsive — mobile  (< 640 px)
+   ───────────────────────────────────────── */
 
 @media (max-width: 639px) {
+  /* Banner */
   .banner {
+    padding: 1.25rem 1rem;
+  }
+
+  .bannerInner {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.25rem 1rem;
   }
 
   .bannerCta {
     align-self: flex-start;
   }
 
+  .bannerHeading {
+    font-size: 1rem;
+  }
+
+  /* Body */
   .body {
-    flex-direction: column;
     padding: 2rem 1rem;
+  }
+
+  .bodyInner {
+    flex-direction: column;
     gap: 1.75rem;
   }
 
+  .brand,
+  .contactCol,
+  .socialCol {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  /* Bottom bar */
   .bottomBar {
-    padding: 1rem 0;
-    gap: 1rem;
+    padding: 1rem 1rem;
   }
 
   .bottomTop {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 1rem;
+    gap: 0.5rem;
   }
 
   .legalLinks {
@@ -283,19 +339,70 @@
   }
 
   .partnerRow {
-    gap: 1.5rem;
-    padding: 0 1rem;
+    gap: 1.25rem;
+  }
+
+  .socialIcons {
+    gap: 1.25rem;
   }
 }
 
-/* Responsive — tablet (640 px – 1023 px)*/
+/* ─────────────────────────────────────────
+   Responsive — tablet  (640 px – 1023 px)
+   ───────────────────────────────────────── */
 
 @media (min-width: 640px) and (max-width: 1023px) {
+  .banner {
+    padding: 1.25rem 1.5rem;
+  }
+
   .body {
     padding: 2rem 1.5rem;
   }
 
-  .banner {
+  .bottomBar {
     padding: 1.25rem 1.5rem;
+  }
+
+  /* Two-column grid: brand + contact side by side, social below */
+  .bodyInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+  }
+
+  .brand {
+    grid-column: 1 / 2;
+  }
+
+  .contactCol {
+    grid-column: 2 / 3;
+  }
+
+  .socialCol {
+    grid-column: 1 / 3;
+  }
+}
+
+/* ─────────────────────────────────────────
+   Responsive — desktop  (≥ 1024 px)
+   ───────────────────────────────────────── */
+
+@media (min-width: 1024px) {
+  .banner {
+    padding: 1.5rem 3rem;
+  }
+
+  .body {
+    padding: 3rem 3rem;
+  }
+
+  .bottomBar {
+    padding: 1.5rem 3rem;
+  }
+
+  .bodyInner {
+    gap: 2.5rem 4rem;
   }
 }
