@@ -79,7 +79,7 @@
 
 .body {
   background-color: #ffffff;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 2rem 1rem;
 }
 
 .bodyInner {
@@ -157,8 +157,9 @@
 }
 
 .socialCol {
-  flex: 1 1 10px;
+   flex: 0 0 auto;
   min-width: 120px;
+  margin-left: auto;
 }
 
 .socialIcons {
@@ -249,8 +250,6 @@
   font-weight: 500;
   color: #00355f;
 }
-
-
 
 @media (max-width: 639px) {
   .banner {
