@@ -1,9 +1,11 @@
-const Page = () => {
-  return (
-    <>
-    <h1>This is anmäl-intresse</h1>
-    </>
+import Steps from "@/components/Steps";
+
+const AnmalIntresse = () => {
+  return (    
+     <main>
+      <Steps />
+    </main>
   )
 }
 
-export default Page;
+export default AnmalIntresse;
