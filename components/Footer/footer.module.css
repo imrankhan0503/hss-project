@@ -2,10 +2,9 @@
   width: 100%;
   font-family: "Inter", sans-serif;
   color: #00355f;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-/* ── Shared inner wrapper ── */
 .bannerInner,
 .bodyInner,
 .bottomInner {
@@ -13,8 +12,6 @@
   margin: 0 auto;
   width: 100%;
 }
-
-/* Community banner */
 
 .banner {
   background-color: #00355f;
@@ -39,7 +36,7 @@
   width: 2.75rem;
   height: 2.75rem;
   flex-shrink: 0;
- }
+}
 
 .bannerHeading {
   margin: 0;
@@ -80,8 +77,6 @@
   transform: translateY(0);
 }
 
-/*  Main body */
-
 .body {
   background-color: #ffffff;
   padding: 2.5rem 2rem;
@@ -93,8 +88,6 @@
   gap: 2rem 3rem;
   align-items: flex-start;
 }
-
-/* ── Brand column ── */
 
 .brand {
   flex: 1 1 220px;
@@ -111,8 +104,8 @@
 .logoImg {
   border-radius: 50%;
   object-fit: cover;
-  width: 72px !important;
-  height: 72px !important;
+  width: 72px;
+  height: 72px;
   flex-shrink: 0;
 }
 
@@ -129,8 +122,6 @@
   color: #00355f;
   font-weight: 400;
 }
-
-/* ── Contact column ── */
 
 .contactCol {
   flex: 1 1 200px;
@@ -165,10 +156,8 @@
   line-height: 1.5;
 }
 
-/* ── Social column ── */
-
 .socialCol {
-  flex: 1 1 140px;
+  flex: 1 1 10px;
   min-width: 120px;
 }
 
@@ -185,8 +174,8 @@
   justify-content: center;
   color: #00355f;
   transition: color 0.2s ease, transform 0.15s ease;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   flex-shrink: 0;
 }
 
@@ -201,11 +190,8 @@
   transform: translateY(-2px);
 }
 
-/* Bottom bar */
-
 .bottomBar {
   background-color: #ffffff;
-  border-top: 3px solid #00355f;
   padding: 1.25rem 2rem;
 }
 
@@ -213,6 +199,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border-top: 3px solid #00355f;
+  padding-top: 1.25rem;
 }
 
 .bottomTop {
@@ -248,8 +236,6 @@
   text-decoration: underline;
 }
 
-/* ── Partners ── */
-
 .partnerRow {
   display: flex;
   align-items: center;
@@ -257,24 +243,16 @@
   flex-wrap: wrap;
 }
 
-.partnerLabel {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #00355f;
-}
-
+.partnerLabel,
 .partnerName {
   font-size: 0.95rem;
   font-weight: 500;
   color: #00355f;
 }
 
-/* ─────────────────────────────────────────
-   Responsive — mobile  (< 640 px)
-   ───────────────────────────────────────── */
+
 
 @media (max-width: 639px) {
-  /* Banner */
   .banner {
     padding: 1.25rem 1rem;
   }
@@ -292,7 +270,6 @@
     font-size: 1rem;
   }
 
-  /* Body */
   .body {
     padding: 2rem 1rem;
   }
@@ -309,7 +286,6 @@
     min-width: unset;
   }
 
-  /* Bottom bar */
   .bottomBar {
     padding: 1rem 1rem;
   }
@@ -332,10 +308,6 @@
     gap: 1.25rem;
   }
 }
-
-/* ─────────────────────────────────────────
-   Responsive — tablet  (640 px – 1023 px)
-   ───────────────────────────────────────── */
 
 @media (min-width: 640px) and (max-width: 1023px) {
   .banner {
@@ -369,10 +341,6 @@
     grid-column: 1 / 3;
   }
 }
-
-/* ─────────────────────────────────────────
-   Responsive — desktop  (≥ 1024 px)
-   ───────────────────────────────────────── */
 
 @media (min-width: 1024px) {
   .banner {
