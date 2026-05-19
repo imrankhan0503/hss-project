@@ -180,12 +180,6 @@
   flex-shrink: 0;
 }
 
-.socialLink svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
 .socialLink:hover {
   color: #f4ab00;
   transform: translateY(-2px);
