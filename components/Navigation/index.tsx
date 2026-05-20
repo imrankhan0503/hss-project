@@ -38,7 +38,7 @@ const Navigation = () => {
 
     return (
 
-        <header className="w-full sticky top-0">
+        <header className="w-full sticky top-0 z-50 bg-white">
 
             <nav className="max-w-7xl mx-auto px-4 py-3 relative">
 
@@ -136,7 +136,7 @@ const Navigation = () => {
                 {/* MOBILE DROPDOWN */}
                 {isOpen && (
 
-                    <div className="absolute left-0 top-full w-full z-50 md:hidden mt-4 p-3 flex flex-col">
+                    <div className="md:hidden absolute left-0 top-full w-full bg-[#eaeaf1] text-white shadow-lg border z-50 flex flex-col p-3">
 
                         {navLinks.map((item) => (
 
