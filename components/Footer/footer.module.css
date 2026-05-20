@@ -283,6 +283,7 @@
   .socialCol {
     flex: 1 1 100%;
     min-width: unset;
+    margin-left: 0;
   }
 
   .bottomBar {
