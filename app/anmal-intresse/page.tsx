@@ -1,8 +1,8 @@
 import Steps from "@/components/Steps";
 
 const AnmalIntresse = () => {
-  return (    
-     <main>
+  return (
+    <main>
       <Steps />
     </main>
   )
