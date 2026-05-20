@@ -1,93 +1,164 @@
-'use client'
+"use client"
 
 import { useState } from "react"
-import NavItem from "./NavItem"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import NavItem from "./NavItem"
 import HeaderLogo from "../../assets/images/logo/HSSLogo.png"
 import HamburgerMenu from "../../assets/images/hamburger.svg"
 
+const navLinks = [
+    {
+        title: "Hem",
+        link: "/",
+    },
+    {
+        title: "Anmäl Intresse",
+        link: "/anmal-intresse",
+    },
+    {
+        title: "Vår Flotta",
+        link: "/var-flotta",
+    },
+    {
+        title: "Verksamhet",
+        link: "/verksamhet",
+    },
+    {
+        title: "För Föräldrar",
+        link: "/foraldrar",
+    },
+]
+
 const Navigation = () => {
+
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <nav className="w-full flex items-center justify-between px-4 py-3 relative">
 
-            {/* LOGO */}
-            <Link
-                href="/"
-                className="flex items-center gap-3"
-                aria-label="Go to homepage"
-            >
+        <header className="w-full sticky top-0">
 
-                <Image
-                    src={HeaderLogo}
-                    alt="HSS Logo"
-                    width={48}
-                    height={48}
-                    priority
-                />
+            <nav className="max-w-7xl mx-auto px-4 py-3 relative">
 
-                <div className="text-[#00355F] leading-tight">
-                    <p className="font-semibold text-sm">Hässelby Strands</p>
-                    <p className="font-semibold text-sm">Sjöscoutkår</p>
-                    <p className="text-xs">sedan 1945</p>
+                <div className="flex items-center justify-between gap-6">
+
+                    <Link
+                        href="/"
+                        aria-label="Go to homepage"
+                        className="flex items-center gap-3 shrink-0"
+                    >
+
+                        <Image
+                            src={HeaderLogo}
+                            alt="HSS Logo"
+                            width={52}
+                            height={52}
+                            priority
+                        />
+
+                        <div className="text-[#00355F] leading-tight whitespace-nowrap">
+
+                            <p className="font-semibold text-sm">
+                                Hässelby Strands
+                            </p>
+
+                            <p className="font-semibold text-sm">
+                                Sjöscoutkår
+                            </p>
+
+                            <p className="text-xs">
+                                sedan 1945
+                            </p>
+
+                        </div>
+
+                    </Link>
+
+                    {/* DESKTOP NAVIGATION */}
+                    <div className="hidden md:flex flex-1 items-center justify-center">
+
+                        <div className="flex items-center justify-center gap-3 lg:gap-5 flex-wrap">
+
+                            {navLinks.map((item) => (
+
+                                <NavItem
+                                    key={item.link}
+                                    title={item.title}
+                                    link={item.link}
+                                    active={pathname === item.link}
+                                />
+
+                            ))}
+
+                            <NavItem
+                                title="Gå med"
+                                link="/join"
+                                highlighted
+                            />
+
+                        </div>
+
+                    </div>
+
+                    {/* MOBILE MENU */}
+                    <div className="flex items-center gap-3 md:hidden">
+
+                        {/* CTA OUTSIDE */}
+                        <NavItem
+                            title="Gå med"
+                            link="/join"
+                            highlighted
+                        />
+
+                        {/* HAMBURGER */}
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            aria-label="Toggle Menu"
+                            aria-expanded={isOpen}
+                            className="p-2"
+                        >
+
+                            <Image
+                                src={HamburgerMenu}
+                                alt="Menu"
+                                width={28}
+                                height={28}
+                            />
+
+                        </button>
+
+                    </div>
+
                 </div>
 
-            </Link>
+                {/* MOBILE DROPDOWN */}
+                {isOpen && (
 
-            {/* DESKTOP MENU */}
-            <div className="hidden md:flex items-center gap-6">
+                    <div className="absolute left-0 top-full w-full z-50 md:hidden mt-4 p-3 flex flex-col">
 
-                <NavItem title="Hem" link="/" active={pathname === "/"} />
-                <NavItem title="Anmäl Intresse" link="/anmal-intresse" active={pathname === "/anmal-intresse"} />
-                <NavItem title="Vår Flotta" link="/var-flotta" active={pathname === "/var-flotta"} />
-                <NavItem title="Verksamhet" link="/verksamhet" active={pathname === "/verksamhet"} />
-                <NavItem title="För Föräldrar" link="/foraldrar" active={pathname === "/foraldrar"} />
+                        {navLinks.map((item) => (
 
-                <NavItem title="Gå med" link="/join" highlighted />
+                            <NavItem
+                                key={item.link}
+                                title={item.title}
+                                link={item.link}
+                                active={pathname === item.link}
+                                mobile
+                                onClick={() => setIsOpen(false)}
+                            />
 
-            </div>
+                        ))}
 
-            {/* MOBILE MENU */}
-            <div className="flex items-center gap-3 md:hidden">
+                    </div>
 
-                {/* CTA always visible */}
-                <NavItem title="Gå med" link="/join" highlighted />
+                )}
 
-                {/* Hamburger */}
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    aria-label="Toggle menu"
-                    className="p-1"
-                    aria-expanded={isOpen}
-                >
-                    <Image
-                        src={HamburgerMenu}
-                        alt="Menu"
-                        width={28}
-                        height={28}
-                    />
-                </button>
+            </nav>
 
-            </div>
+        </header>
 
-            {/* MOBILE MENU */}
-            {isOpen && (
-                <div className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col gap-2 p-4 md:hidden z-50">
-
-                    <NavItem title="Hem" link="/" active={pathname === "/"} />
-                    <NavItem title="Anmäl Intresse" link="/anmal-intresse" active={pathname === "/anmal-intresse"} />
-                    <NavItem title="Vår Flotta" link="/var-flotta" active={pathname === "/var-flotta"} />
-                    <NavItem title="Verksamhet" link="/verksamhet" active={pathname === "/verksamhet"} />
-                    <NavItem title="För Föräldrar" link="/foraldrar" active={pathname === "/foraldrar"} />
-
-                </div>
-            )}
-
-        </nav>
     )
 }
 

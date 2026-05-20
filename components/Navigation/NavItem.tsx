@@ -4,25 +4,39 @@ import Link from "next/link"
 type NavigationProps = {
     title: string
     link: string
-    active?: boolean,
+    active?: boolean
     highlighted?: boolean
-
+    mobile?: boolean
+    onClick?: () => void
 }
 
-const NavItem = ({ title, link, active, highlighted }: NavigationProps) => {
+const NavItem = ({title,link,active,highlighted,mobile,onClick}: NavigationProps) => {
+
     return (
         <Link
             href={link}
+            onClick={onClick}
             aria-current={active ? "page" : undefined}
             className={`
-                px-3 py-2 rounded-full text-sm transition-colors duration-200
-                focus:outline-none focus:ring-2 focus:ring-[#00355F]
+                ${
+                    mobile
+                        ? "w-full text-center"
+                        : ""
+                }
+
+                px-4 py-2 rounded-full text-sm font-medium
+                transition-all duration-200
+
+                focus:outline-none
+                focus:ring-2
+                focus:ring-[#00355F]
+
                 ${
                     highlighted
-                        ? "bg-[#F4AB00] text-[#00355F] hover:bg-[#d99600]"
-                    : active
-                        ? "bg-[#00355F] text-white"
-                        : "text-[#00355F] hover:bg-[#00355F] hover:text-white"
+                        ? "bg-[#F4AB00] text-[#00355F] hover:bg-[#d99600] hover:text-white"
+                        : active
+                            ? "bg-[#00355F] text-white"
+                            : "text-[#00355F] hover:bg-[#00355F] hover:text-white"
                 }
             `}
         >
