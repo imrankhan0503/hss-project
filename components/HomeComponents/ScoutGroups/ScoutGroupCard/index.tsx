@@ -16,9 +16,9 @@ const ScoutGroupCard = ({ title, description, color, icon, href }: ScoutGroupCar
         <Image src={icon} alt={title} className="w-28 md:w-32 h-auto object-contain" />
         <div className="mt-6 flex flex-col items-center gap-3">
           <h3 className="text-primary text-xl md:text-2xl font-semibold md:font-bold">{title}</h3>
-          <p className="text-primary text-base font-normal">{description}</p>
+          <p className="text-primary text-lg font-normal">{description}</p>
         </div>
-        <Link href={href} className="mt-auto bg-secondary text-primary text-sm md:text-base font-medium rounded-full px-6 py-2 md:px-8 md:py-3">Läs mer</Link>
+        <Link href={href} className="mt-auto bg-secondary text-primary text-base md:text-lg font-medium rounded-full px-6 py-2 md:px-8 md:py-3">Läs mer</Link>
       </div>
     </>
   )
