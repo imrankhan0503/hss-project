@@ -13,7 +13,7 @@ const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
         <Image src={icon} alt={title}  className="w-14 h-14" />
         </div>
       <h3 className="text-xl font-bold text-primary">{title}</h3>
-      <p className="text-base text-primary max-w-sm">{description}</p>
+      <p className="text-base text-primary max-w-sm text-justify">{description}</p>
     </div>
   )
 }
