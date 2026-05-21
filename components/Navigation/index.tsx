@@ -94,7 +94,7 @@ const Navigation = () => {
 
                             <NavItem
                                 title="Gå med"
-                                link="/join"
+                                link="https://www.scoutnet.se/register/in/group/764"
                                 highlighted
                             />
 
@@ -108,7 +108,7 @@ const Navigation = () => {
                         {/* CTA OUTSIDE */}
                         <NavItem
                             title="Gå med"
-                            link="/join"
+                            link="https://www.scoutnet.se/register/in/group/764"
                             highlighted
                         />
 
