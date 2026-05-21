@@ -33,7 +33,7 @@ const VarFlotta = () => {
 
                     <p className="mt-4 text-[#F4AB00] text-sm md:text-xl font-medium max-w-2xl">
 
-                        Utforska våra båtar och de platser där vi samlas och seglar.
+                        Utforska våra båtar och de platser där vi samlas och seglar
 
                     </p>
 
