@@ -18,7 +18,7 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
             <div>
                 <label
                     htmlFor="name"
-                    className="mb-2 block text-base font-bold text-sky-950">
+                    className="mb-2 block text-base font-bold text-primary">
                     Scoutens namn
                 </label>
 
@@ -27,7 +27,7 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
                     type="text"
                     pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$"
                     required
-                    className="h-14 w-full rounded-xl border border-sky-950/20 bg-sky-950/5 px-5 text-base text-sky-950 outline-none"
+                    className="h-14 w-full rounded-xl border border-primary/20 bg-primary/5 px-5 text-base text-primary outline-none"
                 />
             </div>
 
@@ -35,7 +35,7 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
             <div>
                 <label
                     htmlFor="age"
-                    className="mb-2 block text-base font-bold text-sky-950">
+                    className="mb-2 block text-base font-bold text-primary">
                     Ålder
                 </label>
 
@@ -45,13 +45,13 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
                     min="1"
                     max="99"
                     required
-                    className="h-14 w-full rounded-xl border border-sky-950/20 bg-sky-950/5 px-5 text-base text-sky-950 outline-none"
+                    className="h-14 w-full rounded-xl border border-primary/20 bg-primary/5 px-5 text-base text-primary outline-none"
                 />
             </div>
 
             {/* Child group category */}
             <div>
-                <label className="mb-2 block text-base font-bold text-sky-950">
+                <label className="mb-2 block text-base font-bold text-primary">
                     Avdelning
                 </label>
 
@@ -61,16 +61,20 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
                     <button
                         type="button"
                         onClick={() => setIsOpen(!isOpen)}
-                        className="flex h-14 w-full items-center justify-between rounded-xl border border-sky-950/20 bg-sky-950/5 px-5 text-base font-medium text-sky-950">
+                        className="flex h-14 w-full items-center justify-between rounded-xl border border-primary/20 bg-primary/5 px-5 text-base font-medium text-primary">
 
                         <span>{selectedCategory}</span>
 
-                        <Image src={ArrowIcon} alt="Arrow icon" />
+                        <Image
+                            src={ArrowIcon}
+                            alt="Arrow icon"
+                            className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                        />
                     </button>
 
                     {/* Open dropdown - provide different age categories to choose */}
                     {isOpen && (
-                        <div className="absolute mt-2 w-full rounded-[10px] bg-sky-950 p-5 text-yellow-500">
+                        <div className="absolute mt-2 w-full rounded-[10px] bg-primary p-5 text-secondary">
 
                             {/* Spårare (6-8 år) category */}
                             <button
@@ -79,7 +83,7 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
                                     setSelectedCategory("Spårare (6-8 år)")
                                     setIsOpen(false)
                                 }}
-                                className="block w-full rounded-md p-3 text-left text-xl transition-colors duration-200 hover:bg-yellow-600 hover:text-sky-950"
+                                className="block w-full rounded-md p-3 text-left text-xl transition-colors duration-200 hover:bg-secondary hover:text-primary"
                             >
                                 Spårare (6-8 år)
                             </button>
@@ -91,7 +95,7 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
                                     setSelectedCategory("Upptäckare (9-11 år)")
                                     setIsOpen(false)
                                 }}
-                                className="block w-full rounded-md p-3 text-left text-xl transition-colors duration-200 hover:bg-yellow-600 hover:text-sky-950"
+                                className="block w-full rounded-md p-3 text-left text-xl transition-colors duration-200 hover:bg-secondary hover:text-primary"
                             >
                                 Upptäckare (9-11 år)
                             </button>
@@ -103,7 +107,7 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
                                     setSelectedCategory("Äventyrare (12-14 år)")
                                     setIsOpen(false)
                                 }}
-                                className="block w-full rounded-md p-3 text-left text-xl transition-colors duration-200 hover:bg-yellow-600 hover:text-sky-950"
+                                className="block w-full rounded-md p-3 text-left text-xl transition-colors duration-200 hover:bg-secondary hover:text-primary"
                             >
                                 Äventyrare (12-14 år)
                             </button>
@@ -115,7 +119,7 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
                                     setSelectedCategory("Rover (15+ år)")
                                     setIsOpen(false)
                                 }}
-                                className="block w-full rounded-md p-3 text-left text-xl transition-colors duration-200 hover:bg-yellow-600 hover:text-sky-950"
+                                className="block w-full rounded-md p-3 text-left text-xl transition-colors duration-200 hover:bg-secondary hover:text-primary"
                             >
                                 Rover (15+ år)
                             </button>
@@ -129,12 +133,12 @@ const ScoutInfoForm = ({ onNext }: ScoutInfoFormProps) => {
             <button
                 type="button"
                 onClick={onNext}
-                className="h-14 w-full rounded-xl bg-sky-950 text-xl font-bold text-yellow-500">
+                className="h-14 w-full rounded-xl bg-primary text-xl font-bold text-secondary">
                 Nästa
             </button>
 
             {/* Extra info about contact */}
-            <div className="rounded-[10px] bg-sky-950 px-8 py-8 text-center text-yellow-500">
+            <div className="rounded-[10px] bg-primary px-8 py-8 text-center text-secondary">
                 <p className="text-lg font-bold">
                     Vi kontaktar dig efter att du skickat.
                 </p>

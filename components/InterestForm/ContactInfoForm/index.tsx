@@ -11,7 +11,7 @@ const ContactInfoForm = ({ onBack, onSubmit }: ContactInfoFormProps) => {
             <div>
                 <label
                     htmlFor="name"
-                    className="mb-2 block text-base font-bold text-sky-950">
+                    className="mb-2 block text-base font-bold text-primary">
                     Vårdnadshavares namn
                 </label>
 
@@ -20,7 +20,7 @@ const ContactInfoForm = ({ onBack, onSubmit }: ContactInfoFormProps) => {
                     type="text"
                     pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$"
                     required
-                    className="h-14 w-full rounded-xl border border-sky-950/20 bg-sky-950/5 px-5 text-base text-sky-950 outline-none"
+                    className="h-14 w-full rounded-xl border border-primary/20 bg-primary/5 px-5 text-base text-primary outline-none"
                 />
             </div>
 
@@ -28,7 +28,7 @@ const ContactInfoForm = ({ onBack, onSubmit }: ContactInfoFormProps) => {
             <div>
                 <label
                     htmlFor="email"
-                    className="mb-2 block text-base font-bold text-sky-950">
+                    className="mb-2 block text-base font-bold text-primary">
                     E-Post
                 </label>
 
@@ -36,7 +36,7 @@ const ContactInfoForm = ({ onBack, onSubmit }: ContactInfoFormProps) => {
                     id="email"
                     type="email"
                     required
-                    className="h-14 w-full rounded-xl border border-sky-950/20 bg-sky-950/5 px-5 text-base text-sky-950 outline-none"
+                    className="h-14 w-full rounded-xl border border-primary/20 bg-primary/5 px-5 text-base text-primary outline-none"
                 />
             </div>
 
@@ -44,7 +44,7 @@ const ContactInfoForm = ({ onBack, onSubmit }: ContactInfoFormProps) => {
             <div>
                 <label
                     htmlFor="mobile-number"
-                    className="mb-2 block text-base font-bold text-sky-950">
+                    className="mb-2 block text-base font-bold text-primary">
                     Telefonnummer
                 </label>
 
@@ -53,7 +53,7 @@ const ContactInfoForm = ({ onBack, onSubmit }: ContactInfoFormProps) => {
                     type="tel"
                     pattern="[0-9+\s()-]+"
                     required
-                    className="h-14 w-full rounded-xl border border-sky-950/20 bg-sky-950/5 px-5 text-base text-sky-950 outline-none"
+                    className="h-14 w-full rounded-xl border border-primary/20 bg-primary/5 px-5 text-base text-primary outline-none"
                 />
             </div>
 
@@ -61,30 +61,30 @@ const ContactInfoForm = ({ onBack, onSubmit }: ContactInfoFormProps) => {
             <div>
                 <label
                     htmlFor="message"
-                    className="mb-2 block text-base font-bold text-sky-950">
+                    className="mb-2 block text-base font-bold text-primary"
+                >
                     Meddelande (valfritt)
                 </label>
 
-                <input
+                <textarea
                     id="message"
-                    type="text"
-                    pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$"
-                    className="w-145 h-28 relative bg-sky-950/5 rounded-xl border border-sky-950/20"
+                    rows={4}
+                    className="w-full rounded-xl border border-primary/20 bg-primary/5 p-5 text-primary outline-none resize-none"
                 />
             </div>
 
-            <div className="flex justify-between">
+            <div className="flex justify-between gap-4">
                 {/* Back to previous page */}
                 <button
                     onClick={onBack}
-                    className="h-14 w-64 rounded-[10px] border-2 border-sky-950/20 text-xl font-bold text-sky-950">
+                    className="h-14 w-64 rounded-[10px] border-2 border-primary/20 text-xl font-bold text-primary">
                     Tillbaka
                 </button>
 
                 {/* Submit */}
                 <button
                     onClick={onSubmit}
-                    className="h-14 w-64 rounded-[10px] bg-sky-950 text-xl font-bold text-yellow-500">
+                    className="h-14 w-64 rounded-[10px] bg-primary text-xl font-bold text-secondary">
                     Skicka anmälan
                 </button>
             </div>
