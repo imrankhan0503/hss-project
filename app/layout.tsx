@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="sv"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased font-sans`}
     >
       <body className="min-h-full flex flex-col">
         <main className="flex-1">
