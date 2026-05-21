@@ -1,5 +1,5 @@
-import Steps from "@/components/Steps";
-import InterestForm from "@/components/InterestForm";
+import Steps from "@/components/AnmalanIntresse/Steps";
+import InterestForm from "@/components/AnmalanIntresse/InterestForm";
 
 const AnmalIntresse = () => {
   return (
