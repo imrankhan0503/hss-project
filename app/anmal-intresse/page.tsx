@@ -4,31 +4,31 @@ const AnmalIntresse = () => {
 
     return (
 
-        <main className="w-full overflow-x-hidden">
+       
+            <main>
 
-            <section className="w-full bg-[#00355F] px-4 py-12 sm:py-16 md:py-20">
+            <section className="w-full min-h-[220px] md:h-[254px] bg-[#00355F] flex items-center justify-center py-10">
 
-                <div className="max-w-4xl mx-auto text-center">
+                <div className="text-center max-w-3xl flex flex-col px-4 overflow-hidden">
 
-                    <h1 className="text-[#F4AB00] text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+                    <h1 className="text-[#F4AB00] text-2xl sm:text-4xl md:text-5xl font-semibold leading-tight">
 
-                        Anmäl intresse
+                        Anmäl Intresse
 
                     </h1>
 
-                    <p className="mt-4 text-[#F4AB00] text-sm sm:text-base md:text-xl font-medium leading-relaxed max-w-2xl mx-auto">
+                    <p className="mt-3 md:mt-4 text-[#F4AB00] text-sm sm:text-base md:text-xl font-medium leading-relaxed">
 
-                        Börja din resa med Hesselby Strands Sjöscoutkår idag
+                        Börja din resa med Hässelby Strands Sjöscoutkår idag
 
                     </p>
 
                 </div>
 
             </section>
-
-            <Steps />
-
+              <Steps />
         </main>
+       
 
     )
 

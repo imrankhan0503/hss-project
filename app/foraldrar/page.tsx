@@ -1,19 +1,45 @@
 import Image from "next/image";
-import ForaldrarTop from "../../assets/images/for-foraldrar-top/for-foraldrar-top.svg"
+import ForaldrarTop from "../../assets/images/background/för-föräldrar-bg.jpg"
 
 const ForaldrarPage = () => {
   return (
-    <div className="w-full">
-
-      <Image 
-             src={ForaldrarTop}
-              alt="anmal-interest background image"
-              width={1440}
-              height={253.731}
-              priority 
-              className="w-full h-auto block"/>
+    <main>
     
-    </div>
+                <section className="relative w-full h-[254px] overflow-hidden">
+    
+                    
+                    <Image
+                        src={ForaldrarTop}
+                        alt="Vår Flotta Background"
+                        fill
+                        priority
+                        className="object-cover"
+                    />
+    
+                   
+                    <div className="absolute inset-0 bg-[#00355F]/60 z-10" />
+    
+                    
+                    <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+    
+                        <h1 className="text-[#F4AB00] text-3xl md:text-5xl font-semibold">
+    
+                            För Föräldrar
+    
+                        </h1>
+    
+                        <p className="mt-4 text-[#F4AB00] text-sm md:text-xl font-medium max-w-2xl">
+    
+                            Information, svar och resurser för er som vårdnadshavare
+    
+                        </p>
+    
+                    </div>
+                  
+                </section>
+    
+            </main>
+    
   )
 }
 
