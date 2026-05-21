@@ -18,7 +18,7 @@ const ScoutGroupCard = ({ title, description, color, icon, href }: ScoutGroupCar
           <h3 className="text-primary text-xl md:text-2xl font-semibold md:font-bold">{title}</h3>
           <p className="text-primary text-lg font-normal">{description}</p>
         </div>
-        <Link href={href} className="mt-auto bg-secondary text-primary text-base md:text-lg font-medium rounded-full px-6 py-2 md:px-8 md:py-3 hover:bg-primary hover:text-background">Läs mer</Link>
+        <Link href={href} className="mt-auto bg-secondary text-primary text-base md:text-lg font-medium rounded-full px-6 py-2 md:px-8 md:py-3 hover:bg-primary hover:text-background">Läs om {title.toLowerCase()}</Link>
       </div>
     </>
   )
