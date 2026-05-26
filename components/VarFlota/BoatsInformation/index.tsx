@@ -1,7 +1,7 @@
 import BoatOneBG from '@/assets/images/var-flotta-images/boat-one.jpg'
 import BoatTwoBG from '@/assets/images/var-flotta-images/boat-two.jpg'
 import BoatThreeBG from '@/assets/images/var-flotta-images/boat-three.jpg'
-import Icon from '@/assets/images/icons/bi_chat.svg'
+import Icon from '@/assets/images/icons/boat.svg'
 import FleetCard from './FleetCard'
 
 const boatInformationSectionData = [
@@ -39,13 +39,15 @@ const boatInformationSectionData = [
 ]
 
 const BoatsInformation = () => {
-    return (
-        <section className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2 auto-rows-fr">
-            {boatInformationSectionData.map(card => (
-                <FleetCard key={card.id} {...card} />
-            ))}
-        </section>
-    )
+  return (
+    <section className="w-full px-6 py-12 md:px-28">
+      <div className="mx-auto grid max-w-[1200px] gap-y-12 gap-x-14 md:grid-cols-2">
+        {boatInformationSectionData.map((card) => (
+          <FleetCard key={card.id} {...card} />
+        ))}
+      </div>
+    </section>
+  )
 }
 
 export default BoatsInformation
