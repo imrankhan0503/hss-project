@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import NavItem from "./NavItem"
-import MobileMenu from "../MobileMenu"
+import MobileMenu from "./MobileMenu"
 import HeaderLogo from "../../assets/images/logo/HSSLogo.png"
 import HamburgerMenu from "../../assets/images/hamburger.svg"
 

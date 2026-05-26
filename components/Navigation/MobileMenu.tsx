@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import NavItem from "./Navigation/NavItem"
+import NavItem from "./NavItem"
 
 interface MobileMenuProps {
     isOpen: boolean

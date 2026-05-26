@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import VarFlottaTop from "../../assets/images/background/vår-flotta-bg.jpg"
+import VarFlottaTop from "../../assets/images/background/var-flotta-bg.jpg"
 
 const VarFlotta = () => {
 
