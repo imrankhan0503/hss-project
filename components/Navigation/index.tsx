@@ -1,10 +1,11 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import NavItem from "./NavItem"
+import MobileMenu from "../MobileMenu"
 import HeaderLogo from "../../assets/images/logo/HSSLogo.png"
 import HamburgerMenu from "../../assets/images/hamburger.svg"
 
@@ -31,10 +32,30 @@ const navLinks = [
     },
 ]
 
+
 const Navigation = () => {
 
     const pathname = usePathname()
+
     const [isOpen, setIsOpen] = useState(false)
+
+    useEffect(() => {
+
+    if (isOpen) {
+        document.documentElement.style.overflow = "hidden"
+        document.body.style.overflow = "hidden"
+    } else {
+        document.documentElement.style.overflow = ""
+        document.body.style.overflow = ""
+    }
+
+    return () => {
+        document.documentElement.style.overflow = ""
+        document.body.style.overflow = ""
+    }
+
+}, [isOpen])
+
 
     return (
 
@@ -69,7 +90,7 @@ const Navigation = () => {
                             </p>
 
                             <p className="text-xs">
-                                sedan 1945
+                                sedan 1959
                             </p>
 
                         </div>
@@ -134,26 +155,12 @@ const Navigation = () => {
                 </div>
 
                 {/* MOBILE DROPDOWN */}
-                {isOpen && (
-
-                    <div className="md:hidden absolute left-0 top-full w-full bg-[#eaeaf1] text-white shadow-lg border z-50 flex flex-col p-3">
-
-                        {navLinks.map((item) => (
-
-                            <NavItem
-                                key={item.link}
-                                title={item.title}
-                                link={item.link}
-                                active={pathname === item.link}
-                                mobile
-                                onClick={() => setIsOpen(false)}
-                            />
-
-                        ))}
-
-                    </div>
-
-                )}
+                    <MobileMenu
+                      isOpen={isOpen}
+                      setIsOpen={setIsOpen}
+                      pathname={pathname}
+                      navLinks={navLinks}
+                    />
 
             </nav>
 

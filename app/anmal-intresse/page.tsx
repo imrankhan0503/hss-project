@@ -2,9 +2,15 @@ import Steps from "@/components/AnmalanIntresse/Steps";
 import InterestForm from "@/components/AnmalanIntresse/InterestForm";
 
 const AnmalIntresse = () => {
+<<<<<<< HEAD
 
   return (
 
+=======
+
+     return (
+
+>>>>>>> 001-feature-navigation
         <main className="bg-primary/5 w-full overflow-x-hidden">
 
             <section className="w-full min-h-[220px] md:h-[254px] bg-[#00355F] flex items-center justify-center py-10">
