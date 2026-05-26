@@ -24,7 +24,7 @@ const NavItem = ({title,link,active,highlighted,mobile,onClick}: NavigationProps
                         : ""
                 }
 
-                px-4 py-2 rounded-full text-sm font-medium
+                px-4 py-2 rounded-full text-md font-medium
                 transition-all duration-200
 
                 focus:outline-none
