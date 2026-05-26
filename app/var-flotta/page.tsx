@@ -1,6 +1,6 @@
 import Image from "next/image"
-
 import VarFlottaTop from "../../assets/images/background/vår-flotta-bg.jpg"
+import BoatsInformation from "@/components/VarFlota/BoatsInformation"
 
 const VarFlotta = () => {
 
@@ -10,7 +10,7 @@ const VarFlotta = () => {
 
             <section className="relative w-full h-[254px] overflow-hidden">
 
-                
+
                 <Image
                     src={VarFlottaTop}
                     alt="Vår Flotta Background"
@@ -19,10 +19,10 @@ const VarFlotta = () => {
                     className="object-cover"
                 />
 
-               
+
                 <div className="absolute inset-0 bg-[#00355F]/60 z-10" />
 
-                
+
                 <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
 
                     <h1 className="text-[#F4AB00] text-3xl md:text-5xl font-semibold">
@@ -38,9 +38,10 @@ const VarFlotta = () => {
                     </p>
 
                 </div>
-              
-            </section>
 
+            </section>
+            
+            <BoatsInformation />
         </main>
 
     )
