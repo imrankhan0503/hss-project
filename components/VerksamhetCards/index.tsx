@@ -6,6 +6,7 @@ import styles from "./verksamhetcards.module.css";
 
 interface Props {
   groups: VerksamhetGroup[];
+  expandedId: string | null;
   onExpand: (id: string) => void;
 }
 
