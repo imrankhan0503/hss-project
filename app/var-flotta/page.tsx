@@ -1,7 +1,7 @@
 import Image from "next/image"
 import VarFlottaTop from "../../assets/images/background/vår-flotta-bg.jpg"
 import BoatsInformation from "@/components/VarFlota/BoatsInformation"
-
+import LocationsInformation from "@/components/VarFlota/LocationsInformation"
 const VarFlotta = () => {
 
     return (
@@ -40,8 +40,9 @@ const VarFlotta = () => {
                 </div>
 
             </section>
-            
+
             <BoatsInformation />
+            <LocationsInformation />
         </main>
 
     )
