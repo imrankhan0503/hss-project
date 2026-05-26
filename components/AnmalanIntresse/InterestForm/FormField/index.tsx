@@ -1,12 +1,6 @@
-type FormFieldProps = {
-  name: string,
-  type: string,
-  label: string,
-  pattern?: string,
-  required?: boolean
-}
+import { FormFieldProps } from "@/types/form";
 
-const FormField = ({ name, type, label, pattern, required }: FormFieldProps) => {
+const FormField = ({ name, type, label, pattern, required, value, onChange }: FormFieldProps) => {
   return (
     <>
       <div>
@@ -16,13 +10,28 @@ const FormField = ({ name, type, label, pattern, required }: FormFieldProps) => 
           {label}
         </label>
 
-        <input
-          id={name}
-          type={type}
-          pattern={pattern}
-          required={required}
-          className="h-14 w-full rounded-xl border border-primary/20 bg-primary/5 px-5 text-base text-primary outline-none"
-        />
+        {name === 'message' ?
+          <textarea
+            id={name}
+            name={name}
+            rows={4}
+            value={value}
+            onChange={onChange}
+            required={required}
+            className="w-full rounded-xl border border-primary/20 bg-primary/5 p-5 text-primary outline-none resize-none"
+          />
+          :
+          <input
+            id={name}
+            name={name}
+            type={type}
+            pattern={pattern}
+            value={value}
+            onChange={onChange}
+            required={required}
+            className="h-14 w-full rounded-xl border border-primary/20 bg-primary/5 px-5 text-base text-primary outline-none"
+          />
+        }
       </div>
     </>
   )
