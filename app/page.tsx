@@ -6,13 +6,15 @@ import ServicesSection from "@/components/HomeComponents/Services/ServicesSectio
 
 const Home = () => {
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <>
       <HomeHero />
-      <ServicesSection />
-      <SectionBanner />
-      <ScoutGroupsSection />
-      <JoinCTASection />
-    </div>
+      <div>
+        <ServicesSection />
+        <SectionBanner />
+        <ScoutGroupsSection />
+        <JoinCTASection />
+      </div>
+    </>
   );
 
 }
