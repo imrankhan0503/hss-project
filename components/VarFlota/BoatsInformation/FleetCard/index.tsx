@@ -22,8 +22,7 @@ const FleetCard = ({ title, subtitle, description, bulletPoints, icon, image }: 
     return (
         <section
 
-            // If card has image: use image background and secondary text.
-            // If no image: use white background and primary text.
+            // If card has image: use image background and secondary text. If no image: use white background and primary text.
             className={`min-h-96 rounded-3xl bg-cover bg-center p-8 ${image
                 ? "flex flex-col justify-end bg-primary/20 text-secondary"
                 : "border border-primary/25 bg-background text-primary"
