@@ -15,7 +15,8 @@ const translations = {
     tagline: "Scouting på vattnet sedan 1959",
     contact: "Kontakt",
     email: "info@hss.scout.se",
-    address: "Hässelby Strandväg, 165 65 Hässelby",
+    address: "Ruffen | Hässelby Strands Sjöscoutkår,Hässelby, 165 65 Stockholm",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Ruffen+Hässelby+Strands+Sjöscoutkår+Stockholm",
     followUs: "Följ oss",
     copyright: "© 2026 Hässelby Strands Sjöscoutkår. Alla rättigheter förbehållna.",
     privacy: "Integritetspolicy",
@@ -31,7 +32,8 @@ const translations = {
     tagline: "Scouting on the water since 1959",
     contact: "Contact",
     email: "info@hss.scout.se",
-    address: "Hässelby Strandväg, 165 65 Hässelby",
+    address: "Ruffen | Hässelby Strands Sjöscoutkår,Hässelby, 165 65 Stockholm",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Ruffen+Hässelby+Strands+Sjöscoutkår+Stockholm",
     followUs: "Follow us",
     copyright: "© 2026 Hässelby Strands Sjöscoutkår. All rights reserved.",
     privacy: "Privacy policy",
@@ -107,7 +109,7 @@ export default function Footer({ locale = "sv" }: FooterProps) {
               {t.email}
             </a>
             <a
-              href="https://www.google.com/maps/place/H%C3%A4sselby+strandv%C3%A4g,+165+65+H%C3%A4sselby"
+              href={t.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.contactLink}
