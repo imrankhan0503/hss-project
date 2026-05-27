@@ -3,8 +3,9 @@ import KaparnaIcon from '@/assets/images/icons/kaparna_icon.png'
 import KonvojenIcon from '@/assets/images/icons/konvojen_icon.png'
 import UtmanareIcon from '@/assets/images/icons/utmanare_icon.png'
 import ScoutGroupCard from '../ScoutGroupCard'
+import { ScoutGroupCardData } from '@/types/home'
 
-const scoutGroupsSectionData = [
+const scoutGroupsSectionData: ScoutGroupCardData[] = [
   {
     id: 1,
     title: 'Sjöhumlor',
