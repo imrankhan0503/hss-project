@@ -2,15 +2,16 @@
 
 import { useState } from "react";
 import VerksamhetCards from "../../components/VerksamhetCards";
+import CcSchedule from "../../components/CcSchedule";
 import { groups } from "../../data/hssdata";
 
 export default function VerksamhetPage() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   return (
-    <main>
-      <section className="w-full min-h-[220px] md:h-[254px] bg-[#00355F] flex items-center justify-center px-4 py-10">
-        <div className="text-center max-w-3xl">
+    <main className="pb-16">
+      <section className="w-full min-h-[220px] md:h-[254px] bg-[#00355F] flex items-center justify-center px-4 py-10 relative overflow-hidden">
+        <div className="text-center max-w-3xl z-10">
           <h1 className="text-[#F4AB00] text-2xl sm:text-3xl md:text-5xl font-semibold leading-tight">
             Vår Verksamhet
           </h1>
@@ -25,6 +26,8 @@ export default function VerksamhetPage() {
         expandedId={expandedId}
         onExpand={(id) => setExpandedId(id)}
       />
+
+      <CcSchedule groups={groups} />
     </main>
   );
 }
