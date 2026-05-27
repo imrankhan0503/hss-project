@@ -2,14 +2,15 @@ import SailingIcon from '@/assets/images/homepage/segling.svg'
 import PeopleIcon from '@/assets/images/homepage/gemenskap.svg'
 import GrowthIcon from '@/assets/images/homepage/utveckling.svg'
 import ServiceCard from '../ServiceCard'
+import { ServiceCardData } from '@/types/home'
 
-const servicesSectionData = [
+const servicesSectionData: ServiceCardData[] = [
   {
     id: 1,
     title: 'Segling & Äventyr',
     description: 'Lär dig segla och upptäck skärgården tillsammans med oss. Vi använder våra jollar som Optimist, Trissjolle, Avanti och 606 för att utveckla både kunskap och äventyrsglädje.',
     icon: SailingIcon,
-    resize:true
+    resize: true
   },
   {
     id: 2,

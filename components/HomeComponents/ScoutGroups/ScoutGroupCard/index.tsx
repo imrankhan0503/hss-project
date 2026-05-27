@@ -1,13 +1,6 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
-
-type ScoutGroupCardProps = {
-  title: string,
-  description: string,
-  color: string,
-  href: string,
-  icon: StaticImageData
-}
+import { ScoutGroupCardProps } from "@/types/home";
 
 const ScoutGroupCard = ({ title, description, color, icon, href }: ScoutGroupCardProps) => {
   return (
