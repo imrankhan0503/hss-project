@@ -16,7 +16,7 @@ export default function CcSchedule({ groups }: Props) {
             "radial-gradient(ellipse 80% 100% at 50% 50%, rgba(244,171,0,0.08) 0%, rgba(244,171,0,0.03) 50%, transparent 75%), #FEFDF8",
         }}
       >
-        <div className="grid grid-cols-4 text-center mb-5">
+        <div className="grid grid-cols-3 md:grid-cols-4 text-center mb-5">
           <p className="text-[#00355F] font-bold text-[11px] md:text-[16px]">
             Dag
           </p>
@@ -26,7 +26,7 @@ export default function CcSchedule({ groups }: Props) {
           <p className="text-[#00355F] font-bold text-[11px] md:text-[16px]">
             Tid
           </p>
-          <p className="text-[#00355F] font-bold text-[11px] md:text-[16px]">
+          <p className="text-[#00355F] font-bold hidden md:block md:text-[16px]">
             Plats
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function CcSchedule({ groups }: Props) {
           {groups.map((item) => (
             <div
               key={item.id}
-              className="grid grid-cols-4 text-center items-center"
+              className="grid grid-cols-3 md:grid-cols-4 text-center items-center"
             >
               <p className="text-[#00355F] font-semibold text-[10px] md:text-[14px]">
                 {item.meetingDays}
@@ -48,9 +48,6 @@ export default function CcSchedule({ groups }: Props) {
               </p>
               <p className="text-[#00355F] font-semibold text-[10px] md:text-[14px]">
                 {item.meetingTime}
-              </p>
-              <p className="text-[#00355F] font-semibold text-[10px] md:text-[10px] md:hidden">
-                Scoutlokalen Ruffen
               </p>
               <p className="text-[#00355F] font-semibold hidden md:block md:text-[14px]">
                 Scoutlokalen Ruffen
