@@ -6,6 +6,7 @@ import InsuranceLogo from '@/assets/images/icons/insurance.svg'
 import VestLogo from '@/assets/images/icons/vest.svg'
 import { InformationCardsData } from '@/types/safety';
 import InformationCards from './InfoCards';
+import ButtonLinks from './Buttons';
 
 const cardsData: InformationCardsData[] = [
   {
@@ -28,6 +29,7 @@ const cardsData: InformationCardsData[] = [
   }
 
 ]
+
 
 const SafetySection = () => {
   return (
@@ -52,7 +54,11 @@ const SafetySection = () => {
           ))}
         </div>
         <div className='mt-6'>
-        <InformationCards icon={VestLogo} title='Flytväst Policy' description='Alla scouter ska alltid använda godkänd flytväst vid aktiviteter på eller vid vatten. Flytvästen ska vara rätt storlek och korrekt påtagen.' isPolicyBanner/>
+          <InformationCards icon={VestLogo} title='Flytväst Policy' description='Alla scouter ska alltid använda godkänd flytväst vid aktiviteter på eller vid vatten. Flytvästen ska vara rätt storlek och korrekt påtagen.' isPolicyBanner />
+        </div>
+        <div className="mt-10 flex flex-col gap-4 md:flex-row md:justify-center md:items-center md:gap-12">
+          <ButtonLinks text='Våra utbildningar på webben' link='https://www.scouternasfolkhogskola.se/kurser-utbildningar/webbutbildningar/' />
+          <ButtonLinks text='Utbildningar för scouter och scoutledare' link='https://www.scouternasfolkhogskola.se/kurser-utbildningar/scoututbildningar/' />
         </div>
       </div>
     </section>
