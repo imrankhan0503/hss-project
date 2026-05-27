@@ -1,3 +1,5 @@
+import { FieldErrors, UseFormRegister } from "react-hook-form";
+
 export type FormFieldNamesTypes = 'name' | 'email' | 'locality' | 'mobileNumber' | 'message'
 
 export type FormData = {
@@ -12,7 +14,6 @@ type BaseSectionField = {
   name: FormFieldNamesTypes;
   label: string;
   type?: string;
-  pattern?: string;
   required?: boolean;
 };
 
@@ -21,6 +22,6 @@ export type FormSectionDataField = BaseSectionField & {
 }
 
 export type FormFieldProps = BaseSectionField & {
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+  register: UseFormRegister<FormData>
+  errors: FieldErrors<FormData>
 }

@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from "react"
 import FormField from "@/components/AnmalanIntresse/InterestForm/FormField"
 import { FormData, FormSectionDataField } from "@/types/form"
+import { useForm } from "react-hook-form"
 
 const formSectionData: FormSectionDataField[] = [
   {
@@ -10,7 +10,6 @@ const formSectionData: FormSectionDataField[] = [
     name: 'name',
     label: 'Namn',
     type: 'text',
-    pattern: "^[A-Za-zÀ-ÖØ-öø-ÿ\\s]+$",
     required: true
   },
   {
@@ -25,7 +24,6 @@ const formSectionData: FormSectionDataField[] = [
     name: 'locality',
     label: 'Ort',
     type: 'text',
-    pattern: "^[A-Za-zÀ-ÖØ-öø-ÿ\\s]+$",
     required: false
   },
   {
@@ -47,35 +45,11 @@ type ContactInfoFormProps = {
   onSubmit: () => void
 }
 
-const initialFormData: FormData = {
-  name: '',
-  email: '',
-  locality: '',
-  mobileNumber: '',
-  message: ''
-}
 
 const ContactInfoForm = ({ onSubmit }: ContactInfoFormProps) => {
-  const [formData, setFormData] = useState(initialFormData);
-  const phoneNumberRegex = /^[0-9+()\\s-]{7,}$/;
+  const { handleSubmit, register, formState: { errors, isSubmitting } } = useForm<FormData>()
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const name = e.target.name
-    const value = e.target.value
-
-    setFormData((p => ({
-      ...p,
-      [name]: value
-    })))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if(!phoneNumberRegex.test(formData.mobileNumber)){
-      alert('Ogiltigt telefonnummer');
-      return
-    }
+  const onFormSubmit = async (formData: FormData) => {
 
     const res = await fetch("/api/contact", {
       method: "POST",
@@ -93,19 +67,19 @@ const ContactInfoForm = ({ onSubmit }: ContactInfoFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-6">
 
       {formSectionData && formSectionData.map(f => (
-        <FormField key={f.id} {...f} value={formData[f.name]} onChange={handleInputChange} />
+        <FormField key={f.id} {...f} register={register} errors={errors} />
       ))}
       <div className="text-center">
         <button
           type='submit'
+          disabled={isSubmitting}
           className="h-14 w-64 rounded-[10px] bg-primary text-xl font-bold text-secondary">
-          Skicka
+          {isSubmitting ? 'Skickar...' : 'Skicka'}
         </button>
       </div>
-
     </form>
   )
 }

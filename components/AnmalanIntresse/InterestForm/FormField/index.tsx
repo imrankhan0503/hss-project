@@ -1,6 +1,6 @@
 import { FormFieldProps } from "@/types/form";
 
-const FormField = ({ name, type, label, pattern, required, value, onChange }: FormFieldProps) => {
+const FormField = ({ name, type, label, required, register, errors }: FormFieldProps) => {
   return (
     <>
       <div>
@@ -13,24 +13,28 @@ const FormField = ({ name, type, label, pattern, required, value, onChange }: Fo
         {name === 'message' ?
           <textarea
             id={name}
-            name={name}
             rows={4}
-            value={value}
-            onChange={onChange}
-            required={required}
             className="w-full rounded-xl border border-primary/20 bg-primary/5 p-5 text-primary outline-none resize-none"
-          />
+            {...register(name, { required })} />
           :
           <input
             id={name}
-            name={name}
             type={type}
-            pattern={pattern}
-            value={value}
-            onChange={onChange}
-            required={required}
             className="h-14 w-full rounded-xl border border-primary/20 bg-primary/5 px-5 text-base text-primary outline-none"
-          />
+            {...register(name, {
+              required, ...(name === "mobileNumber" && {
+                pattern: {
+                  value: /^[0-9+() -]{7,}$/,
+                  message: "Ogiltigt telefonnummer"
+                }
+              }),
+              ...(name === "name" && {
+                pattern: {
+                  value: /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/,
+                  message: "Endast bokstäver är tillåtna"
+                }
+              })
+            })} />
         }
       </div>
     </>
