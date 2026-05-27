@@ -64,7 +64,9 @@
   border-radius: 9999px;
   text-decoration: none;
   white-space: nowrap;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
   flex-shrink: 0;
 }
 
@@ -157,7 +159,7 @@
 }
 
 .socialCol {
-   flex: 0 0 auto;
+  flex: 0 0 auto;
   min-width: 120px;
   margin-left: auto;
 }
@@ -174,7 +176,9 @@
   align-items: center;
   justify-content: center;
   color: #00355f;
-  transition: color 0.2s ease, transform 0.15s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.15s ease;
   width: 2.5rem;
   height: 2.5rem;
   flex-shrink: 0;
@@ -214,27 +218,22 @@
 
 .copyright {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #00355f;
 }
 
 .legalLinks {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
 }
 
 .legalLink {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #00355f;
   text-decoration: none;
   transition: opacity 0.15s;
-}
-
-.legalLink:hover {
-  opacity: 0.65;
-  text-decoration: underline;
 }
 
 .partnerRow {
