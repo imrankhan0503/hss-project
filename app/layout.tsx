@@ -7,7 +7,7 @@ import Navigation from "@/components/Navigation";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400","500", "600", "700","800"]
+  weight: ["400", "500", "600", "700", "800"]
 });
 
 export const metadata: Metadata = {
@@ -24,11 +24,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} h-full antialiased font-sans`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
         <main className="flex-1">
-        <Navigation />
-        {children}</main>
+          <Navigation />
+          {children}
+        </main>
         <Footer locale="sv" />
       </body>
     </html>
