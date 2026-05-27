@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import Footer from "@/components/Footer/index";
+import Navigation from "@/components/Navigation";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["500", "600", "700"]
+  weight: ["400", "500", "600", "700", "800"]
 });
 
 export const metadata: Metadata = {
@@ -21,11 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="sv"
-      className={`${inter.variable} h-full antialiased`}
+      lang="en"
+      className={`${inter.variable} h-full antialiased font-sans`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <Navigation />
+          {children}
+        </main>
         <Footer locale="sv" />
       </body>
     </html>
