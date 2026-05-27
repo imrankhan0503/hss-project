@@ -31,13 +31,13 @@ const formSectionData: FormSectionDataField[] = [
     name: 'mobileNumber',
     label: 'Telefonnummer',
     type: 'tel',
-    required: true
+    required: false
   },
   {
     id: 5,
     name: 'message',
     label: 'Meddelande',
-    required: true
+    required: false
   }
 ]
 

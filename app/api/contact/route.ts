@@ -13,7 +13,6 @@ export async function POST(req: Request) {
       to: 'michellechicsarmiento@yahoo.com',
       subject: "Nytt meddelande från hemsidan",
       replyTo: email,
-
       html: `
         <h2>Nytt meddelande från kontaktformuläret</h2>
 
@@ -30,6 +29,7 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ success: true });
+
   } catch (error) {
     console.error(error);
 
@@ -38,6 +38,5 @@ export async function POST(req: Request) {
       { status: 500 }
     );
   }
-
 
 }
