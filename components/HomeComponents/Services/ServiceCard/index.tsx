@@ -1,11 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-
-type ServiceCardProps = {
-  title: string,
-  description: string,
-  icon: StaticImageData,
-  resize?: boolean
-}
+import Image from "next/image";
+import { ServiceCardProps } from "@/types/home";
 
 const ServiceCard = ({ title, description, icon ,resize }: ServiceCardProps) => {
   return (
