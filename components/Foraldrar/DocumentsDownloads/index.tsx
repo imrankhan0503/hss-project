@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import DownloadIcon from '@/assets/images/icons/download.svg'
 
-const documents = [
+type DocumentProps = {
+    id: number
+    title: string
+    file: string
+}
+
+const documents:DocumentProps[] = [
     {
         id: 1,
         title: "Årsredovisning",
@@ -34,7 +40,7 @@ const documents = [
     },
     {
         id: 7,
-        title: "Kårstämma protololl",
+        title: "Kårstämma protokoll",
         file: "/documents/7-karstamma-protokoll.pdf"
     },
     {
