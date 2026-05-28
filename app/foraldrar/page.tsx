@@ -1,6 +1,7 @@
 import SafetySection from "@/components/Foraldrar/SafetySection";
 import Image from "next/image";
 import ForaldrarTop from "../../assets/images/background/for-foraldrar-bg.jpg"
+import DocumentsStorage from "@/components/Foraldrar/DocumentsDownloads";
 
 const ForaldrarPage = () => {
   return (
@@ -24,6 +25,7 @@ const ForaldrarPage = () => {
         </div>
       </section>
       <SafetySection/>
+      <DocumentsStorage/>
     </main>
 
   )
