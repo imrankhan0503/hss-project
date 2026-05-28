@@ -18,12 +18,11 @@ const SuccessForm = () => {
             />
 
             <h2 className="mb-8 text-2xl font-bold">
-                Tack för ditt intresse!
+                Vi har mottagit ditt meddelande!
             </h2>
 
             <p className="max-w-md text-lg leading-10">
-                Vi har mottagit din anmälan och kommer att kontakta dig inom kort med mer
-                information om hur ni kan prova på.
+                Vi svarar så fort vi kan.
             </p>
         </div>
     )
