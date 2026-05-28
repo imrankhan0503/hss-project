@@ -1,6 +1,6 @@
 import SafetySection from "@/components/Foraldrar/SafetySection";
 import Image from "next/image";
-import ForaldrarTop from "../../assets/images/background/för-föräldrar-bg.jpg"
+import ForaldrarTop from "../../assets/images/background/for-foraldrar-bg.jpg"
 
 const ForaldrarPage = () => {
   return (
