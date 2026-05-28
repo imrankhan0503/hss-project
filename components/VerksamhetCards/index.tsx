@@ -7,10 +7,138 @@ import styles from "./verksamhetcards.module.css";
 interface Props {
   groups: VerksamhetGroup[];
   expandedId: string | null;
-  onExpand: (id: string) => void;
+  onExpand: (id: string | null) => void;
 }
 
-export default function VerksamhetCards({ groups, onExpand }: Props) {
+export default function VerksamhetCards({ groups, expandedId, onExpand }: Props) {
+  const expandedGroup = groups.find((g) => g.id === expandedId);
+
+  if (expandedGroup) {
+    return (
+      <div className={styles.wrapper}>
+        <div className={styles.detailCard}style={{ borderColor: expandedGroup.bulletColor }}>
+          <div
+            className={styles.detailHeader}
+            style={{ backgroundColor: expandedGroup.bulletColor }}
+          >
+            <h2 className={styles.detailTitle}>{expandedGroup.title}</h2>
+            <div className={styles.detailIconBox}>
+              <Image
+                src={expandedGroup.icon}
+                alt={expandedGroup.title}
+                width={expandedGroup.iconWidth ?? 110}
+                height={expandedGroup.iconHeight ?? 95}
+              />
+            </div>
+            <p className={styles.detailSubtitle}>{expandedGroup.subtitle}</p>
+          </div>
+
+          <div className={styles.detailContent}>
+            <div className={styles.detailGrid}>
+              <div className={styles.desktopCol}>
+                <h3 className={styles.sectionTitle}>Aktiviteter</h3>
+                <ul className={styles.activityList}>
+                  {expandedGroup.activities.map((item) => (
+                    <li key={item} className={styles.activityItem}>
+                      <span
+                        className={styles.bullet}
+                        style={{ backgroundColor: expandedGroup.bulletColor }}
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className={styles.desktopCol}>
+                <div className={styles.badgeRow}>
+                  <Image
+                    src={expandedGroup.badgeIcon}
+                    alt="Märken"
+                    width={22}
+                    height={22}
+                  />
+                  <p className={styles.badgeLabel}>Märken &amp; Färdigheter</p>
+                </div>
+                <ul className={styles.badgeList}>
+                  {expandedGroup.badges.map((badge) => (
+                    <li key={badge}>{badge}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className={styles.desktopCol}>
+                <div className={styles.metaGroup}>
+                  <div className={styles.metaBlock}>
+                    <Image
+                      src={expandedGroup.timeIcon}
+                      alt="Tid"
+                      width={22}
+                      height={22}
+                    />
+                    <div>
+                      <p className={styles.metaLabel}>Mötestider</p>
+                      <p className={styles.metaValue}>
+                        {expandedGroup.meetingDays} ({expandedGroup.meetingTime})
+                      </p>
+                    </div>
+                  </div>
+                  <div className={styles.metaBlock}>
+                    <Image
+                      src={expandedGroup.locationIcon}
+                      alt="Plats"
+                      width={22}
+                      height={22}
+                    />
+                    <div>
+                      <p className={styles.metaLabel}>Mötesplats</p>
+                      <p className={styles.metaValue}>{expandedGroup.meetingPlace}</p>
+                    </div>
+                  </div>
+                  <div className={styles.metaBlock}>
+                    <Image
+                      src={expandedGroup.leaderIcon}
+                      alt="Ledare"
+                      width={22}
+                      height={22}
+                    />
+                    <div>
+                      <p className={styles.metaLabel}>Ledare</p>
+                      <p className={styles.metaValue}>{expandedGroup.leader}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.descriptionWrapper}>
+              {expandedGroup.description.split("\n\n").map((paragraph, index) => (
+                <p key={index} className={styles.descriptionParagraph}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            <div className={styles.backButtonWrapper}>
+              <button
+                className={styles.backButton}
+                onClick={() => onExpand(null)}
+                aria-label="Tillbaka"
+              >
+                <Image
+                  src={expandedGroup.backIcon}
+                  alt="Tillbaka"
+                  width={24}
+                  height={24}
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.wrapper}>
       {groups.map((group) => (
@@ -33,8 +161,8 @@ export default function VerksamhetCards({ groups, onExpand }: Props) {
                 <Image
                   src={group.icon}
                   alt={group.title}
-                  width={group.iconWidth ?? 100}
-                  height={group.iconHeight ?? 88}
+                  width={group.iconWidth ?? 110}
+                  height={group.iconHeight ?? 95}
                 />
               </div>
               <p className={styles.cardSubtitle}>{group.subtitle}</p>
@@ -59,46 +187,44 @@ export default function VerksamhetCards({ groups, onExpand }: Props) {
                   </div>
 
                   <div className={styles.mobileMeta}>
-                    <div className={styles.metaGroup}>
-                      <div className={styles.metaBlock}>
-                        <Image
-                          src={group.timeIcon}
-                          alt="Tid"
-                          width={12}
-                          height={12}
-                        />
-                        <div>
-                          <p className={styles.metaLabel}>Mötestider</p>
-                          <p className={styles.metaValue}>
-                            {group.meetingDays} ({group.meetingTime})
-                          </p>
-                        </div>
+                    <div className={styles.metaBlock}>
+                      <Image
+                        src={group.timeIcon}
+                        alt="Tid"
+                        width={22}
+                        height={22}
+                      />
+                      <div>
+                        <p className={styles.metaLabel}>Mötestider</p>
+                        <p className={styles.metaValue}>
+                          {group.meetingDays} ({group.meetingTime})
+                        </p>
                       </div>
-                      <div className={styles.metaBlock}>
-                        <Image
-                          src={group.locationIcon}
-                          alt="Plats"
-                          width={12}
-                          height={12}
-                        />
-                        <div>
-                          <p className={styles.metaLabel}>Mötesplats</p>
-                          <p className={styles.metaValue}>
-                            {group.meetingPlace}
-                          </p>
-                        </div>
+                    </div>
+                    <div className={styles.metaBlock}>
+                      <Image
+                        src={group.locationIcon}
+                        alt="Plats"
+                        width={22}
+                        height={22}
+                      />
+                      <div>
+                        <p className={styles.metaLabel}>Mötesplats</p>
+                        <p className={styles.metaValue}>
+                          {group.meetingPlace}
+                        </p>
                       </div>
-                      <div className={styles.metaBlock}>
-                        <Image
-                          src={group.leaderIcon}
-                          alt="Ledare"
-                          width={12}
-                          height={12}
-                        />
-                        <div>
-                          <p className={styles.metaLabel}>Ledare</p>
-                          <p className={styles.metaValue}>{group.leader}</p>
-                        </div>
+                    </div>
+                    <div className={styles.metaBlock}>
+                      <Image
+                        src={group.leaderIcon}
+                        alt="Ledare"
+                        width={22}
+                        height={22}
+                      />
+                      <div>
+                        <p className={styles.metaLabel}>Ledare</p>
+                        <p className={styles.metaValue}>{group.leader}</p>
                       </div>
                     </div>
                   </div>
@@ -115,93 +241,95 @@ export default function VerksamhetCards({ groups, onExpand }: Props) {
                 </div>
               </div>
 
-              <div className={styles.desktopGrid}>
-                <div>
-                  <h3 className={styles.sectionTitle}>Aktiviteter</h3>
-                  <ul className={styles.activityList}>
-                    {group.activities.map((item) => (
-                      <li key={item} className={styles.activityItem}>
-                        <span
-                          className={styles.bullet}
-                          style={{ backgroundColor: group.bulletColor }}
+              <div className={styles.desktopGridContainer}>
+                <div className={styles.desktopGrid}>
+                  <div className={styles.desktopCol}>
+                    <h3 className={styles.sectionTitle}>Aktiviteter</h3>
+                    <ul className={styles.activityList}>
+                      {group.activities.map((item) => (
+                        <li key={item} className={styles.activityItem}>
+                          <span
+                            className={styles.bullet}
+                            style={{ backgroundColor: group.bulletColor }}
+                          />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className={styles.desktopCol}>
+                    <div className={styles.badgeRow}>
+                      <Image
+                        src={group.badgeIcon}
+                        alt="Märken"
+                        width={22}
+                        height={22}
+                      />
+                      <p className={styles.badgeLabel}>
+                        Märken &amp; Färdigheter
+                      </p>
+                    </div>
+                    <ul className={styles.badgeList}>
+                      {group.badges.map((badge) => (
+                        <li key={badge}>{badge}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className={styles.desktopCol}>
+                    <div className={styles.metaGroup}>
+                      <div className={styles.metaBlock}>
+                        <Image
+                          src={group.timeIcon}
+                          alt="Tid"
+                          width={22}
+                          height={22}
                         />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <div className={styles.badgeRow}>
-                    <Image
-                      src={group.badgeIcon}
-                      alt="Märken"
-                      width={16}
-                      height={16}
-                    />
-                    <p className={styles.badgeLabel}>
-                      Märken &amp; Färdigheter
-                    </p>
-                  </div>
-                  <ul className={styles.badgeList}>
-                    {group.badges.map((badge) => (
-                      <li key={badge}>{badge}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <div className={styles.metaGroup}>
-                    <div className={styles.metaBlock}>
-                      <Image
-                        src={group.timeIcon}
-                        alt="Tid"
-                        width={16}
-                        height={16}
-                      />
-                      <div>
-                        <p className={styles.metaLabel}>Mötestider</p>
-                        <p className={styles.metaValue}>
-                          {group.meetingDays} ({group.meetingTime})
-                        </p>
+                        <div>
+                          <p className={styles.metaLabel}>Mötestider</p>
+                          <p className={styles.metaValue}>
+                            {group.meetingDays} ({group.meetingTime})
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className={styles.metaBlock}>
-                      <Image
-                        src={group.locationIcon}
-                        alt="Plats"
-                        width={16}
-                        height={16}
-                      />
-                      <div>
-                        <p className={styles.metaLabel}>Mötesplats</p>
-                        <p className={styles.metaValue}>{group.meetingPlace}</p>
+                      <div className={styles.metaBlock}>
+                        <Image
+                          src={group.locationIcon}
+                          alt="Plats"
+                          width={22}
+                          height={22}
+                        />
+                        <div>
+                          <p className={styles.metaLabel}>Mötesplats</p>
+                          <p className={styles.metaValue}>{group.meetingPlace}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className={styles.metaBlock}>
-                      <Image
-                        src={group.leaderIcon}
-                        alt="Ledare"
-                        width={16}
-                        height={16}
-                      />
-                      <div>
-                        <p className={styles.metaLabel}>Ledare</p>
-                        <p className={styles.metaValue}>{group.leader}</p>
+                      <div className={styles.metaBlock}>
+                        <Image
+                          src={group.leaderIcon}
+                          alt="Ledare"
+                          width={22}
+                          height={22}
+                        />
+                        <div>
+                          <p className={styles.metaLabel}>Ledare</p>
+                          <p className={styles.metaValue}>{group.leader}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className={styles.desktopReadMore}>
-                <button
-                  className={styles.readMore}
-                  style={{ color: group.bulletColor }}
-                  onClick={() => onExpand(group.id)}
-                >
-                  Läs Mer ...
-                </button>
+                <div className={styles.desktopReadMore}>
+                  <button
+                    className={styles.readMore}
+                    style={{ color: group.bulletColor }}
+                    onClick={() => onExpand(group.id)}
+                  >
+                    Läs Mer ...
+                  </button>
+                </div>
               </div>
             </div>
           </div>
