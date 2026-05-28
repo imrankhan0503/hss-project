@@ -94,34 +94,29 @@
 
 .mobileTop {
   display: flex;
-  flex-direction: row;
-  gap: 8px;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .mobileActivities {
-  flex: 1;
-  min-width: 0;
+  width: 100%;
 }
 
 .mobileMeta {
-  width: 120px;
-  min-width: 100px;
-  flex-shrink: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 20px;
+  padding-top: 12px;
 }
 
 .mobileLasMer {
   display: flex;
   justify-content: flex-end;
+  margin-top: 4px;
 }
 
-.desktopGrid {
-  display: none;
-}
-
-.desktopReadMore {
+.desktopGridContainer {
   display: none;
 }
 
@@ -167,8 +162,9 @@
 .badgeRow {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   margin-bottom: 5px;
+  height: 22px;
 }
 
 .badgeLabel {
@@ -182,7 +178,7 @@
 .badgeList {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 21px;
+  padding: 0 0 0 30px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -198,37 +194,37 @@
 .metaGroup {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 24px;
 }
 
 .metaBlock {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  gap: 5px;
+  align-items: start;
+  gap: 8px;
 }
 
 .metaBlock img {
-  margin-top: 1px;
+  margin-top: 2px;
   flex-shrink: 0;
 }
 
 .metaLabel {
   color: #9ca3af;
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin: 0 0 1px 0;
+  margin: 0 0 2px 0;
   line-height: 1;
 }
 
 .metaValue {
   color: #00355f;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .readMore {
@@ -243,6 +239,101 @@
 
 .readMore:hover {
   text-decoration: underline;
+}
+
+.detailCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.detailHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  gap: 8px;
+}
+
+.detailTitle {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.detailIconBox {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detailIconBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.detailSubtitle {
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+.detailContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detailGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.descriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.descriptionParagraph {
+  color: #00355f;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.backButtonWrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 8px;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.backButton:hover {
+  transform: scale(1.1);
 }
 
 @media (min-width: 768px) {
@@ -279,7 +370,7 @@
   }
 
   .rightPanel {
-    padding: 20px 24px 16px 20px;
+    padding: 24px 24px 16px 24px;
     background: transparent;
   }
 
@@ -287,18 +378,31 @@
     display: none;
   }
 
+  .desktopGridContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex: 1;
+  }
+
   .desktopGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
+    gap: 32px;
     align-items: start;
-    flex: 1;
+  }
+
+  .desktopCol {
+    display: flex;
+    flex-direction: column;
   }
 
   .desktopReadMore {
     display: flex;
     justify-content: flex-end;
-    margin-top: 14px;
+    margin-top: auto;
+    padding-top: 14px;
   }
 
   .sectionTitle {
@@ -306,6 +410,9 @@
     font-size: 15px;
     font-weight: 700;
     margin-bottom: 12px;
+    height: 22px;
+    display: flex;
+    align-items: center;
   }
 
   .activityList {
@@ -326,13 +433,18 @@
     margin-top: 5px;
   }
 
+  .badgeRow {
+    height: 22px;
+    margin-bottom: 12px;
+  }
+
   .badgeLabel {
     font-size: 11px;
     color: #9ca3af;
   }
 
   .badgeList {
-    padding-left: 21px;
+    padding-left: 30px;
     gap: 6px;
   }
 
@@ -342,7 +454,8 @@
   }
 
   .metaGroup {
-    gap: 12px;
+    gap: 24px;
+    padding-top: 0;
   }
 
   .metaLabel {
@@ -359,5 +472,39 @@
   .readMore {
     font-size: 14px;
     font-weight: 700;
+  }
+
+  .detailHeader {
+    padding: 32px 24px;
+    gap: 14px;
+  }
+
+  .detailTitle {
+    font-size: 26px;
+  }
+
+  .detailIconBox {
+    width: 110px;
+    height: 95px;
+  }
+
+  .detailSubtitle {
+    font-size: 14px;
+  }
+
+  .detailContent {
+    padding: 40px 50px;
+    gap: 32px;
+  }
+
+  .detailGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
+
+  .descriptionParagraph {
+    font-size: 13.5px;
+    line-height: 1.7;
   }
 }
