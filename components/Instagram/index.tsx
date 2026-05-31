@@ -2,10 +2,14 @@
 
 import Image from "next/image";
 import InstagramLogo from '@/assets/images/icons/Instagram.svg'
-import image1 from '@/assets/images/instagram/ig_1.png'
-import image2 from '@/assets/images/instagram/ig_2.png'
-import image3 from '@/assets/images/instagram/ig_3.png'
-import image4 from '@/assets/images/instagram/ig_4.png'
+import image1 from '@/assets/images/instagram/arts.jpg'
+import image2 from '@/assets/images/instagram/tents.jpg'
+import image3 from '@/assets/images/instagram/indoor_climbing.jpg'
+import image4 from '@/assets/images/instagram/sailingboat_2.jpg'
+import image5 from '@/assets/images/instagram/knitting.jpg'
+import image6 from '@/assets/images/instagram/outdoor_climbing.jpg'
+import image7 from '@/assets/images/instagram/sailingboat_one.jpg'
+import image8 from '@/assets/images/instagram/running.jpg'
 import { PostDataProps } from "@/types/instagram";
 import Post from "./Post";
 import useEmblaCarousel from "embla-carousel-react";
@@ -15,23 +19,23 @@ import CarouselButton from "./CarouselButton";
 const instagramDummyImages: PostDataProps[] = [
   {
     id: 1,
-    image: image2
+    image: image8
   },
   {
     id: 2,
-    image: image1
+    image: image7
   },
   {
     id: 3,
-    image: image3
+    image: image6
   },
   {
     id: 4,
-    image: image4
+    image: image5
   },
   {
     id: 5,
-    image: image1
+    image: image4
   },
   {
     id: 6,
@@ -39,11 +43,11 @@ const instagramDummyImages: PostDataProps[] = [
   },
   {
     id: 7,
-    image: image4
+    image: image2
   },
   {
     id: 8,
-    image: image2
+    image: image1
   }
 
 ]
