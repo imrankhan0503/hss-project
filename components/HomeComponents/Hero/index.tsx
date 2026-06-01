@@ -17,8 +17,8 @@ const HomeHero = () => {
           Upptäck havet, utveckla ledarskap och skapa livslånga minnen tillsammans med oss.
         </p>
         <div className="flex justify-center md:justify-start gap-3 md:gap-5 mt-6 md:mt-10">
-          <Link  target="_blank" href='https://www.scoutnet.se/register/in/group/764' className="px-5 md:px-8 h-12 md:h-14 flex items-center justify-center text-center rounded-full bg-background text-primary font-bold text-xs md:text-base hover:bg-secondary hover:text-background">Anmäl dig till Scouterna</Link>
-          <Link href='/verksamhet' className="px-5 md:px-8 h-12 md:h-14 flex items-center justify-center text-center rounded-full border-2 border-secondary text-secondary font-bold text-xs md:text-base hover:bg-secondary hover:text-primary">Utforska våra aktiviteter</Link>
+          <Link  target="_blank" href='https://www.scoutnet.se/register/in/group/764' className="px-5 md:px-8 h-12 md:h-14 flex items-center justify-center text-center rounded-full bg-background text-primary font-bold text-xs md:text-base hover:bg-secondary hover:text-background">Bli Scout</Link>
+          <Link href='/verksamhet' className="px-5 md:px-8 h-12 md:h-14 flex items-center justify-center text-center rounded-full border-2 border-secondary text-secondary font-bold text-xs md:text-base hover:bg-secondary hover:text-primary">Våra aktiviteter</Link>
         </div>
       </div>
     </section>
