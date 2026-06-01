@@ -6,6 +6,7 @@ import HSSLogo from "@/assets/images/logo/HSSLogo.png";
 import BiChat from "@/assets/images/icons/bi_chat.svg";
 import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
 import styles from "./footer.module.css";
+import InstagramSection from "../Instagram";
 
 const translations = {
   sv: {
@@ -55,6 +56,7 @@ export default function Footer({ locale = "sv" }: FooterProps) {
 
   return (
     <footer className={styles.footer}>
+      <InstagramSection/>
 
       <div className={styles.banner}>
         <div className={styles.bannerInner}>

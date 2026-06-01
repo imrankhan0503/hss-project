@@ -20,33 +20,33 @@ const MobileMenu = ({
     navLinks,
 }: MobileMenuProps) => {
 
-    if (!isOpen) return null
-
+  
   const menuRef = useRef<HTMLDivElement | null>(null)
-
-     useEffect(() => {
-
+  
+  useEffect(() => {
+    
     const handleClickOutside = (event: MouseEvent) => {
-
-        if (
-            menuRef.current &&
-            !menuRef.current.contains(event.target as Node)
-        ) {
-            setIsOpen(false)
-        }
-
+      
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false)
+      }
+      
     }
-
+    
     if (isOpen) {
-        document.addEventListener("mousedown", handleClickOutside)
+      document.addEventListener("mousedown", handleClickOutside)
     }
-
+    
     return () => {
-        document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("mousedown", handleClickOutside)
     }
-
-}, [isOpen, setIsOpen])
-
+    
+  }, [isOpen, setIsOpen])
+  
+  if (!isOpen) return null
 
     return (
 
