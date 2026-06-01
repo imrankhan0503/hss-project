@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import HSSLogo from "@/assets/images/logo/HSSLogo.png";
 import BiChat from "@/assets/images/icons/bi_chat.svg";
 import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
 import styles from "./footer.module.css";
-import InstagramSection from "../Instagram";
+import InstagramSection from "./Instagram";
+import JoinCTASection from "./JoinCTA";
 
 const translations = {
   sv: {
@@ -56,6 +56,7 @@ export default function Footer({ locale = "sv" }: FooterProps) {
 
   return (
     <footer className={styles.footer}>
+      <JoinCTASection/>
       <InstagramSection/>
 
       <div className={styles.banner}>
