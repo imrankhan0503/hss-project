@@ -1,7 +1,10 @@
 import { StaticImageData } from "next/image"
 
 export type PostProps = {
-  image: StaticImageData
+  media_url: StaticImageData,
+  caption:string,
+  permalink:string
+
 }
 
 export type PostDataProps = PostProps & {

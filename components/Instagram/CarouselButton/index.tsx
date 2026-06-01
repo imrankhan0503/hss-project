@@ -6,7 +6,7 @@ type CarouselButtonProps = {
 
 const CarouselButton = ({ index, imageIndex, onChange }: CarouselButtonProps) => {
   return (
-    <button onClick={() => onChange(index)} className={`h-4 w-4 rounded-full ${imageIndex === index ? 'bg-primary' : 'bg-primary/20'}`} />
+    <button onClick={() => onChange(index)} className={`h-4 w-4 rounded-full ${imageIndex === index ? 'bg-primary' : 'bg-primary/20'}`} aria-label="a slider button" />
   )
 }
 export default CarouselButton;

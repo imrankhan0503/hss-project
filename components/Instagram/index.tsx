@@ -1,53 +1,69 @@
 'use client'
 
 import Image from "next/image";
+import { useState, useCallback, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import InstagramLogo from '@/assets/images/icons/Instagram.svg'
-import image1 from '@/assets/images/instagram/arts.jpg'
-import image2 from '@/assets/images/instagram/tents.jpg'
-import image3 from '@/assets/images/instagram/indoor_climbing.jpg'
-import image4 from '@/assets/images/instagram/sailingboat_2.jpg'
-import image5 from '@/assets/images/instagram/knitting.jpg'
-import image6 from '@/assets/images/instagram/outdoor_climbing.jpg'
-import image7 from '@/assets/images/instagram/sailingboat_one.jpg'
-import image8 from '@/assets/images/instagram/running.jpg'
+import image1 from '@/assets/images/instagram/running.jpg'
+import image2 from '@/assets/images/instagram/sailingboat_one.jpg'
+import image3 from '@/assets/images/instagram/outdoor_climbing.jpg'
+import image4 from '@/assets/images/instagram/knitting.jpg'
+import image5 from '@/assets/images/instagram/sailingboat_2.jpg'
+import image6 from '@/assets/images/instagram/indoor_climbing.jpg'
+import image7 from '@/assets/images/instagram/tents.jpg'
+import image8 from '@/assets/images/instagram/arts.jpg'
 import { PostDataProps } from "@/types/instagram";
 import Post from "./Post";
-import useEmblaCarousel from "embla-carousel-react";
-import { useState, useCallback, useEffect } from "react";
 import CarouselButton from "./CarouselButton";
 
 const instagramDummyImages: PostDataProps[] = [
   {
     id: 1,
-    image: image8
+    media_url: image1,
+    permalink: 'https://www.instagram.com/p/DZABmSriAD_/',
+    caption: 'Kids marathon'
   },
   {
     id: 2,
-    image: image7
+    media_url: image2,
+    permalink: 'https://www.instagram.com/p/DZABgHnCDOq/',
+    caption: 'Sailing boat in stockholm'
   },
   {
     id: 3,
-    image: image6
+    media_url: image3,
+    permalink: 'https://www.instagram.com/p/DZABYd-iJaj/',
+    caption: 'Outdoor climbing'
   },
   {
     id: 4,
-    image: image5
+    media_url: image4,
+    permalink: 'https://www.instagram.com/p/DZABRUKCDqg/',
+    caption: 'Knitting activity'
   },
   {
     id: 5,
-    image: image4
+    media_url: image5,
+    permalink: 'https://www.instagram.com/p/DZABLihiAc8/',
+    caption: 'Sailboats'
   },
   {
     id: 6,
-    image: image3
+    media_url: image6,
+    permalink: 'https://www.instagram.com/p/DZABEERCBWs/',
+    caption: 'Rock climbing'
   },
   {
     id: 7,
-    image: image2
+    media_url: image7,
+    permalink: 'https://www.instagram.com/p/DZAA4ZaiKb3/',
+    caption: 'Our camping site'
   },
   {
     id: 8,
-    image: image1
+    media_url: image8,
+    permalink: 'https://www.instagram.com/p/DZAAyEMCNki/',
+    caption: 'Kids doing crafts'
   }
 
 ]
