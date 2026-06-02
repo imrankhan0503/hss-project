@@ -68,20 +68,20 @@ const Navigation = () => {
 
             <div className="text-[#00355F] leading-tight text-sm -mr-4">
 
-              <p className="font-semibold text-sm">
+                            <p className="font-semibold text-sm">
 
-                {t("headerlogotext.line1")}
-              </p>
+                               {t("headerlogotext.line1")}
+                            </p>
 
-              <p className="font-semibold text-sm">
+                            <p className="font-semibold text-sm">
+                                
+                                {t("headerlogotext.line2")}
+                            </p>
 
-                {t("headerlogotext.line2")}
-              </p>
-
-              <p className="text-xs">
-
-                {t("headerlogotext.line3")}
-              </p>
+                            <p className="text-xs">
+                                
+                                {t("headerlogotext.line3")}
+                            </p>
 
             </div>
 
