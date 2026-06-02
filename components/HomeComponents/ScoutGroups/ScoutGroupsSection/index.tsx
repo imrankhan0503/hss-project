@@ -2,6 +2,7 @@ import SjohumlorIcon from '@/assets/images/icons/sjohumlor_icon.png'
 import KaparnaIcon from '@/assets/images/icons/kaparna_icon.png'
 import KonvojenIcon from '@/assets/images/icons/konvojen_icon.png'
 import UtmanareIcon from '@/assets/images/icons/utmanare_icon.png'
+import FamiljescoutIcon from '@/assets/images/icons/familyscout_icon.png'
 import ScoutGroupCard from '../ScoutGroupCard'
 import { ScoutGroupCardData } from '@/types/home'
 
@@ -38,13 +39,20 @@ const scoutGroupsSectionData: ScoutGroupCardData[] = [
     href: '/sjohumlor',
     icon: UtmanareIcon
   },
-
+  {
+    id: 5,
+    title: 'Familjescout',
+    description: 'Familj',
+    color: 'bg-card-five',
+    href: '/familjescout',
+    icon: FamiljescoutIcon
+  }
 ]
 
 const ScoutGroupsSection = () => {
   return (
     <section className="px-6 py-12 md:px-[70px] md:py-16 bg-(--primary)/20">
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6 md:gap-8 mx-auto">
         {scoutGroupsSectionData && scoutGroupsSectionData.map(s => (
           <ScoutGroupCard key={s.id} {...s} />
         ))}
