@@ -106,13 +106,13 @@ const Navigation = () => {
           </div>
         </div>
 
-        <MobileMenu
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          pathname={pathname}
-          navLinks={navLinks}
-        />
       </nav>
+      <MobileMenu
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        pathname={pathname}
+        navLinks={navLinks}
+      />
     </header>
   )
 }
