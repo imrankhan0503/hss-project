@@ -6,6 +6,7 @@
   --card-category-one-background: #3EB52C;
   --card-category-three-background: #FF7024;
   --card-category-two-background: #01A8DF;
+  --card-category-five-background: #652482;
   --primary-color: #00355F;
   --secondary-color: #F4AB00;
   --section-background: #00355F;
@@ -22,6 +23,7 @@
   --color-card-two: var(--card-category-two-background);
   --color-card-three: var(--card-category-three-background);
   --color-card-four: var(--card-category-four-background);
+  --color-card-five: var(--card-category-five-background);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-inter);
 }
