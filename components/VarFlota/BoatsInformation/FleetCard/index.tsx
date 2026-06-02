@@ -23,27 +23,50 @@ const FleetCard = ({ title, subtitle, description, bulletPoints, icon, image }: 
         <section
 
             // If card has image: use image background and secondary text. If no image: use white background and primary text.
-            className={`min-h-96 rounded-3xl bg-cover bg-center p-8 ${image
-                ? "flex flex-col justify-end bg-primary/20 text-secondary"
-                : "border border-primary/25 bg-background text-primary"
+            className={`rounded-3xl ${image
+                ? "text-secondary"
+                : "min-h-96 border border-primary/25 bg-background p-8 text-primary"
                 }`}
-            style={image ? { backgroundImage: `url(${image.src})` } : undefined}
         >
             {image ? (
                 /* If card has image */
-                <div className={`flex flex-col ${imageTextPosition}`}>
-                    <h3 className="text-2xl font-bold leading-8">
+                <div className="flex flex-col">
+
+                    {/* Mobile: title above image  */}
+                    <h3 className="mb-3 text-center text-2xl font-bold text-primary md:hidden">
                         {title}
                     </h3>
 
+                    {/* Image card: used on both mobile and desktop */}
+                    <div
+                        className="relative flex h-72 overflow-hidden rounded-3xl bg-cover bg-center p-8 md:min-h-96 md:flex-col md:justify-end"
+                        style={{ backgroundImage: `url(${image.src})` }}
+                    >
+                        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+
+                        {/* Desktop: title and subtitle inside image */}
+                        <div className={`relative hidden flex-col md:flex ${imageTextPosition}`}>
+                            <h3 className="text-2xl font-bold leading-8 drop-shadow-lg">
+                                {title}
+                            </h3>
+
+                            {subtitle && (
+                                <p className="mt-2 max-w-md text-xl font-medium leading-8 drop-shadow-lg">
+                                    {subtitle}
+                                </p>
+                            )}
+                        </div>
+                    </div>
+
+                    {/* Mobile: subtitle below image */}
                     {subtitle && (
-                        <p className="mt-2 max-w-md text-xl font-medium leading-8">
+                        <p className="mt-3 text-center text-lg font-medium text-primary md:hidden">
                             {subtitle}
                         </p>
                     )}
                 </div>
             ) : (
-                /* If card doesn't have image */
+                /* If card doesn't have image: description + bullet points */
                 <div>
                     <div className="mb-6 flex items-center gap-4">
                         {icon && (
@@ -60,13 +83,13 @@ const FleetCard = ({ title, subtitle, description, bulletPoints, icon, image }: 
                     </div>
 
                     {description && (
-                        <p className="mt-6 max-w-md text-base leading-9">
+                        <p className="mt-6 max-w-md text-lg leading-9">
                             {description}
                         </p>
                     )}
 
                     {bulletPoints && (
-                        <ul className="mt-6 list-disc space-y-2 pl-6 text-base font-medium leading-8">
+                        <ul className="mt-6 list-disc space-y-2 pl-6 text-lg font-medium leading-8">
                             {bulletPoints.map((point) => (
                                 <li key={point}>{point}</li>
                             ))}
