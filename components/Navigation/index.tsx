@@ -71,15 +71,18 @@ const Navigation = () => {
                         <div className="text-[#00355F] leading-tight text-sm -mr-4">
 
                             <p className="font-semibold text-sm">
-                               Hässelby Strands
+
+                               {t("headerlogotext.line1")}
                             </p>
 
                             <p className="font-semibold text-sm">
-                                Sjöscoutkår
+                                
+                                {t("headerlogotext.line2")}
                             </p>
 
                             <p className="text-xs">
-                                sedan 1959
+                                
+                                {t("headerlogotext.line3")}
                             </p>
 
                         </div>
