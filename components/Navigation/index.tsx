@@ -27,13 +27,13 @@ const Navigation = () => {
   ]
 
   return (
-    <header className="w-full sticky top-0 z-[9999] bg-white isolate">
+    <header className="w-full sticky top-0 z-[9999] bg-white">
       <nav className="relative mx-auto max-w-7xl px-4 py-3">
-        <div className="flex items-center justify-between gap-6">
+        <div className="flex items-center justify-between gap-3 md:gap-3">
           <Link
             href="/"
             aria-label="Go to homepage"
-            className="flex shrink-0 items-center gap-3"
+            className="flex shrink-0 items-center gap-2 min-w-0"
             onClick={() => setIsOpen(false)}
           >
             <Image
@@ -43,14 +43,16 @@ const Navigation = () => {
               height={52}
               priority />
 
-            <div className="text-sm leading-tight text-[#00355F]">
-              <p className="text-sm font-semibold">
+            
+
+            <div className="text-sm leading-tight text-[#00355F] min-w-0">
+              <p className="text-xs font-semibold truncate md:text-sm">
                 {t("headerlogotext.line1")}
               </p>
-              <p className="text-sm font-semibold">
+              <p className="text-xs font-semibold truncate md:text-sm">
                 {t("headerlogotext.line2")}
               </p>
-              <p className="text-xs">
+              <p className="text-xs truncate">
                 {t("headerlogotext.line3")}
               </p>
             </div>
@@ -80,7 +82,7 @@ const Navigation = () => {
 
           {/* MOBILE RIGHT SIDE */}
           <div className="ml-auto flex shrink-0 items-center gap-1 md:hidden">
-            <div className="text-sm">
+            <div className="text-sm scale-90">
               <NavItem
                 title={t("nav.join")}
                 link="https://www.scoutnet.se/register/in/group/764"
@@ -106,13 +108,13 @@ const Navigation = () => {
           </div>
         </div>
 
-      </nav>
       <MobileMenu
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         pathname={pathname}
         navLinks={navLinks}
-      />
+        />
+        </nav>
     </header>
   )
 }

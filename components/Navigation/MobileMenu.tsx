@@ -45,7 +45,7 @@ const MobileMenu = ({
   return (
     <div
       ref={menuRef}
-      className="absolute left-0 right-0 top-full z-50 flex flex-col bg-white p-5 shadow-lg md:hidden"  >
+      className="absolute left-0 right-0 top-full w-full z-50 flex flex-col bg-white p-5 shadow-lg md:hidden"  >
       <button
         type="button"
         onClick={() => setIsOpen(false)}
