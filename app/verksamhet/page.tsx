@@ -7,8 +7,12 @@ import CcSchedule from "../../components/CcSchedule";
 import { groups } from "../../data/hssdata";
 import HeroSection from "@/components/shared/HeroSection";
 import { heroSectionData } from "@/data/heroSectionData";
+import { t } from "@/i18n/t"
+import { useLang } from "@/i18n/useLang";
 
 const VerksamhetContent = () => {
+  useLang()
+  const data = heroSectionData.verksamhet
   const searchParams = useSearchParams();
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
@@ -19,7 +23,10 @@ const VerksamhetContent = () => {
 
   return (
     <main className="pb-16">
-      <HeroSection {...heroSectionData.verksamhet} />
+      <HeroSection title={t(data.titleKey)}
+              subtitle={t(data.subtitleKey)}
+               />
+
       <VerksamhetCards
         groups={groups}
         expandedId={expandedId}
