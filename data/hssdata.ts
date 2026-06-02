@@ -4,6 +4,7 @@ import SjohumlorIcon from "../assets/images/icons/sjohumlor_icon.png";
 import KaparnaIcon from "../assets/images/icons/kaparna_icon.png";
 import KonvojenIcon from "../assets/images/icons/konvojen_icon.png";
 import UtmanareIcon from "../assets/images/icons/utmanare_icon.png";
+import FamiljescoutIcon from "../assets/images/icons/familyscout_icon.png";
 
 import GreenMedalIcon from "../assets/images/icons/greenmedal.svg";
 import GreenTimeIcon from "../assets/images/icons/greentime.svg";
@@ -28,6 +29,12 @@ import PinkTimeIcon from "../assets/images/icons/pinktime.svg";
 import PinkLocationIcon from "../assets/images/icons/pinkmp.svg";
 import PinkLeaderIcon from "../assets/images/icons/pinkledare.svg";
 import PinkBackIcon from "../assets/images/icons/pinkback.svg";
+
+import PurpleMedalIcon from "../assets/images/icons/purplemedal.svg";
+import PurpleTimeIcon from "../assets/images/icons/purpletime.svg";
+import PurpleLocationIcon from "../assets/images/icons/purplemp.svg";
+import PurpleLeaderIcon from "../assets/images/icons/purpleledare.svg";
+import PurpleBackIcon from "../assets/images/icons/purpleback.svg";
 
 export interface VerksamhetGroup {
   id: string;
@@ -109,13 +116,7 @@ export const groups: VerksamhetGroup[] = [
       "Segla kölbåt",
       "Släcka mindre bränder",
     ],
-    badges: [
-      "Tända eld",
-      "Schiffer",
-      "Repmärket",
-      "LABC",
-      "Tvåkrona",
-    ],
+    badges: ["Tända eld", "Schiffer", "Repmärket", "LABC", "Tvåkrona"],
     meetingDays: "Onsdagar",
     meetingTime: "18:30–20:15",
     meetingPlace: "Scoutlokalen Ruffen (Hässelby Strand)",
@@ -191,5 +192,40 @@ export const groups: VerksamhetGroup[] = [
     leader: "Abcxxx",
     description:
       'HSS utmanarscoutlag upphör aldrig att existera! Efter tiden som utmanarscout är man ett tätt sammansvetsat gäng. Det är inte ovanligt att man håller kontakten livet ut. (Tidigare hette denna avdelning "seniorscout")\n\nNär man kommer upp från äventyrarscouterna bildar man ett lag tillsammans med kullkamraterna. Sedan arbetar man mot att lära sig nya saker och anta svårare utmaningar för att öka sammanhållningen. Under de första åren har man ledare med sig och allt eftersom man utvecklas blir man själv ledare på de andra avdelningarna.\n\nUtmanarscouterna seglar själva i skärgården när de uppnått tillräcklig kunskapsnivå.\n\nVarje utmanarscoutlag hittar på sitt eget namn (av tradition slutar de på -arne och laget kallas "fjantarne" till dess att de kommit på ett eget namn.\n\nMötena sker på tisdagar eller onsdagar.',
+  },
+  {
+    id: "familjescout",
+    title: "Familjescout",
+    subtitle: "Familj",
+    color: "bg-card-familj",
+    bulletColor: "#652482",
+    icon: FamiljescoutIcon,
+    iconWidth: 100,
+    iconHeight: 88,
+    badgeIcon: PurpleMedalIcon,
+    timeIcon: PurpleTimeIcon,
+    locationIcon: PurpleLocationIcon,
+    leaderIcon: PurpleLeaderIcon,
+    backIcon: PurpleBackIcon,
+    activities: [
+      "Tälja med kniv",
+      "Övernattningar",
+      "Lägga bandage",
+      "Segla optimistjollar",
+      "Samarbeta i patruller",
+    ],
+    badges: [
+      "Lyktmärket",
+      "Underhållning",
+      "Knopmärket",
+      "Sjukvårdsmärket",
+      "Optimist",
+    ],
+    meetingDays: "Måndagar",
+    meetingTime: "18:30–20:00",
+    meetingPlace: "Scoutlokalen Ruffen (Hässelby Strand)",
+    leader: "Abcxxx",
+    description:
+      'Vid 8 års ålder kan man börja i HSS, dvs när man börjar i årskurs 2. Man blir då Spårarscout och medlem i avdelningen Sjöhumlorna. (Tidigare hette spårarscout "familjescout")\n\nVi har möten varje vecka samt övernattningar, både hajker och längre läger.\n\nHär får barnen lära sig knopar, grundläggande naturkunskap och sjömanskap på ett lekfullt sätt.\n\nDu lär dig något nytt nästan varje dag i Scouterna, det är alltid roliga saker men ibland är de också väldigt bra att kunna. Som att tälja med kniv eller lägga bandage på någon som gjort sig illa. Till skillnad från hur man gör i skolan läser vi inga böcker om knivar och bandage, vi lär oss genom att göra, genom att prova på allt på riktigt istället. Medans vi gör det samarbetar vi i patruller, små grupper där alla är med och bestämmer. Det är smart, för tillsammans kan man alltid hjälpas åt att hitta på ännu roligare saker.\n\nVi seglar optimistjollar och 2-kronor.\n\nSjöhumlorna har möten på måndagar i vår fina lokal Ruffen vid Hässelby Strandbad.\n\nNär man är scout gör man alltid sitt bästa och det gör inget om det råkar bli fel, därför brukar vi tänka lite på hur allting gått till så att vi blir bättre till nästa gång.',
   },
 ];
