@@ -15,7 +15,7 @@ const translations = {
     cta: "Kom igång",
     tagline: "Scouting på vattnet sedan 1959",
     contact: "Kontakt",
-    email: "info@hss.scout.se",
+    email: "info@hss-scout.org",
     address: "Ruffen | Hässelby Strands Sjöscoutkår,Hässelby, 165 65 Stockholm",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Ruffen+Hässelby+Strands+Sjöscoutkår+Stockholm",
     followUs: "Följ oss",
@@ -32,7 +32,7 @@ const translations = {
     cta: "Get started",
     tagline: "Scouting on the water since 1959",
     contact: "Contact",
-    email: "info@hss.scout.se",
+    email: "info@hss-scout.org",
     address: "Ruffen | Hässelby Strands Sjöscoutkår,Hässelby, 165 65 Stockholm",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Ruffen+Hässelby+Strands+Sjöscoutkår+Stockholm",
     followUs: "Follow us",
@@ -56,8 +56,8 @@ export default function Footer({ locale = "sv" }: FooterProps) {
 
   return (
     <footer className={styles.footer}>
-      <JoinCTASection/>
-      <InstagramSection/>
+      <JoinCTASection />
+      <InstagramSection />
 
       <div className={styles.banner}>
         <div className={styles.bannerInner}>
@@ -89,7 +89,6 @@ export default function Footer({ locale = "sv" }: FooterProps) {
 
       <div className={styles.body}>
         <div className={styles.bodyInner}>
-
           <div className={styles.brand}>
             <div className={styles.brandLogo}>
               <Image
@@ -125,7 +124,6 @@ export default function Footer({ locale = "sv" }: FooterProps) {
             <h3 className={styles.colHeading}>{t.followUs}</h3>
 
             <div className={styles.socialIcons}>
-
               <a
                 href="https://www.instagram.com/hss_scout/"
                 target="_blank"
@@ -155,19 +153,15 @@ export default function Footer({ locale = "sv" }: FooterProps) {
               >
                 <FaFacebookF />
               </a>
-
             </div>
           </div>
-
         </div>
       </div>
 
       <div className={styles.bottomBar}>
         <div className={styles.bottomInner}>
-
           <div className={styles.bottomTop}>
             <p className={styles.copyright}>{t.copyright}</p>
-            
           </div>
 
           <div className={styles.partnerRow}>
@@ -175,10 +169,8 @@ export default function Footer({ locale = "sv" }: FooterProps) {
             <span className={styles.partnerName}>{t.stockholm}</span>
             <span className={styles.partnerName}>{t.stadhsbk}</span>
           </div>
-
         </div>
       </div>
-
     </footer>
   );
 }
