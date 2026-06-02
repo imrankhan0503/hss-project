@@ -17,7 +17,7 @@ const Navigation = () => {
 
    const navLinks = [
   { title: t("nav.home"), link: "/" },
-  { title: t("nav.interest"), link: "/anmal-intresse" },
+  // { title: t("nav.interest"), link: "/anmal-intresse" },
   { title: t("nav.fleet"), link: "/var-flotta" },
   { title: t("nav.activity"), link: "/verksamhet" },
   { title: t("nav.parents"), link: "/foraldrar" },
