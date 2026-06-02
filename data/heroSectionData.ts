@@ -23,4 +23,9 @@ export const heroSectionData = {
     subtitle: "Information, svar och resurser för er som vårdnadshavare",
     image: ForaldrarTop,
   },
+  kontaktaOss:
+  {
+    title: 'Kontakta Oss',
+    subtitle: '  Oavsett om du har en fråga, behöver support eller vill veta mer - vi finns här för dig.'
+  }
 };
