@@ -4,22 +4,15 @@ import { useState } from "react";
 import VerksamhetCards from "../../components/VerksamhetCards";
 import CcSchedule from "../../components/CcSchedule";
 import { groups } from "../../data/hssdata";
+import HeroSection from "@/components/shared/HeroSection";
+import { heroSectionData } from "@/data/heroSectionData";
 
-export default function VerksamhetPage() {
+const VerksamhetPage = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   return (
     <main className="pb-16">
-      <section className="w-full min-h-[220px] md:h-[254px] bg-[#00355F] flex items-center justify-center px-4 py-10 relative overflow-hidden">
-        <div className="text-center max-w-3xl z-10">
-          <h1 className="text-[#F4AB00] text-2xl sm:text-3xl md:text-5xl font-semibold leading-tight">
-            Vår Verksamhet
-          </h1>
-          <p className="mt-3 md:mt-4 text-[#F4AB00] text-sm sm:text-base md:text-xl font-medium">
-            Från 8 år till vuxen - vi har aktiviteter för alla åldrar
-          </p>
-        </div>
-      </section>
+      <HeroSection {...heroSectionData.verksamhet} />
 
       <VerksamhetCards
         groups={groups}
@@ -30,4 +23,6 @@ export default function VerksamhetPage() {
       <CcSchedule groups={groups} />
     </main>
   );
-}
+};
+
+export default VerksamhetPage;
