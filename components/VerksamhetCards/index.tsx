@@ -16,7 +16,7 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
   if (expandedGroup) {
     return (
       <div className={styles.wrapper}>
-        <div className={styles.detailCard}style={{ borderColor: expandedGroup.bulletColor }}>
+        <div className={styles.detailCard} style={{ borderColor: expandedGroup.bulletColor }}>
           <div
             className={styles.detailHeader}
             style={{ backgroundColor: expandedGroup.bulletColor }}
@@ -65,49 +65,6 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
                     <li key={badge}>{badge}</li>
                   ))}
                 </ul>
-              </div>
-
-              <div className={styles.desktopCol}>
-                <div className={styles.metaGroup}>
-                  <div className={styles.metaBlock}>
-                    <Image
-                      src={expandedGroup.timeIcon}
-                      alt="Tid"
-                      width={22}
-                      height={22}
-                    />
-                    <div>
-                      <p className={styles.metaLabel}>Mötestider</p>
-                      <p className={styles.metaValue}>
-                        {expandedGroup.meetingDays} ({expandedGroup.meetingTime})
-                      </p>
-                    </div>
-                  </div>
-                  <div className={styles.metaBlock}>
-                    <Image
-                      src={expandedGroup.locationIcon}
-                      alt="Plats"
-                      width={22}
-                      height={22}
-                    />
-                    <div>
-                      <p className={styles.metaLabel}>Mötesplats</p>
-                      <p className={styles.metaValue}>{expandedGroup.meetingPlace}</p>
-                    </div>
-                  </div>
-                  <div className={styles.metaBlock}>
-                    <Image
-                      src={expandedGroup.leaderIcon}
-                      alt="Ledare"
-                      width={22}
-                      height={22}
-                    />
-                    <div>
-                      <p className={styles.metaLabel}>Ledare</p>
-                      <p className={styles.metaValue}>{expandedGroup.leader}</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -186,47 +143,21 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
                     </ul>
                   </div>
 
-                  <div className={styles.mobileMeta}>
-                    <div className={styles.metaBlock}>
+                  <div className={styles.mobileBadges}>
+                    <div className={styles.badgeRow}>
                       <Image
-                        src={group.timeIcon}
-                        alt="Tid"
-                        width={22}
-                        height={22}
+                        src={group.badgeIcon}
+                        alt="Märken"
+                        width={20}
+                        height={20}
                       />
-                      <div>
-                        <p className={styles.metaLabel}>Mötestider</p>
-                        <p className={styles.metaValue}>
-                          {group.meetingDays} ({group.meetingTime})
-                        </p>
-                      </div>
+                      <p className={styles.badgeLabel}>Märken &amp; Färdigheter</p>
                     </div>
-                    <div className={styles.metaBlock}>
-                      <Image
-                        src={group.locationIcon}
-                        alt="Plats"
-                        width={22}
-                        height={22}
-                      />
-                      <div>
-                        <p className={styles.metaLabel}>Mötesplats</p>
-                        <p className={styles.metaValue}>
-                          {group.meetingPlace}
-                        </p>
-                      </div>
-                    </div>
-                    <div className={styles.metaBlock}>
-                      <Image
-                        src={group.leaderIcon}
-                        alt="Ledare"
-                        width={22}
-                        height={22}
-                      />
-                      <div>
-                        <p className={styles.metaLabel}>Ledare</p>
-                        <p className={styles.metaValue}>{group.leader}</p>
-                      </div>
-                    </div>
+                    <ul className={styles.badgeList}>
+                      {group.badges.map((badge) => (
+                        <li key={badge}>{badge}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
@@ -275,49 +206,6 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
                         <li key={badge}>{badge}</li>
                       ))}
                     </ul>
-                  </div>
-
-                  <div className={styles.desktopCol}>
-                    <div className={styles.metaGroup}>
-                      <div className={styles.metaBlock}>
-                        <Image
-                          src={group.timeIcon}
-                          alt="Tid"
-                          width={22}
-                          height={22}
-                        />
-                        <div>
-                          <p className={styles.metaLabel}>Mötestider</p>
-                          <p className={styles.metaValue}>
-                            {group.meetingDays} ({group.meetingTime})
-                          </p>
-                        </div>
-                      </div>
-                      <div className={styles.metaBlock}>
-                        <Image
-                          src={group.locationIcon}
-                          alt="Plats"
-                          width={22}
-                          height={22}
-                        />
-                        <div>
-                          <p className={styles.metaLabel}>Mötesplats</p>
-                          <p className={styles.metaValue}>{group.meetingPlace}</p>
-                        </div>
-                      </div>
-                      <div className={styles.metaBlock}>
-                        <Image
-                          src={group.leaderIcon}
-                          alt="Ledare"
-                          width={22}
-                          height={22}
-                        />
-                        <div>
-                          <p className={styles.metaLabel}>Ledare</p>
-                          <p className={styles.metaValue}>{group.leader}</p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
