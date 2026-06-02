@@ -4,7 +4,7 @@ import SuccessIcon from "@/assets/images/icons/success-icon.svg"
 
 const SuccessForm = () => {
     return (
-        <div className="flex min-h-155 flex-col items-center justify-center px-8 py-10 text-center text-primary">
+        <div className="flex min-h-120 flex-col items-center justify-center px-4 py-4 text-center text-primary">
             <Image
                 src={LogoImage}
                 alt="Hässelby Strands Sjöscoutkår"
