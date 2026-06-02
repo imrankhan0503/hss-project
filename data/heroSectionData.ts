@@ -6,26 +6,25 @@ export const heroSectionData = {
     title: "Anmäl Intresse",
     subtitle: "Börja din resa med Hässelby Strands Sjöscoutkår idag",
   },
-
   varFlotta: {
-    title: "Vår Flotta & Lokaler",
-    subtitle: "Utforska våra båtar och de platser där vi samlas och seglar",
+    titleKey: "herosection.varFlotta.title",
+    subtitleKey: "herosection.varFlotta.subtitle",
     image: VarFlottaTop,
   },
 
   verksamhet: {
-    title: "Vår Verksamhet",
-    subtitle: "Från 8 år till vuxen - vi har aktiviteter för alla åldrar",
+    titleKey: "herosection.verksamhet.title",
+    subtitleKey: "herosection.verksamhet.subtitle",
   },
 
   foraldrar: {
-    title: "För Föräldrar",
-    subtitle: "Information, svar och resurser för er som vårdnadshavare",
+    titleKey: "herosection.foraldrar.title",
+    subtitleKey: "herosection.foraldrar.subtitle",
     image: ForaldrarTop,
   },
-  kontaktaOss:
-  {
-    title: 'Kontakta Oss',
-    subtitle: '  Oavsett om du har en fråga, behöver support eller vill veta mer - vi finns här för dig.'
+
+  kontaktaOss: {
+    titleKey: "herosection.kontaktaOss.title",
+    subtitleKey: "herosection.kontaktaOss.subtitle",
   }
 };
