@@ -49,9 +49,7 @@ const Navigation = () => {
 
     <header className="w-full sticky top-0 z-50 bg-white">
 
-
       <nav className="max-w-7xl mx-auto px-4 py-3 relative overflow-x-hidden">
-
         <div className="flex items-center justify-between gap-6">
 
           <Link
@@ -68,35 +66,21 @@ const Navigation = () => {
               priority
             />
 
-<<<<<<< HEAD
             <div className="text-[#00355F] leading-tight text-sm -mr-4">
 
               <p className="font-semibold text-sm">
-                Hässelby Strands
+
+                {t("headerlogotext.line1")}
               </p>
 
               <p className="font-semibold text-sm">
-                Sjöscoutkår
+
+                {t("headerlogotext.line2")}
               </p>
-=======
-                            <p className="font-semibold text-sm">
-
-                               {t("headerlogotext.line1")}
-                            </p>
-
-                            <p className="font-semibold text-sm">
-                                
-                                {t("headerlogotext.line2")}
-                            </p>
-
-                            <p className="text-xs">
-                                
-                                {t("headerlogotext.line3")}
-                            </p>
->>>>>>> 001-feature-navigation
 
               <p className="text-xs">
-                sedan 1959
+
+                {t("headerlogotext.line3")}
               </p>
 
             </div>
