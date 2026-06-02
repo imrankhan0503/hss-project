@@ -76,7 +76,7 @@ const ContactInfoForm = ({ onSubmit }: ContactInfoFormProps) => {
         <button
           type='submit'
           disabled={isSubmitting}
-          className="h-14 w-64 rounded-[10px] bg-primary text-xl font-bold text-secondary">
+          className="h-14 w-56 md:w-64 rounded-[10px] bg-primary text-lg md:text-xl font-bold text-secondary">
           {isSubmitting ? 'Skickar...' : 'Skicka'}
         </button>
       </div>

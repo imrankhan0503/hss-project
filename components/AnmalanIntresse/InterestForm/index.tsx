@@ -11,7 +11,7 @@ const InterestForm = () => {
 
         <section className="w-full max-w-175 rounded-3xl bg-background px-15 py-10">
 
-            <div className="mb-14 flex items-center justify-between">
+            <div className="mb-2 flex items-center justify-between">
                 <h1
                     className={`text-3xl font-bold text-primary ${step === 2 ? "hidden md:block" : ""}`}>
                     Fråga Oss
