@@ -7,5 +7,12 @@
     "parents": "For Parents",
     "join": "Join",
     "contact": "Contact us"
+  },
+
+  "headerlogotext": {
+    "line1": "Hasselby Strand",
+    "line2": "Sea Scout Troop",
+    "line3": "since 1959"
   }
+  
 }
