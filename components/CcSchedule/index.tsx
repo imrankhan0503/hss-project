@@ -17,16 +17,16 @@ export default function CcSchedule({ groups }: Props) {
         }}
       >
         <div className="grid grid-cols-3 md:grid-cols-4 text-center mb-5">
-          <p className="text-[#00355F] font-bold text-[11px] md:text-[16px]">
+          <p className="text-[#00355F] font-bold text-[15px] md:text-[20px]">
             Dag
           </p>
-          <p className="text-[#00355F] font-bold text-[11px] md:text-[16px]">
+          <p className="text-[#00355F] font-bold text-[15px] md:text-[20px]">
             Avdelning
           </p>
-          <p className="text-[#00355F] font-bold text-[11px] md:text-[16px]">
+          <p className="text-[#00355F] font-bold text-[15px] md:text-[20px]">
             Tid
           </p>
-          <p className="text-[#00355F] font-bold hidden md:block md:text-[16px]">
+          <p className="text-[#00355F] font-bold hidden md:block md:text-[20px]">
             Plats
           </p>
         </div>
@@ -37,19 +37,19 @@ export default function CcSchedule({ groups }: Props) {
               key={item.id}
               className="grid grid-cols-3 md:grid-cols-4 text-center items-center"
             >
-              <p className="text-[#00355F] font-semibold text-[10px] md:text-[14px]">
+              <p className="text-[#00355F] font-semibold text-[13px] md:text-[18px]">
                 {item.meetingDays}
               </p>
               <p
-                className="font-bold text-[10px] md:text-[14px]"
+                className="font-bold text-[13px] md:text-[18px]"
                 style={{ color: item.bulletColor }}
               >
                 {item.title}
               </p>
-              <p className="text-[#00355F] font-semibold text-[10px] md:text-[14px]">
+              <p className="text-[#00355F] font-semibold text-[13px] md:text-[18px]">
                 {item.meetingTime}
               </p>
-              <p className="text-[#00355F] font-semibold hidden md:block md:text-[14px]">
+              <p className="text-[#00355F] font-semibold hidden md:block md:text-[18px]">
                 Scoutlokalen Ruffen
               </p>
             </div>
