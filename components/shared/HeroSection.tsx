@@ -39,7 +39,7 @@ const HeroSection = ({
 
   return (
     <section className="w-full min-h-[220px] md:h-[254px] bg-[#00355F] flex items-center justify-center py-10 px-4">
-      <div className="text-center max-w-3xl">
+      <div className="text-center">
         <h1 className="text-[#F4AB00] text-2xl sm:text-4xl md:text-5xl font-semibold leading-tight">
           {title}
         </h1>
