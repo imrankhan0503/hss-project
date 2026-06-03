@@ -13,11 +13,12 @@ const FleetCard = ({ title, subtitle, description, bulletPoints, icon, image }: 
 
     // Unique position of texts for 2nd, 3rd, 4th cards
     const imageTextPosition =
-        title === "Optimist"
-            ? "items-center text-center"
-            : title === "2-kronor"
-                ? "items-end text-left"
-                : "items-start text-left"
+        title === 'optimist'
+            ? 'items-center text-center'
+            : title === 'twoKronor'
+                ? 'items-end text-left'
+                : 'items-start text-left'
+
 
     return (
         <section
@@ -90,8 +91,8 @@ const FleetCard = ({ title, subtitle, description, bulletPoints, icon, image }: 
 
                     {bulletPoints && (
                         <ul className="mt-6 list-disc space-y-2 pl-6 text-lg font-medium leading-8">
-                            {bulletPoints.map((point) => (
-                                <li key={point}>{point}</li>
+                            {bulletPoints.map((point, index) => (
+                                <li key={index}>{point}</li>
                             ))}
                         </ul>
                     )}
