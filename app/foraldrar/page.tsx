@@ -1,6 +1,7 @@
 'use client'
 
 import SafetySection from "@/components/Foraldrar/SafetySection";
+import GeneralQuestions from "@/components/Foraldrar/GeneralQuestions";
 import DocumentsStorage from "@/components/Foraldrar/DocumentsDownloads";
 import HeroSection from "@/components/shared/HeroSection";
 import { heroSectionData } from "@/data/heroSectionData";
@@ -17,6 +18,7 @@ const ForaldrarPage = () => {
         image={data.image} /> 
 
       <SafetySection />
+      <GeneralQuestions/>
       <DocumentsStorage />
     </main>
   );
