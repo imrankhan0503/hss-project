@@ -2,11 +2,15 @@ import enNav from './locales/en/navigation.json'
 import enLogo from './locales/en/logo.json'
 import enHero from './locales/en/herosection.json'
 import enHomepage from './locales/en/homepagesection.json'
+import enFleetSection from './locales/en/fleetsection.json'
+import enMapSection from './locales/en/mapsection.json'
 
 import svNav from './locales/sv/navigation.json'
 import svLogo from './locales/sv/logo.json'
 import svHero from './locales/sv/herosection.json'
 import svHomepage from './locales/sv/homepagesection.json'
+import svFleetSection from './locales/sv/fleetsection.json'
+import svMapSection from './locales/sv/mapsection.json'
 
 import { getLang } from "./langStore"
 
@@ -15,13 +19,17 @@ const dict = {
     nav: enNav,
     headerlogotext: enLogo,
     herosection: enHero,
-    homepage: enHomepage
+    homepage: enHomepage,
+    fleetsection: enFleetSection,
+    mapsection: enMapSection
   },
   sv: {
     nav: svNav,
     headerlogotext: svLogo,
     herosection: svHero,
-    homepage: svHomepage
+    homepage: svHomepage,
+    fleetsection: svFleetSection,
+    mapsection: svMapSection
   }
 }
 

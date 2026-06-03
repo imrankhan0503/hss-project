@@ -1,0 +1,20 @@
+{
+    "title": "Our Locations",
+    "address": "Address:",
+    "ruffen": {
+        "address": "Scout Hall Ruffen, by Hässelby Beach",
+        "description": "This is our main waterfront location where we hold our weekly meetings."
+    },
+    "myset": {
+        "address": "Kyrkhamnsvägen, Järfälla (between Kyrkhamn and Gåseborg)",
+        "description": "Our cozy cabin in the forest, used for overnight stays, hikes, and land-based activities."
+    },
+    "boatclub": {
+        "address": "HSBK is located at the end of Sparrisbacken",
+        "description": "This is where our larger scout boats are moored during the summer season."
+    },
+    "shipyard": {
+        "address": "IRS is located on Kanaans väg, on the way to Kanaan Beach",
+        "description": "This is our boatyard where we carry out maintenance, repairs, and winter storage."
+    }
+}

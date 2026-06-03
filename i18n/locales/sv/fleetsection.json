@@ -1,0 +1,25 @@
+{
+        "information": {
+            "title": "Vår Flotta",
+            "description": "Vi är stolta över att ha en av områdets mest välutrustade flottor. Med 18 båtar i olika modeller finns vi här för dig, hela vägen från nybörjare till erfaren seglare.",
+            "bulletPoints": {
+                "trainingDinghies": "12 utbildningsjollar (Optimist & 2-krona)",
+                "keelboats": "5 större kölbåtar (H-båt & Viggen)",
+                "motorboat": "1 motorbåt för säkerhet (Big Buster)"
+            }
+        },
+        "boats": {
+            "optimist": {
+                "title": "Optimist",
+                "subtitle": "Här börjar äventyret för våra minsta seglare"
+            },
+            "twoKronor": {
+                "title": "2-kronor",
+                "subtitle": "Perfekt för lagarbete och fortsättningskurser"
+            },
+            "keelboats": {
+                "title": "Kölbåtar",
+                "subtitle": "Våra största båtar för långfärder och segling i skärgården"
+            }
+        }
+    }
