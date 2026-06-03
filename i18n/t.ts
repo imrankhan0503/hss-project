@@ -1,30 +1,36 @@
-import enNav from './locales/en/navigation.json'
-import enLogo from './locales/en/logo.json'
-import enHero from './locales/en/herosection.json'
+import enNav from "./locales/en/navigation.json";
+import enLogo from "./locales/en/logo.json";
+import enHero from "./locales/en/herosection.json";
+import enFooter from "./locales/en/footer.json";
 
-import svNav from './locales/sv/navigation.json'
-import svLogo from './locales/sv/logo.json'
-import svHero from './locales/sv/herosection.json'
+import svNav from "./locales/sv/navigation.json";
+import svLogo from "./locales/sv/logo.json";
+import svHero from "./locales/sv/herosection.json";
+import svFooter from "./locales/sv/footer.json";
 
-import { getLang } from "./langStore"
+import { getLang } from "./langStore";
 
 const dict = {
   en: {
     nav: enNav,
     headerlogotext: enLogo,
-    herosection: enHero
+    herosection: enHero,
+    footer: enFooter,
   },
   sv: {
     nav: svNav,
     headerlogotext: svLogo,
-    herosection: svHero
-  }
-}
+    herosection: svHero,
+    footer: svFooter,
+  },
+};
 
-export const t = (key: string): string => {
+export const t = (key: string, lang?: "sv" | "en"): string => {
   if (!key) return "";
-  const lang = getLang();
-
-  
-  return (key.split(".").reduce((obj: any, k) => obj?.[k], dict[lang]) as string) || "";
-}
+  const activeLang = lang ?? getLang();
+  return (
+    (key
+      .split(".")
+      .reduce((obj: any, k) => obj?.[k], dict[activeLang]) as string) || ""
+  );
+};
