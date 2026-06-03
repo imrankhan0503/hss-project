@@ -1,22 +1,4 @@
 {
-  "nav": {
-    "home": "Hem",
-    "interest": "Anmäl Intresse",
-    "fleet": "Vår Flotta",
-    "activity": "Verksamhet",
-    "parents": "För Föräldrar",
-    "join": "Gå med",
-    "contact": "Kontakta oss"
-  },
-  
-  "headerlogotext": {
-    "line1": "Hässelby Strands",
-    "line2": "Sjöscoutkår",
-    "line3": "sedan 1959"
-  },
-
-  "herosection": {
-  
   "varFlotta": {
       "title": "Vår Flotta & Lokaler",
       "subtitle": "Utforska våra båtar och de platser där vi samlas och seglar"
@@ -38,4 +20,4 @@
     }
 }
 
-}
+
