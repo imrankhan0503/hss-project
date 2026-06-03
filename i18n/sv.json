@@ -40,8 +40,22 @@
   "homepage": {
     "hero": {
       "subtitle": " Upptäck havet, utveckla ledarskap och skapa livslånga minnen tillsammans med oss.",
-      "primary-cta":"Bli scout",
-      "secondary-cta":"Våra aktiviteter"
+      "primary-cta": "Bli scout",
+      "secondary-cta": "Våra aktiviteter"
+    },
+    "services": {
+      "sailing": {
+        "title": "Segling & Äventyr",
+        "description": "Lär dig segla och upptäck skärgården tillsammans med oss. Vi använder våra jollar som Optimist, Trissjolle, Avanti och 606 för att utveckla både kunskap och äventyrsglädje."
+      },
+      "community": {
+        "title": "Gemenskap",
+        "description": "Hos oss blir du en del av en stark gemenskap där vi hjälper varandra, har roligt tillsammans och bygger vänskaper som ofta varar hela livet. Vi har över 75 års scoutingtradition i Hässelby Strand."
+      },
+      "development": {
+        "title": "Utveckling",
+        "description": "Utmana dig själv, lär dig nya färdigheter och väx som person. Hos oss får du möjlighet att ta märken, leda andra och utvecklas i din egen takt."
+      }
     }
   }
 }
