@@ -13,28 +13,34 @@
     "line1": "Hasselby Strand",
     "line2": "Sea Scout Troop",
     "line3": "since 1959"
-  }, 
-
- "herosection": {
-  "varFlotta": {
-    "title": "Our Fleet & Facilities",
-    "subtitle": "Explore our boats and the places where we meet and sail"
   },
 
-  "verksamhet": {
-    "title": "Our Activities",
-    "subtitle": "From age 8 to adults - we have activities for everyone"
-  },
+  "herosection": {
+    "varFlotta": {
+      "title": "Our Fleet & Facilities",
+      "subtitle": "Explore our boats and the places where we meet and sail"
+    },
 
-  "foraldrar": {
-    "title": "For Parents",
-    "subtitle": "Information, answers and resources for guardians"
-  },
+    "verksamhet": {
+      "title": "Our Activities",
+      "subtitle": "From age 8 to adults - we have activities for everyone"
+    },
 
-  "kontaktaOss": {
-    "title": "Contact Us",
-    "subtitle": "Whether you have a question, need support or want to know more - we are here for you."
+    "foraldrar": {
+      "title": "For Parents",
+      "subtitle": "Information, answers and resources for guardians"
+    },
+
+    "kontaktaOss": {
+      "title": "Contact Us",
+      "subtitle": "Whether you have a question, need support or want to know more - we are here for you."
+    }
+  },
+  "homepage": {
+    "hero": {
+      "subtitle": "Discover the sea, develop leadership skills, and create lifelong memories together with us.",
+       "primary-cta":"Become a scout",
+      "secondary-cta":"Our activities"
+    }
   }
-}
-  
 }

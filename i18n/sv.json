@@ -8,7 +8,7 @@
     "join": "Gå med",
     "contact": "Kontakta oss"
   },
-  
+
   "headerlogotext": {
     "line1": "Hässelby Strands",
     "line2": "Sjöscoutkår",
@@ -16,26 +16,32 @@
   },
 
   "herosection": {
-  
-  "varFlotta": {
+    "varFlotta": {
       "title": "Vår Flotta & Lokaler",
       "subtitle": "Utforska våra båtar och de platser där vi samlas och seglar"
     },
 
-  "verksamhet": {
+    "verksamhet": {
       "title": "Vår Verksamhet",
       "subtitle": "Från 8 år till vuxen - vi har aktiviteter för alla åldrar"
     },
 
-  "foraldrar": {
+    "foraldrar": {
       "title": "För Föräldrar",
       "subtitle": "Information, svar och resurser för er som vårdnadshavare"
     },
-    
-     "kontaktaOss": {
+
+    "kontaktaOss": {
       "title": "Kontakta Oss",
       "subtitle": "Oavsett om du har en fråga, behöver support eller vill veta mer - vi finns här för dig."
     }
-}
+  },
 
+  "homepage": {
+    "hero": {
+      "subtitle": " Upptäck havet, utveckla ledarskap och skapa livslånga minnen tillsammans med oss.",
+      "primary-cta":"Bli scout",
+      "secondary-cta":"Våra aktiviteter"
+    }
+  }
 }
