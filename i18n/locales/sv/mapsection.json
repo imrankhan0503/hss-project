@@ -1,0 +1,20 @@
+{
+    "title": "Våra Lokaler",
+    "address": "Adress:",
+    "ruffen": {
+        "address": "Kårlokal Ruffen, vid Hässelby strandbad",
+        "description": "Detta är vår huvudsakliga plats vid vattnet, där vi håller våra veckomöten."
+    },
+    "myset": {
+        "address": "Kyrkhamnsvägen, Järfälla (mellan Kyrkhamn och Gåseborg)",
+        "description": "Vår mysiga stuga i skogen som används för övernattningar, hajk och landbaserade aktiviteter."
+    },
+    "boatclub": {
+        "address": "HSBK ligger längst ner på Sparrisbacken",
+        "description": "Här har vi våra hamnplatser för kårens större båtar under sommarhalvåret."
+    },
+    "shipyard": {
+        "address": "IRS ligger på Kanaans väg mot Kanaanbadet",
+        "description": "Detta är vårt båtvarv där vi utför underhåll, reparationer och vinterförvaring."
+    }
+}
