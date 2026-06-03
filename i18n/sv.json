@@ -56,6 +56,28 @@
         "title": "Utveckling",
         "description": "Utmana dig själv, lär dig nya färdigheter och väx som person. Hos oss får du möjlighet att ta märken, leda andra och utvecklas i din egen takt."
       }
+    },
+    "banner": {
+      "title": "Verksamhet för alla åldrar"
+    },
+    "groups": {
+      "sjöhumlor": {
+        "description": "Spårare 8-9 år"
+      },
+      "kaparna": {
+        "description": "Upptäckare 10-11 år"
+      },
+      "konvojen": {
+        "description": "Äventyrare 12-14 år"
+      },
+      "utmanare": {
+        "description": "Utmanare 15+"
+      },
+      "familyscout": {
+        "title": "Familjescout",
+        "description": "Familj"
+      },
+       "buttonText" :"Läs om"
     }
   }
 }

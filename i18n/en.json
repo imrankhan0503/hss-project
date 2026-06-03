@@ -42,19 +42,41 @@
       "primary-cta": "Become a scout",
       "secondary-cta": "Our activities"
     },
-   "services": {
+    "services": {
       "sailing": {
-      "title": "Sailing & Adventure",
-      "description": "Learn to sail and explore the archipelago together with us. We use our dinghies such as the Optimist, Trissjolle, Avanti, and 606 to develop both knowledge and a sense of adventure."
+        "title": "Sailing & Adventure",
+        "description": "Learn to sail and explore the archipelago together with us. We use our dinghies such as the Optimist, Trissjolle, Avanti, and 606 to develop both knowledge and a sense of adventure."
       },
-     "community": {
-      "title": "Community",
-      "description": "Together with us, you become part of a strong community where we help each other, have fun together, and build friendships that often last a lifetime. We have more than 75 years of scouting tradition in Hässelby Strand."
-     },
-    "development": {
-      "title": "Development",
-      "description": "Challenge yourself, learn new skills, and grow as a person. Together with us, you have the opportunity to earn badges, lead others, and develop at your own pace."
-     }
-   }
+      "community": {
+        "title": "Community",
+        "description": "Together with us, you become part of a strong community where we help each other, have fun together, and build friendships that often last a lifetime. We have more than 75 years of scouting tradition in Hässelby Strand."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Challenge yourself, learn new skills, and grow as a person. Together with us, you have the opportunity to earn badges, lead others, and develop at your own pace."
+      }
+    },
+    "banner": {
+      "title": "Activities for all ages"
+    },
+    "groups": {
+      "sjöhumlor": {
+        "description": "Trackers 8-9 years"
+      },
+      "kaparna": {
+        "description": "Explorers 10-11 years"
+      },
+      "konvojen": {
+        "description": "Adventurers 12-14 years"
+      },
+      "utmanare": {
+        "description": "Challengers 15+ years"
+      },
+      "familyscout": {
+        "title": "Family Scout",
+        "description": "Family"
+      },
+      "buttonText" :"Read more about"
+    }
   }
 }
