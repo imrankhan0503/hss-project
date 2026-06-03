@@ -4,20 +4,18 @@
       "subtitle": "Utforska våra båtar och de platser där vi samlas och seglar"
     },
 
-  "verksamhet": {
+    "verksamhet": {
       "title": "Vår Verksamhet",
       "subtitle": "Från 8 år till vuxen - vi har aktiviteter för alla åldrar"
     },
 
-  "foraldrar": {
+    "foraldrar": {
       "title": "För Föräldrar",
       "subtitle": "Information, svar och resurser för er som vårdnadshavare"
     },
-    
-     "kontaktaOss": {
+
+    "kontaktaOss": {
       "title": "Kontakta Oss",
       "subtitle": "Oavsett om du har en fråga, behöver support eller vill veta mer - vi finns här för dig."
     }
-}
-
-
+  }
