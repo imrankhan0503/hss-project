@@ -76,7 +76,13 @@
         "title": "Family Scout",
         "description": "Family"
       },
-      "buttonText" :"Read more about"
-    }
+      "buttonText": "Read more about"
+    },
+    "interest": {
+      "heading": "Ready to start your adventure?",
+      "subHeading": "Try a session with no commitment. Welcome aboard!",
+      "buttonText": "Register interest"
+    },
+    "instagramText": "Live from the sea"
   }
 }
