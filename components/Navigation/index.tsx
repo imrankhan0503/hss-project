@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -13,7 +13,10 @@ import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang"
 
 const Navigation = () => {
-  const lang = useLang()
+  useLang()
+
+  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
     { title: t("nav.home"), link: "/" },
@@ -23,76 +26,41 @@ const Navigation = () => {
     { title: t("nav.contact"), link: "/kontakta-oss" },
   ]
 
-  const pathname = usePathname()
-
-  const [isOpen, setIsOpen] = useState(false)
-
-  useEffect(() => {
-
-    if (isOpen) {
-      document.documentElement.style.overflow = "hidden"
-      document.body.style.overflow = "hidden"
-    } else {
-      document.documentElement.style.overflow = ""
-      document.body.style.overflow = ""
-    }
-
-    return () => {
-      document.documentElement.style.overflow = ""
-      document.body.style.overflow = ""
-    }
-
-  }, [isOpen])
-
-
   return (
-
-    <header className="w-full sticky top-0 z-50 bg-white">
-
-      <nav className="max-w-7xl mx-auto px-4 py-3 relative overflow-x-hidden">
-        <div className="flex items-center justify-between gap-6">
-
+    <header className="w-full sticky top-0 z-[9999] bg-white">
+      <nav className="relative mx-auto max-w-7xl px-4 py-3">
+        <div className="flex items-center justify-between gap-3 md:gap-3">
           <Link
             href="/"
             aria-label="Go to homepage"
-            className="flex items-center gap-3 shrink-0"
+            className="flex shrink-0 items-center gap-2 min-w-0"
+            onClick={() => setIsOpen(false)}
           >
-
             <Image
               src={HeaderLogo}
               alt="HSS Logo"
               width={52}
               height={52}
-              priority
-            />
+              priority />
 
-            <div className="text-[#00355F] leading-tight text-sm -mr-4">
+            
 
-                            <p className="font-semibold text-sm">
-
-                               {t("headerlogotext.line1")}
-                            </p>
-
-                            <p className="font-semibold text-sm">
-                                
-                                {t("headerlogotext.line2")}
-                            </p>
-
-                            <p className="text-xs">
-                                
-                                {t("headerlogotext.line3")}
-                            </p>
-
+            <div className="text-sm leading-tight text-[#00355F] min-w-0">
+              <p className="text-xs font-semibold truncate md:text-sm">
+                {t("headerlogotext.line1")}
+              </p>
+              <p className="text-xs font-semibold truncate md:text-sm">
+                {t("headerlogotext.line2")}
+              </p>
+              <p className="text-xs truncate">
+                {t("headerlogotext.line3")}
+              </p>
             </div>
-
           </Link>
 
           {/* DESKTOP NAVIGATION */}
-
-          <div className="hidden md:flex flex-1 items-center justify-center min-w-0">
-
-            <div className="flex items-center justify-center gap-3 lg:gap-5 flex-wrap">
-
+          <div className="hidden min-w-0 flex-1 items-center justify-center md:flex">
+            <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-5">
               {navLinks.map((item) => (
                 <NavItem
                   key={item.link}
@@ -101,64 +69,53 @@ const Navigation = () => {
                   active={pathname === item.link}
                 />
               ))}
+
               <NavItem
                 title={t("nav.join")}
                 link="https://www.scoutnet.se/register/in/group/764"
                 highlighted
               />
+
               <LanguageSwitcher />
             </div>
-
           </div>
 
-          {/* MOBILE MENU */}
-
-          <div className="flex items-center gap-1 md:hidden ml-auto shrink-0">
-
-
-            {/* CTA OUTSIDE */}
-            <div className="text-sm">
+          {/* MOBILE RIGHT SIDE */}
+          <div className="ml-auto flex shrink-0 items-center gap-1 md:hidden">
+            <div className="text-sm scale-90">
               <NavItem
                 title={t("nav.join")}
                 link="https://www.scoutnet.se/register/in/group/764"
                 highlighted
               />
             </div>
+
             <LanguageSwitcher />
 
-            {/* HAMBURGER */}
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              type="button"
+              onClick={() => setIsOpen((prev) => !prev)}
               aria-label="Toggle Menu"
               aria-expanded={isOpen}
-              className="p-2 flex items-center justify-center shrink-0"
-            >
-
+              className="flex shrink-0 items-center justify-center p-2">
               <Image
                 src={HamburgerMenu}
-                alt="Menu"
+                alt=""
                 width={28}
                 height={28}
               />
-
             </button>
-
           </div>
-
         </div>
 
-        {/* MOBILE DROPDOWN */}
-        <MobileMenu
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          pathname={pathname}
-          navLinks={navLinks}
+      <MobileMenu
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        pathname={pathname}
+        navLinks={navLinks}
         />
-
-      </nav>
-
+        </nav>
     </header>
-
   )
 }
 
