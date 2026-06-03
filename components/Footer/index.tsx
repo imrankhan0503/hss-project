@@ -7,52 +7,11 @@ import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
 import styles from "./footer.module.css";
 import InstagramSection from "./Instagram";
 import JoinCTASection from "./JoinCTA";
+import { t } from "@/i18n/t";
+import { useLang } from "@/i18n/useLang";
 
-const translations = {
-  sv: {
-    community: "Gå med i vår community",
-    chat: "Chatta med oss på facebook",
-    cta: "Kom igång",
-    tagline: "Scouting på vattnet sedan 1959",
-    contact: "Kontakt",
-    email: "info@hss-scout.org",
-    address: "Ruffen | Hässelby Strands Sjöscoutkår,Hässelby, 165 65 Stockholm",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Ruffen+Hässelby+Strands+Sjöscoutkår+Stockholm",
-    followUs: "Följ oss",
-    copyright: "© 2026 Hässelby Strands Sjöscoutkår. Alla rättigheter förbehållna.",
-    privacy: "Integritetspolicy",
-    gdpr: "GDPR",
-    partner: "Partner:",
-    stockholm: "Stockholm Stad",
-    stadhsbk: "StadHSBK",
-  },
-  en: {
-    community: "Join our community",
-    chat: "Chat with us on Facebook",
-    cta: "Get started",
-    tagline: "Scouting on the water since 1959",
-    contact: "Contact",
-    email: "info@hss-scout.org",
-    address: "Ruffen | Hässelby Strands Sjöscoutkår,Hässelby, 165 65 Stockholm",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Ruffen+Hässelby+Strands+Sjöscoutkår+Stockholm",
-    followUs: "Follow us",
-    copyright: "© 2026 Hässelby Strands Sjöscoutkår. All rights reserved.",
-    privacy: "Privacy policy",
-    gdpr: "GDPR",
-    partner: "Partner:",
-    stockholm: "Stockholm Stad",
-    stadhsbk: "StadHSBK",
-  },
-} as const;
-
-type Locale = keyof typeof translations;
-
-interface FooterProps {
-  locale?: Locale;
-}
-
-export default function Footer({ locale = "sv" }: FooterProps) {
-  const t = translations[locale];
+export default function Footer() {
+  const lang = useLang();
 
   return (
     <footer className={styles.footer}>
@@ -71,8 +30,8 @@ export default function Footer({ locale = "sv" }: FooterProps) {
               aria-hidden="true"
             />
             <div>
-              <p className={styles.bannerHeading}>{t.community}</p>
-              <p className={styles.bannerSubtext}>{t.chat}</p>
+              <p className={styles.bannerHeading}>{t("footer.community", lang)}</p>
+              <p className={styles.bannerSubtext}>{t("footer.chat", lang)}</p>
             </div>
           </div>
 
@@ -82,7 +41,7 @@ export default function Footer({ locale = "sv" }: FooterProps) {
             rel="noopener noreferrer"
             className={styles.bannerCta}
           >
-            {t.cta}
+            {t("footer.cta", lang)}
           </a>
         </div>
       </div>
@@ -102,26 +61,31 @@ export default function Footer({ locale = "sv" }: FooterProps) {
                 Hässelby Strands Sjöscoutkår
               </span>
             </div>
-            <p className={styles.brandTagline}>{t.tagline}</p>
+            <p className={styles.brandTagline}>{t("footer.tagline", lang)}</p>
           </div>
 
           <div className={styles.contactCol}>
-            <h3 className={styles.colHeading}>{t.contact}</h3>
-            <a href={`mailto:${t.email}`} className={styles.contactLink}>
-              {t.email}
+            <h3 className={styles.colHeading}>{t("footer.contact", lang)}</h3>
+            <a
+              href={`mailto:${t("footer.email", lang)}`}
+              className={styles.contactLink}
+            >
+              {t("footer.email", lang)}
             </a>
             <a
-              href={t.mapsUrl}
+              href={t("footer.mapsUrl", lang)}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.contactLink}
             >
-              <address className={styles.address}>{t.address}</address>
+              <address className={styles.address}>
+                {t("footer.address", lang)}
+              </address>
             </a>
           </div>
 
           <div className={styles.socialCol}>
-            <h3 className={styles.colHeading}>{t.followUs}</h3>
+            <h3 className={styles.colHeading}>{t("footer.followUs", lang)}</h3>
 
             <div className={styles.socialIcons}>
               <a
@@ -161,13 +125,13 @@ export default function Footer({ locale = "sv" }: FooterProps) {
       <div className={styles.bottomBar}>
         <div className={styles.bottomInner}>
           <div className={styles.bottomTop}>
-            <p className={styles.copyright}>{t.copyright}</p>
+            <p className={styles.copyright}>{t("footer.copyright", lang)}</p>
           </div>
 
           <div className={styles.partnerRow}>
-            <span className={styles.partnerLabel}>{t.partner}</span>
-            <span className={styles.partnerName}>{t.stockholm}</span>
-            <span className={styles.partnerName}>{t.stadhsbk}</span>
+            <span className={styles.partnerLabel}>{t("footer.partner", lang)}</span>
+            <span className={styles.partnerName}>{t("footer.stockholm", lang)}</span>
+            <span className={styles.partnerName}>{t("footer.stadhsbk", lang)}</span>
           </div>
         </div>
       </div>

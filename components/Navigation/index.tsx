@@ -13,17 +13,16 @@ import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang"
 
 const Navigation = () => {
-  useLang()
-
+  const lang = useLang()
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
-    { title: t("nav.home"), link: "/" },
-    { title: t("nav.fleet"), link: "/var-flotta" },
-    { title: t("nav.activity"), link: "/verksamhet" },
-    { title: t("nav.parents"), link: "/foraldrar" },
-    { title: t("nav.contact"), link: "/kontakta-oss" },
+    { title: t("nav.home", lang), link: "/" },
+    { title: t("nav.fleet", lang), link: "/var-flotta" },
+    { title: t("nav.activity", lang), link: "/verksamhet" },
+    { title: t("nav.parents", lang), link: "/foraldrar" },
+    { title: t("nav.contact", lang), link: "/kontakta-oss" },
   ]
 
   return (
@@ -41,24 +40,21 @@ const Navigation = () => {
               alt="HSS Logo"
               width={52}
               height={52}
-              priority />
-
-            
-
+              priority
+            />
             <div className="text-sm leading-tight text-[#00355F] min-w-0">
               <p className="text-xs font-semibold truncate md:text-sm">
-                {t("headerlogotext.line1")}
+                {t("headerlogotext.line1", lang)}
               </p>
               <p className="text-xs font-semibold truncate md:text-sm">
-                {t("headerlogotext.line2")}
+                {t("headerlogotext.line2", lang)}
               </p>
               <p className="text-xs truncate">
-                {t("headerlogotext.line3")}
+                {t("headerlogotext.line3", lang)}
               </p>
             </div>
           </Link>
 
-          {/* DESKTOP NAVIGATION */}
           <div className="hidden min-w-0 flex-1 items-center justify-center md:flex">
             <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-5">
               {navLinks.map((item) => (
@@ -71,7 +67,7 @@ const Navigation = () => {
               ))}
 
               <NavItem
-                title={t("nav.join")}
+                title={t("nav.join", lang)}
                 link="https://www.scoutnet.se/register/in/group/764"
                 highlighted
               />
@@ -80,11 +76,10 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* MOBILE RIGHT SIDE */}
           <div className="ml-auto flex shrink-0 items-center gap-1 md:hidden">
             <div className="text-sm scale-90">
               <NavItem
-                title={t("nav.join")}
+                title={t("nav.join", lang)}
                 link="https://www.scoutnet.se/register/in/group/764"
                 highlighted
               />
@@ -97,7 +92,8 @@ const Navigation = () => {
               onClick={() => setIsOpen((prev) => !prev)}
               aria-label="Toggle Menu"
               aria-expanded={isOpen}
-              className="flex shrink-0 items-center justify-center p-2">
+              className="flex shrink-0 items-center justify-center p-2"
+            >
               <Image
                 src={HamburgerMenu}
                 alt=""
@@ -108,13 +104,13 @@ const Navigation = () => {
           </div>
         </div>
 
-      <MobileMenu
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        pathname={pathname}
-        navLinks={navLinks}
+        <MobileMenu
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          pathname={pathname}
+          navLinks={navLinks}
         />
-        </nav>
+      </nav>
     </header>
   )
 }

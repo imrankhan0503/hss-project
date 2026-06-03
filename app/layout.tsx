@@ -7,12 +7,13 @@ import Navigation from "@/components/Navigation";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"]
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   title: "Hässelby Strands Sjöscoutkår",
-  description: "Upptäck havet, utveckla ledarskap och skapa livslånga minnen tillsammans med oss.",
+  description:
+    "Upptäck havet, utveckla ledarskap och skapa livslånga minnen tillsammans med oss.",
 };
 
 export default function RootLayout({
@@ -31,7 +32,7 @@ export default function RootLayout({
           <Navigation />
           {children}
         </main>
-        <Footer locale="sv" />
+        <Footer />
       </body>
     </html>
   );
