@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import DocumentDownloads from '@/assets/images/icons/dokument&neladdningar.svg'
+import DocumentDownloads from '@/assets/images/icons/dokument&nedladdningar.svg'
 import DownloadIcon from '@/assets/images/icons/download.svg'
 import PreviewIcon from '@/assets/images/icons/preview.svg'
 
