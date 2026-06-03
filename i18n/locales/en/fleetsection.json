@@ -1,0 +1,25 @@
+{
+        "information": {
+            "title": "Our Fleet",
+            "description": "We are proud to have one of the area’s best-equipped fleets. With 18 boats in different models, we are here for you all the way from beginner to experienced sailor.",
+            "bulletPoints": {
+                "trainingDinghies": "12 training dinghies (Optimist & 2-krona)",
+                "keelboats": "5 larger keelboats (H-boat & Viggen)",
+                "motorboat": "1 safety motorboat (Big Buster)"
+            }
+        },
+        "boats": {
+            "optimist": {
+                "title": "Optimist",
+                "subtitle": "This is where the adventure begins for our youngest sailors"
+            },
+            "twoKronor": {
+                "title": "2-kronor",
+                "subtitle": "Perfect for teamwork and continuation courses"
+            },
+            "keelboats": {
+                "title": "Keelboats",
+                "subtitle": "Our largest boats for longer trips and sailing in the archipelago"
+            }
+        }
+    }

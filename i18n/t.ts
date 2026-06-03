@@ -3,12 +3,16 @@ import enLogo from "./locales/en/logo.json";
 import enHero from "./locales/en/herosection.json";
 import enHomepage from "./locales/en/homepagesection.json";
 import enFooter from "./locales/en/footer.json";
+import enFleetSection from './locales/en/fleetsection.json'
+import enMapSection from './locales/en/mapsection.json'
 
 import svNav from "./locales/sv/navigation.json";
 import svLogo from "./locales/sv/logo.json";
 import svHero from "./locales/sv/herosection.json";
 import svHomepage from "./locales/sv/homepagesection.json";
 import svFooter from "./locales/sv/footer.json";
+import svFleetSection from './locales/sv/fleetsection.json'
+import svMapSection from './locales/sv/mapsection.json'
 
 import { getLang } from "./langStore";
 
@@ -18,6 +22,8 @@ const dict = {
     headerlogotext: enLogo,
     herosection: enHero,
     homepage: enHomepage,
+    fleetsection: enFleetSection,
+    mapsection: enMapSection,
     footer: enFooter,
   },
   sv: {
@@ -25,6 +31,8 @@ const dict = {
     headerlogotext: svLogo,
     herosection: svHero,
     homepage: svHomepage,
+    fleetsection: svFleetSection,
+    mapsection: svMapSection,
     footer: svFooter,
   },
 };
