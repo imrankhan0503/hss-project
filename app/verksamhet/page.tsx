@@ -4,14 +4,14 @@ import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import VerksamhetCards from "../../components/VerksamhetCards";
 import CcSchedule from "../../components/CcSchedule";
-import { groups } from "../../data/hssdata";
+import { getGroups } from "../../data/hssdata";
 import HeroSection from "@/components/shared/HeroSection";
 import { heroSectionData } from "@/data/heroSectionData";
 import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang";
 
 const VerksamhetContent = () => {
-  useLang()
+  const lang = useLang();
   const data = heroSectionData.verksamhet
   const searchParams = useSearchParams();
   const [expandedId, setExpandedId] = useState<string | null>(null);
@@ -21,11 +21,12 @@ const VerksamhetContent = () => {
     if (expand) setExpandedId(expand);
   }, [searchParams]);
 
+const groups = getGroups(lang);
+
   return (
     <main className="pb-16">
-      <HeroSection title={t(data.titleKey)}
-              subtitle={t(data.subtitleKey)}
-              image={data.image}
+      <HeroSection title={t(data.titleKey, lang)}
+              subtitle={t(data.subtitleKey, lang)}
                />
 
       <VerksamhetCards
