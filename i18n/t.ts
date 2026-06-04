@@ -3,16 +3,18 @@ import enLogo from "./locales/en/logo.json";
 import enHero from "./locales/en/herosection.json";
 import enHomepage from "./locales/en/homepagesection.json";
 import enFooter from "./locales/en/footer.json";
-import enFleetSection from './locales/en/fleetsection.json'
-import enMapSection from './locales/en/mapsection.json'
+import enFleetSection from './locales/en/fleetsection.json';
+import enMapSection from './locales/en/mapsection.json';
+import enVerksamhet from "./locales/en/verksamhet.json";
 
 import svNav from "./locales/sv/navigation.json";
 import svLogo from "./locales/sv/logo.json";
 import svHero from "./locales/sv/herosection.json";
 import svHomepage from "./locales/sv/homepagesection.json";
 import svFooter from "./locales/sv/footer.json";
-import svFleetSection from './locales/sv/fleetsection.json'
-import svMapSection from './locales/sv/mapsection.json'
+import svFleetSection from './locales/sv/fleetsection.json';
+import svMapSection from './locales/sv/mapsection.json';
+import svVerksamhet from "./locales/sv/verksamhet.json";  
 
 import { getLang } from "./langStore";
 
@@ -25,6 +27,7 @@ const dict = {
     fleetsection: enFleetSection,
     mapsection: enMapSection,
     footer: enFooter,
+    verksamhet: enVerksamhet,
   },
   sv: {
     nav: svNav,
@@ -34,6 +37,7 @@ const dict = {
     fleetsection: svFleetSection,
     mapsection: svMapSection,
     footer: svFooter,
+    verksamhet: svVerksamhet,
   },
 };
 

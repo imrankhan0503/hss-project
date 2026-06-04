@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { VerksamhetGroup } from "../../data/hssdata";
 import styles from "./verksamhetcards.module.css";
+import { t } from "@/i18n/t";
+import { useLang } from "@/i18n/useLang";
 
 interface Props {
   groups: VerksamhetGroup[];
@@ -10,13 +12,21 @@ interface Props {
   onExpand: (id: string | null) => void;
 }
 
-export default function VerksamhetCards({ groups, expandedId, onExpand }: Props) {
+export default function VerksamhetCards({
+  groups,
+  expandedId,
+  onExpand,
+}: Props) {
+  const lang = useLang();
   const expandedGroup = groups.find((g) => g.id === expandedId);
 
   if (expandedGroup) {
     return (
       <div className={styles.wrapper}>
-        <div className={styles.detailCard} style={{ borderColor: expandedGroup.bulletColor }}>
+        <div
+          className={styles.detailCard}
+          style={{ borderColor: expandedGroup.bulletColor }}
+        >
           <div
             className={styles.detailHeader}
             style={{ backgroundColor: expandedGroup.bulletColor }}
@@ -36,7 +46,9 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
           <div className={styles.detailContent}>
             <div className={styles.detailGrid}>
               <div className={styles.desktopCol}>
-                <h3 className={styles.sectionTitle}>Aktiviteter</h3>
+                <h3 className={styles.sectionTitle}>
+                  {t("verksamhet.activities", lang)}
+                </h3>
                 <ul className={styles.activityList}>
                   {expandedGroup.activities.map((item) => (
                     <li key={item} className={styles.activityItem}>
@@ -54,7 +66,7 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
                 <div className={styles.badgeRow}>
                   <Image
                     src={expandedGroup.badgeIcon}
-                    alt="Märken"
+                    alt={t("verksamhet.badges", lang)}
                     width={22}
                     height={22}
                   />
@@ -69,22 +81,24 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
             </div>
 
             <div className={styles.descriptionWrapper}>
-              {expandedGroup.description.split("\n\n").map((paragraph, index) => (
-                <p key={index} className={styles.descriptionParagraph}>
-                  {paragraph}
-                </p>
-              ))}
+              {expandedGroup.description
+                .split("\n\n")
+                .map((paragraph, index) => (
+                  <p key={index} className={styles.descriptionParagraph}>
+                    {paragraph}
+                  </p>
+                ))}
             </div>
 
             <div className={styles.backButtonWrapper}>
               <button
                 className={styles.backButton}
                 onClick={() => onExpand(null)}
-                aria-label="Tillbaka"
+                aria-label={t("verksamhet.back", lang)}
               >
                 <Image
                   src={expandedGroup.backIcon}
-                  alt="Tillbaka"
+                  alt={t("verksamhet.back", lang)}
                   width={24}
                   height={24}
                 />
@@ -129,7 +143,9 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
               <div className={styles.mobileContent}>
                 <div className={styles.mobileTop}>
                   <div className={styles.mobileActivities}>
-                    <h3 className={styles.sectionTitle}>Aktiviteter</h3>
+                    <h3 className={styles.sectionTitle}>
+                      {t("verksamhet.activities", lang)}
+                    </h3>
                     <ul className={styles.activityList}>
                       {group.activities.map((item) => (
                         <li key={item} className={styles.activityItem}>
@@ -147,11 +163,13 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
                     <div className={styles.badgeRow}>
                       <Image
                         src={group.badgeIcon}
-                        alt="Märken"
+                        alt={t("verksamhet.badges", lang)}
                         width={20}
                         height={20}
                       />
-                      <p className={styles.badgeLabel}>Märken &amp; Färdigheter</p>
+                      <p className={styles.badgeLabel}>
+                        {t("verksamhet.badges", lang)}
+                      </p>
                     </div>
                     <ul className={styles.badgeList}>
                       {group.badges.map((badge) => (
@@ -167,7 +185,7 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
                     style={{ color: group.bulletColor }}
                     onClick={() => onExpand(group.id)}
                   >
-                    Läs Mer ...
+                    {t("verksamhet.readMore", lang)}
                   </button>
                 </div>
               </div>
@@ -175,7 +193,9 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
               <div className={styles.desktopGridContainer}>
                 <div className={styles.desktopGrid}>
                   <div className={styles.desktopCol}>
-                    <h3 className={styles.sectionTitle}>Aktiviteter</h3>
+                    <h3 className={styles.sectionTitle}>
+                      {t("verksamhet.activities", lang)}
+                    </h3>
                     <ul className={styles.activityList}>
                       {group.activities.map((item) => (
                         <li key={item} className={styles.activityItem}>
@@ -193,12 +213,12 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
                     <div className={styles.badgeRow}>
                       <Image
                         src={group.badgeIcon}
-                        alt="Märken"
+                        alt={t("verksamhet.badges", lang)}
                         width={22}
                         height={22}
                       />
                       <p className={styles.badgeLabel}>
-                        Märken &amp; Färdigheter
+                        {t("verksamhet.badges", lang)}
                       </p>
                     </div>
                     <ul className={styles.badgeList}>
@@ -215,7 +235,7 @@ export default function VerksamhetCards({ groups, expandedId, onExpand }: Props)
                     style={{ color: group.bulletColor }}
                     onClick={() => onExpand(group.id)}
                   >
-                    Läs Mer ...
+                    {t("verksamhet.readMore", lang)}
                   </button>
                 </div>
               </div>
