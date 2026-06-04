@@ -25,6 +25,7 @@ const VerksamhetContent = () => {
     <main className="pb-16">
       <HeroSection title={t(data.titleKey)}
               subtitle={t(data.subtitleKey)}
+              image={data.image}
                />
 
       <VerksamhetCards
