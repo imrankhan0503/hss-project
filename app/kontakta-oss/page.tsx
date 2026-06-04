@@ -12,11 +12,15 @@ const ContactPage = () => {
   return (
     <div className="w-full">
       <HeroSection  title={t(data.titleKey)}
-                    subtitle={t(data.subtitleKey)} />
+                    subtitle={t(data.subtitleKey)} 
+                    image={data.image}
+                    />
+                    
       <div className="flex justify-center px-4 py-16 bg-primary/5">
         <InterestForm />
       </div>
     </div>
+   
   )
 }
 
