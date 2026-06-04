@@ -24,9 +24,16 @@ const VerksamhetContent = () => {
 const groups = getGroups(lang);
 
   return (
+<<<<<<< HEAD
     <main className="pb-16">
       <HeroSection title={t(data.titleKey, lang)}
               subtitle={t(data.subtitleKey, lang)}
+=======
+    <main>
+      <HeroSection title={t(data.titleKey, lang)}
+              subtitle={t(data.subtitleKey, lang)}
+              image={data.image}
+>>>>>>> feature/023-ccschedule-language
                />
 
       <VerksamhetCards
