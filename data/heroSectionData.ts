@@ -1,5 +1,7 @@
 import VarFlottaTop from "@/assets/images/background/var-flotta-bg.jpg";
-import ForaldrarTop from "@/assets/images/background/for-foraldrar-bg.jpg";
+import VerksamhetTop from "@/assets/images/background/for-verksamhet-bg.jpg";
+import ForaldrarTop from "@/assets/images/background/prq.png"
+import ContantUsTop from "@/assets/images/background/c.png"
 
 export const heroSectionData = {
   anmalIntresse: {
@@ -15,6 +17,7 @@ export const heroSectionData = {
   verksamhet: {
     titleKey: "herosection.verksamhet.title",
     subtitleKey: "herosection.verksamhet.subtitle",
+    image: VerksamhetTop,
   },
 
   foraldrar: {
@@ -26,5 +29,6 @@ export const heroSectionData = {
   kontaktaOss: {
     titleKey: "herosection.kontaktaOss.title",
     subtitleKey: "herosection.kontaktaOss.subtitle",
+    image: ContantUsTop
   }
 };
