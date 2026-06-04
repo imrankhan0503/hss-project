@@ -24,10 +24,11 @@ const VerksamhetContent = () => {
 const groups = getGroups(lang);
 
   return (
-    <main className="pb-16">
+    <main>
       <HeroSection title={t(data.titleKey, lang)}
               subtitle={t(data.subtitleKey, lang)}
-               />
+              image={data.image}
+            />
 
       <VerksamhetCards
         groups={groups}
