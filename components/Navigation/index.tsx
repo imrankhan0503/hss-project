@@ -26,7 +26,7 @@ const Navigation = () => {
   ]
 
   return (
-    <header className="w-full sticky top-0 z-[9999] bg-white">
+    <header className="w-full sticky top-0 z-[9999] bg-white shadow-md">
       <nav className="relative mx-auto max-w-7xl px-4 py-3">
         <div className="flex items-center justify-between gap-3 md:gap-3">
           <Link
@@ -44,13 +44,13 @@ const Navigation = () => {
             />
             <div className="text-sm leading-tight text-[#00355F] min-w-0">
               <p className="text-xs font-semibold truncate md:text-sm">
-                {t("headerlogotext.line1", lang)}
+                Hässelby Strands
               </p>
               <p className="text-xs font-semibold truncate md:text-sm">
-                {t("headerlogotext.line2", lang)}
+                Sjöscoutkår
               </p>
               <p className="text-xs truncate">
-                {t("headerlogotext.line3", lang)}
+                {t("headerlogotext.line1", lang)}
               </p>
             </div>
           </Link>
