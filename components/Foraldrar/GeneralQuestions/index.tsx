@@ -97,7 +97,7 @@ const GeneralQuestions = () => {
                         className="h-12 w-auto md:h-auto"
                     />
 
-                    <h2 className="text-xl font-bold text-primary md:text-2xl">
+                    <h2 className="text-xl md:text-2xl font-bold text-primary">
                         Vanliga Frågor
                     </h2>
                 </div>

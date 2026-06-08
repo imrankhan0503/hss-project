@@ -1,7 +1,11 @@
+'use client'
+
 import Image from 'next/image'
 import DocumentDownloads from '@/assets/images/icons/dokument&nedladdningar.svg'
 import DownloadIcon from '@/assets/images/icons/download.svg'
 import PreviewIcon from '@/assets/images/icons/preview.svg'
+import { t } from '@/i18n/t'
+import { useLang } from '@/i18n/useLang'
 
 type DocumentProps = {
     id: number
@@ -9,62 +13,64 @@ type DocumentProps = {
     file: string
 }
 
-const documents: DocumentProps[] = [
-    {
-        id: 1,
-        title: 'Årsredovisning',
-        file: '/documents/1-arsredovisning.pdf',
-    },
-    {
-        id: 2,
-        title: 'Revisionsberättelse',
-        file: '/documents/2-revisionsberattelse.pdf',
-    },
-    {
-        id: 3,
-        title: 'Verksamhetsplan',
-        file: '/documents/3-verksamhetsplan.pdf',
-    },
-    {
-        id: 4,
-        title: 'Budget 2025-2026',
-        file: '/documents/4-budget-2025-2026.pdf',
-    },
-    {
-        id: 5,
-        title: 'Sjöscoutkår',
-        file: '/documents/5-sjoscoutkar.pdf',
-    },
-    {
-        id: 6,
-        title: 'Anvisningar',
-        file: '/documents/6-anvisningar.pdf',
-    },
-    {
-        id: 7,
-        title: 'Kårstämma protokoll',
-        file: '/documents/7-karstamma-protokoll.pdf',
-    },
-    {
-        id: 8,
-        title: 'Förslag på avgifter',
-        file: '/documents/8-forslag-pa-avgifter.pdf',
-    },
-    {
-        id: 9,
-        title: 'Verksamhetsberättelse',
-        file: '/documents/9-verksamhetsberattelse.pdf',
-    },
-]
-
 const DocumentsStorage = () => {
+    useLang()
+
+    const documents: DocumentProps[] = [
+        {
+            id: 1,
+            title: t('safetydocuments.documents.documentscard.documents.annualReport'),
+            file: '/documents/1-arsredovisning.pdf',
+        },
+        {
+            id: 2,
+            title: t('safetydocuments.documents.documentscard.documents.auditReport'),
+            file: '/documents/2-revisionsberattelse.pdf',
+        },
+        {
+            id: 3,
+            title: t('safetydocuments.documents.documentscard.documents.activityPlan'),
+            file: '/documents/3-verksamhetsplan.pdf',
+        },
+        {
+            id: 4,
+            title: t('safetydocuments.documents.documentscard.documents.budget'),
+            file: '/documents/4-budget-2025-2026.pdf',
+        },
+        {
+            id: 5,
+            title: t('safetydocuments.documents.documentscard.documents.seaScoutGroup'),
+            file: '/documents/5-sjoscoutkar.pdf',
+        },
+        {
+            id: 6,
+            title: t('safetydocuments.documents.documentscard.documents.instructions'),
+            file: '/documents/6-anvisningar.pdf',
+        },
+        {
+            id: 7,
+            title: t('safetydocuments.documents.documentscard.documents.annualMeetingMinutes'),
+            file: '/documents/7-karstamma-protokoll.pdf',
+        },
+        {
+            id: 8,
+            title: t('safetydocuments.documents.documentscard.documents.feeProposal'),
+            file: '/documents/8-forslag-pa-avgifter.pdf',
+        },
+        {
+            id: 9,
+            title: t('safetydocuments.documents.documentscard.documents.activityReport'),
+            file: '/documents/9-verksamhetsberattelse.pdf',
+        },
+    ]
+
     return (
         <section className="w-full py-12">
             <div className="mx-auto max-w-7xl px-4 md:px-6">
                 <div className="mb-10 flex items-center justify-center md:mb-14 md:justify-start">
                     <Image src={DocumentDownloads} alt="Document section Icon" />
-                    <h2 className="text-base font-bold text-primary md:text-2xl">
-                        Dokument & Nedladdningar
+                    <h2 className="text-xl md:text-2xl font-bold text-primary">
+                        {t('safetydocuments.documents.title')}
                     </h2>
                 </div>
 
@@ -83,7 +89,7 @@ const DocumentsStorage = () => {
                                 <Image src={PreviewIcon} alt="Preview Icon" />
 
                                 <span className="absolute left-1/2 top-full z-10 mt-2 hidden -translate-x-1/2 rounded-md bg-primary px-2 py-1 text-xs text-background group-hover:block">
-                                    Preview
+                                    {t('safetydocuments.documents.documentscard.preview')}
                                 </span>
                             </a>
 
@@ -97,8 +103,8 @@ const DocumentsStorage = () => {
                             >
                                 <Image src={DownloadIcon} alt="Download Icon" />
 
-                                <span className="absolute left-1/2 top-full z-10 mt-2 hidden -translate-x-1/2 rounded-md bg-primary px-2 py-1 text-xs text-background group-hover:block">
-                                    Download
+                                <span className="absolute left-1/2 top-full z-10 mt-2 hidden -translate-x-1/2 rounded-md bg-primary px-2 py-1 text-xs text-background whitespace-nowrap group-hover:block">
+                                    {t('safetydocuments.documents.documentscard.download')}
                                 </span>
                             </a>
                         </div>

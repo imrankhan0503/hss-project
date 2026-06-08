@@ -1,0 +1,46 @@
+{
+    "safetysecurity": {
+        "title": "Safe Meetings & Safety",
+        "subtitle": "We actively work to create a safe and secure environment for all scouts.",
+        "cards": {
+            "trainedLeaders": {
+                "title": "Trained Leaders",
+                "description": "All leaders complete training in Safe Meetings and first aid."
+            },
+            "safetyRoutines": {
+                "title": "Safety Procedures",
+                "description": "Clear procedures for sailing, camps, and all activities are strictly followed."
+            },
+            "insurance": {
+                "title": "Insurance",
+                "description": "All scouts are covered by the Swedish Scouts' group insurance."
+            }
+        },
+        "policyBanner": {
+            "title": "Life Jacket Policy",
+            "description": "All scouts must always wear an approved life jacket during activities on or near water. The life jacket must be the correct size and properly fitted."
+        },
+        "buttons": {
+            "webTraining": "Our online training courses",
+            "scoutTraining": "Training courses for scouts and scout leaders"
+        }
+    },
+    "documents": {
+        "title": "Documents & Downloads",
+        "documentscard": {
+            "preview": "Preview",
+            "download": "Download",
+            "documents": {
+                "annualReport": "Annual Report",
+                "auditReport": "Audit Report",
+                "activityPlan": "Activity Plan",
+                "budget": "Budget 2025-2026",
+                "seaScoutGroup": "Sea Scout Group",
+                "instructions": "Instructions",
+                "annualMeetingMinutes": "Annual Meeting Minutes",
+                "feeProposal": "Proposal for Fees",
+                "activityReport": "Activity Report"
+            }
+        }
+    }
+}
