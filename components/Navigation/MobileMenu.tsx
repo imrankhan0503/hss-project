@@ -45,11 +45,11 @@ const MobileMenu = ({
   return (
     <div
       ref={menuRef}
-      className="absolute left-0 right-0 top-full w-full z-50 flex flex-col bg-white p-5 shadow-lg md:hidden"  >
+      className="absolute left-0 right-0 top-full w-full z-50 flex flex-col bg-background p-5 shadow-lg md:hidden"  >
       <button
         type="button"
         onClick={() => setIsOpen(false)}
-        className="self-end pb-1.5 text-2xl font-bold text-[#00355F]"
+        className="self-end pb-1.5 text-2xl font-bold text-primary"
         aria-label="Close Menu">
         ✕
       </button>

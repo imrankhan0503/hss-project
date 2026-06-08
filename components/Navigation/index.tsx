@@ -26,7 +26,7 @@ const Navigation = () => {
   ]
 
   return (
-    <header className="w-full sticky top-0 z-[9999] bg-white shadow-md">
+    <header className="w-full sticky top-0 z-[9999] bg-background shadow-md">
       <nav className="relative mx-auto max-w-7xl px-4 py-3">
         <div className="flex items-center justify-between gap-3 md:gap-3">
           <Link
@@ -42,7 +42,7 @@ const Navigation = () => {
               height={52}
               priority
             />
-            <div className="text-sm leading-tight text-[#00355F] min-w-0">
+            <div className="text-sm leading-tight text-primary min-w-0">
               <p className="text-xs font-semibold truncate md:text-sm">
                 Hässelby Strands
               </p>
