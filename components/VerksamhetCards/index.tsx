@@ -70,7 +70,7 @@ export default function VerksamhetCards({
                     width={22}
                     height={22}
                   />
-                  <p className={styles.badgeLabel}>Märken &amp; Färdigheter</p>
+                  <p className={styles.badgeLabel}>{t("verksamhet.badges", lang)}</p>
                 </div>
                 <ul className={styles.badgeList}>
                   {expandedGroup.badges.map((badge) => (

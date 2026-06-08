@@ -1,0 +1,20 @@
+{
+  "header": {
+    "title": "Fråga HSS",
+    "buttonText": "Ny Fråga"
+  },
+  "stepsLabel": "Kontaktuppgifter",
+  "fields": {
+    "name": "Namn",
+    "email": "E-post",
+    "locality": "Ort",
+    "mobileNumber": "Telefonnummer",
+    "message": "Meddelande"
+  },
+  "sendCTALoading": "Skickar",
+  "sendCTA": "Skicka",
+  "successPage": {
+    "heading": " Vi har mottagit ditt meddelande!",
+    "subHeading": "Vi svarar så fort vi kan."
+  }
+}
