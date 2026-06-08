@@ -3,7 +3,7 @@
 import Image from "next/image";
 import HSSLogo from "@/assets/images/logo/HSSLogo.png";
 import BiChat from "@/assets/images/icons/bi_chat.svg";
-import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import styles from "./footer.module.css";
 import InstagramSection from "./Instagram";
 import JoinCTASection from "./JoinCTA";
@@ -30,7 +30,9 @@ export default function Footer() {
               aria-hidden="true"
             />
             <div>
-              <p className={styles.bannerHeading}>{t("footer.community", lang)}</p>
+              <p className={styles.bannerHeading}>
+                {t("footer.community", lang)}
+              </p>
               <p className={styles.bannerSubtext}>{t("footer.chat", lang)}</p>
             </div>
           </div>
@@ -99,16 +101,6 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.youtube.com/@hasselbystrandssjoscoutkar4026"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className={styles.socialLink}
-              >
-                <FaYoutube />
-              </a>
-
-              <a
                 href="https://www.facebook.com/HSSScout"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -129,9 +121,15 @@ export default function Footer() {
           </div>
 
           <div className={styles.partnerRow}>
-            <span className={styles.partnerLabel}>{t("footer.partner", lang)}</span>
-            <span className={styles.partnerName}>{t("footer.stockholm", lang)}</span>
-            <span className={styles.partnerName}>{t("footer.stadhsbk", lang)}</span>
+            <span className={styles.partnerLabel}>
+              {t("footer.partner", lang)}
+            </span>
+            <span className={styles.partnerName}>
+              {t("footer.stockholm", lang)}
+            </span>
+            <span className={styles.partnerName}>
+              {t("footer.stadhsbk", lang)}
+            </span>
           </div>
         </div>
       </div>
