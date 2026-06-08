@@ -8,6 +8,7 @@ import enMapSection from './locales/en/mapsection.json';
 import enVerksamhet from "./locales/en/verksamhet.json";
 import enFormSection from './locales/en/formsection.json';
 import enSafetyAndDocumentsSection from './locales/en/safetydocumentsection.json'
+import enFAQ from './locales/en/faq.json'
 
 import svNav from "./locales/sv/navigation.json";
 import svLogo from "./locales/sv/logo.json";
@@ -19,6 +20,7 @@ import svMapSection from './locales/sv/mapsection.json';
 import svVerksamhet from "./locales/sv/verksamhet.json";
 import svFormSection from './locales/sv/formsection.json'
 import svSafetyAndDocumentsSection from './locales/sv/safetydocumentsection.json'
+import svFAQ from './locales/sv/faq.json'
 
 import { getLang } from "./langStore";
 
@@ -33,7 +35,8 @@ const dict = {
     footer: enFooter,
     verksamhet: enVerksamhet,
     form: enFormSection,
-    safetydocuments: enSafetyAndDocumentsSection
+    safetydocuments: enSafetyAndDocumentsSection,
+    faq: enFAQ
   },
   sv: {
     nav: svNav,
@@ -45,7 +48,8 @@ const dict = {
     footer: svFooter,
     verksamhet: svVerksamhet,
     form: svFormSection,
-    safetydocuments: svSafetyAndDocumentsSection
+    safetydocuments: svSafetyAndDocumentsSection,
+    faq: svFAQ
   },
 };
 

@@ -1,0 +1,23 @@
+{
+   
+        "title": "Frequently Asked Questions",
+        "questions": {
+            "question-one": "Why do we wear a scout uniform?",
+            "question-two": "I am a new scout leader! Which training should I take first?",
+            "question-three": "I have lost my invoice. What should I do?",
+            "question-four": "What is included in my membership fee?",
+            "question-five": "How do I change my billing address?",
+            "question-six": "The amount on my invoice is incorrect. What should I do?",
+            "question-seven": "How do I change my contact details?"
+        },
+        "answers": {
+            "answer-one": "The scout uniform is a way for all of us to show that we belong to the scouts. It creates a sense of community, strengthens our identity and is part of our symbolic framework. Scout uniforms are used in different forms around the world and show that we are part of a global movement.",
+            "answer-two": "The first training you should take is Safe Sessions. This is the only mandatory training required to become a scout leader. Safe Sessions is an online course that takes about one hour to complete.",
+            "answer-three": "Send an email to support@scouterna.se with your name and membership number and you will receive a copy of the invoice by email.",
+            "answer-four": "Go to www.scoutnet.se, log in and change your billing address.",
+            "answer-five": "Go to www.scoutnet.se or contact your scout group.",
+            "answer-six": "Send an email to support@scouterna.se explaining why the amount is incorrect and include your membership number, scout group name and the current invoice.",
+            "answer-seven": "Log in to www.scoutnet.se to update your contact details."
+        }
+    
+}

@@ -4,50 +4,14 @@ import { useState } from 'react'
 import Image from "next/image";
 import GeneralQuestionsIcon from '@/assets/images/icons/general-questions.svg'
 import DropArrow from '@/assets/images/icons/FAQ-arrow.svg'
+import { t } from '@/i18n/t'
+import { useLang } from '@/i18n/useLang'
 
 type GeneralQuestionsProps = {
     id: number
     question: string
     answer: string
 }
-
-const faqs: GeneralQuestionsProps[] = [
-    {
-        id: 1,
-        question: 'Varför bär vi scoutuniform?',
-        answer: 'Scoutuniformen är ett sätt för oss alla att visa att vi tillhör scouterna. Scoutuniformen skapar gemenskap, stärker vår identitet och är en del av vårt symboliska ramverk. Scoutuniformer används i olika utföranden runt om i världen och visar att vi tillhör en global rörelse.',
-    },
-    {
-        id: 2,
-        question: 'Jag är en ny scoutledare! Vilken utbildning ska jag gå först?',
-        answer: 'Den första utbildningen du kommer att gå är Safe Sessions. Detta är den enda obligatoriska utbildningen du måste ha gått för att bli scoutledare. Safe Sessions är en onlinekurs som du gör själv och tar cirka 1 timme att genomföra.',
-    },
-    {
-        id: 3,
-        question: 'Jag har tappat bort min faktura. Vad gör jag?',
-        answer: 'Skicka ett mejl till support@scouterna.se med ditt namn och medlemsnummer så får du en kopia av fakturan via e-post.',
-    },
-    {
-        id: 4,
-        question: 'Vad ingår i min medlemsavgift?',
-        answer: 'Gå till www.scoutnet.se, logga in och ändra din faktureringsadress.',
-    },
-    {
-        id: 5,
-        question: 'Hur ändrar jag min faktureringsadress?',
-        answer: 'Gå till www.scoutnet.se eller kontakta din scoutkår.',
-    },
-    {
-        id: 6,
-        question: 'Beloppet på min faktura är felaktigt. Vad gör jag?',
-        answer: 'Skicka ett e-postmeddelande till support@scouterna.se och ange orsaken till att beloppet är felaktigt, ditt medlemsnummer, fackföreningsnamnet och den aktuella fakturan.',
-    },
-    {
-        id: 7,
-        question: 'Hur ändrar jag mina kontaktuppgifter?',
-        answer: 'Logga in på www.scoutnet.se för att uppdatera dina uppgifter.',
-    },
-]
 
 const FAQItem = ({ question, answer }: GeneralQuestionsProps) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -87,6 +51,47 @@ const FAQItem = ({ question, answer }: GeneralQuestionsProps) => {
 }
 
 const GeneralQuestions = () => {
+
+    useLang()
+
+    const faqs: GeneralQuestionsProps[] = [
+        {
+            id: 1,
+            question: t('faq.questions.question-one'),
+            answer: t('faq.answers.answer-one'),
+        },
+        {
+            id: 2,
+            question: t('faq.questions.question-two'),
+            answer: t('faq.answers.answer-two'),
+        },
+        {
+            id: 3,
+            question: t('faq.questions.question-three'),
+            answer: t('faq.answers.answer-three'),
+        },
+        {
+            id: 4,
+            question: t('faq.questions.question-four'),
+            answer: t('faq.answers.answer-four'),
+        },
+        {
+            id: 5,
+            question: t('faq.questions.question-five'),
+            answer: t('faq.answers.answer-five'),
+        },
+        {
+            id: 6,
+            question: t('faq.questions.question-six'),
+            answer: t('faq.answers.answer-six'),
+        },
+        {
+            id: 7,
+            question: t('faq.questions.question-seven'),
+            answer: t('faq.answers.answer-seven'),
+        },
+    ]
+
     return (
         <section className="w-full border-b border-primary/25 py-12">
             <div className="mx-auto max-w-7xl px-4 md:px-6">
@@ -98,7 +103,7 @@ const GeneralQuestions = () => {
                     />
 
                     <h2 className="text-xl md:text-2xl font-bold text-primary">
-                        Vanliga Frågor
+                       {t('faq.title')}
                     </h2>
                 </div>
 
