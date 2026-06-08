@@ -70,18 +70,19 @@ const Navigation = () => {
                 title={t("nav.join", lang)}
                 link="https://www.scoutnet.se/register/in/group/764"
                 highlighted
+                external
               />
 
               <LanguageSwitcher />
             </div>
           </div>
-
           <div className="ml-auto flex shrink-0 items-center gap-1 md:hidden">
             <div className="text-sm scale-90">
               <NavItem
                 title={t("nav.join", lang)}
                 link="https://www.scoutnet.se/register/in/group/764"
                 highlighted
+                external
               />
             </div>
 

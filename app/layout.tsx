@@ -28,8 +28,8 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
+        <Navigation />
         <main className="flex-1">
-          <Navigation />
           {children}
         </main>
         <Footer />
