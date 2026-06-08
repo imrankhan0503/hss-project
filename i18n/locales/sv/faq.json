@@ -1,0 +1,23 @@
+{
+   
+        "title": "Vanliga frågor",
+        "questions": {
+            "question-one": "Varför bär vi scoutuniform?",
+            "question-two": "Jag är en ny scoutledare! Vilken utbildning ska jag gå först?",
+            "question-three": "Jag har tappat bort min faktura. Vad gör jag?",
+            "question-four": "Vad ingår i min medlemsavgift?",
+            "question-five": "Hur ändrar jag min faktureringsadress?",
+            "question-six": "Beloppet på min faktura är felaktigt. Vad gör jag?",
+            "question-seven": "Hur ändrar jag mina kontaktuppgifter?"
+        },
+        "answers": {
+            "answer-one": "Scoutuniformen är ett sätt för oss alla att visa att vi tillhör scouterna. Scoutuniformen skapar gemenskap, stärker vår identitet och är en del av vårt symboliska ramverk. Scoutuniformer används i olika utföranden runt om i världen och visar att vi tillhör en global rörelse.",
+            "answer-two": "Den första utbildningen du kommer att gå är Safe Sessions. Detta är den enda obligatoriska utbildningen du måste ha gått för att bli scoutledare. Safe Sessions är en onlinekurs som du gör själv och tar cirka 1 timme att genomföra.",
+            "answer-three": "Skicka ett mejl till support@scouterna.se med ditt namn och medlemsnummer så får du en kopia av fakturan via e-post.",
+            "answer-four": "Gå till www.scoutnet.se, logga in och ändra din faktureringsadress.",
+            "answer-five": "Gå till www.scoutnet.se eller kontakta din scoutkår.",
+            "answer-six": "Skicka ett e-postmeddelande till support@scouterna.se och ange orsaken till att beloppet är felaktigt, ditt medlemsnummer, scoutkårens namn och den aktuella fakturan.",
+            "answer-seven": "Logga in på www.scoutnet.se för att uppdatera dina uppgifter."
+        }
+    
+}
