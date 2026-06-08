@@ -47,7 +47,7 @@ const BoatsInformation = () => {
 
   return (
     <section className="w-full px-6 py-12 md:px-28">
-      <div className="mx-auto grid max-w-300 gap-y-12 gap-x-14 md:grid-cols-2">
+     <div className="mx-auto grid max-w-300 gap-y-12 gap-x-14 md:grid-cols-2 md:auto-rows-fr">
         {boatsInformationSectionData.map((card) => (
           <FleetCard key={card.id} {...card} />
         ))}

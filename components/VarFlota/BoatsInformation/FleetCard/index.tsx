@@ -24,14 +24,14 @@ const FleetCard = ({ title, subtitle, description, bulletPoints, icon, image }: 
         <section
 
             // If card has image: use image background and secondary text. If no image: use white background and primary text.
-            className={`rounded-3xl ${image
+            className={`h-full rounded-3xl ${image
                 ? "text-secondary"
                 : "min-h-96 border border-primary/25 bg-background p-8 text-primary"
                 }`}
         >
             {image ? (
                 /* If card has image */
-                <div className="flex flex-col">
+                <div className="flex h-full flex-col">
 
                     {/* Mobile: title above image  */}
                     <h3 className="mb-3 text-center text-2xl font-bold text-primary md:hidden">
@@ -40,7 +40,7 @@ const FleetCard = ({ title, subtitle, description, bulletPoints, icon, image }: 
 
                     {/* Image card: used on both mobile and desktop */}
                     <div
-                        className="relative flex h-72 overflow-hidden rounded-3xl bg-cover bg-center p-8 md:min-h-96 md:flex-col md:justify-end"
+                        className="relative flex h-72 overflow-hidden rounded-3xl bg-cover bg-center p-8 md:h-full md:min-h-96 md:flex-col md:justify-end"
                         style={{ backgroundImage: `url(${image.src})` }}
                     >
                         <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
