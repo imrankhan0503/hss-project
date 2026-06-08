@@ -2,5 +2,10 @@
   "activities": "Aktiviteter",
   "badges": "Märken & Färdigheter",
   "readMore": "Läs Mer ...",
-  "back": "Tillbaka"
+  "back": "Tillbaka",
+  "day": "Dag",
+  "division": "Avdelning",
+  "time": "Tid",
+  "place": "Plats",
+  "meetingPlace": "Scoutlokalen Ruffen"
 }
