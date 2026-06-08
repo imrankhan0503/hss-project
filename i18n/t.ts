@@ -6,6 +6,7 @@ import enFooter from "./locales/en/footer.json";
 import enFleetSection from './locales/en/fleetsection.json';
 import enMapSection from './locales/en/mapsection.json';
 import enVerksamhet from "./locales/en/verksamhet.json";
+import enFormSection from './locales/en/formsection.json';
 
 import svNav from "./locales/sv/navigation.json";
 import svLogo from "./locales/sv/logo.json";
@@ -14,7 +15,8 @@ import svHomepage from "./locales/sv/homepagesection.json";
 import svFooter from "./locales/sv/footer.json";
 import svFleetSection from './locales/sv/fleetsection.json';
 import svMapSection from './locales/sv/mapsection.json';
-import svVerksamhet from "./locales/sv/verksamhet.json";  
+import svVerksamhet from "./locales/sv/verksamhet.json";
+import svFormSection from './locales/sv/formsection.json'
 
 import { getLang } from "./langStore";
 
@@ -28,6 +30,7 @@ const dict = {
     mapsection: enMapSection,
     footer: enFooter,
     verksamhet: enVerksamhet,
+    form: enFormSection
   },
   sv: {
     nav: svNav,
@@ -38,6 +41,7 @@ const dict = {
     mapsection: svMapSection,
     footer: svFooter,
     verksamhet: svVerksamhet,
+    form: svFormSection
   },
 };
 

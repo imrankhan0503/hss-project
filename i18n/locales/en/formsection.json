@@ -1,0 +1,20 @@
+{
+  "header": {
+    "title": "Ask HSS",
+    "buttonText": "New Question"
+  },
+  "stepsLabel": "Contact Information",
+  "fields": {
+    "name": "Name",
+    "email": "E-mail",
+    "locality": "Locality",
+    "mobileNumber": "Phone number",
+    "message": "Message"
+  },
+  "sendCTALoading": "Sending",
+  "sendCTA": "Send",
+  "successPage": {
+    "heading": " We have received your message!",
+    "subHeading": "We will get back to you shortly."
+  }
+}

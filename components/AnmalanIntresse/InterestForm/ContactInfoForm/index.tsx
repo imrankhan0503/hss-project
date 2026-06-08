@@ -3,50 +3,54 @@
 import FormField from "@/components/AnmalanIntresse/InterestForm/FormField"
 import { FormData, FormSectionDataField } from "@/types/form"
 import { useForm } from "react-hook-form"
-
-const formSectionData: FormSectionDataField[] = [
-  {
-    id: 1,
-    name: 'name',
-    label: 'Namn',
-    type: 'text',
-    required: true
-  },
-  {
-    id: 2,
-    name: 'email',
-    label: 'E-post',
-    type: 'email',
-    required: true
-  },
-  {
-    id: 3,
-    name: 'locality',
-    label: 'Ort',
-    type: 'text',
-    required: false
-  },
-  {
-    id: 4,
-    name: 'mobileNumber',
-    label: 'Telefonnummer',
-    type: 'tel',
-    required: false
-  },
-  {
-    id: 5,
-    name: 'message',
-    label: 'Meddelande',
-    required: false
-  }
-]
+import { t } from "@/i18n/t"
+import { useLang } from "@/i18n/useLang";
 
 type ContactInfoFormProps = {
   onSubmit: () => void
 }
 
-
 const ContactInfoForm = ({ onSubmit }: ContactInfoFormProps) => {
+  useLang()
+
+  const formSectionData: FormSectionDataField[] = [
+    {
+      id: 1,
+      name: 'name',
+      label: t('form.fields.name'),
+      type: 'text',
+      required: true
+    },
+    {
+      id: 2,
+      name: 'email',
+      label: t('form.fields.email'),
+      type: 'email',
+      required: true
+    },
+    {
+      id: 3,
+      name: 'locality',
+      label: t('form.fields.locality'),
+      type: 'text',
+      required: false
+    },
+    {
+      id: 4,
+      name: 'mobileNumber',
+      label: t('form.fields.mobileNumber'),
+      type: 'tel',
+      required: false
+    },
+    {
+      id: 5,
+      name: 'message',
+      label: t('form.fields.message'),
+      required: false
+    }
+  ]
+
+
   const { handleSubmit, register, formState: { errors, isSubmitting } } = useForm<FormData>()
 
   const onFormSubmit = async (formData: FormData) => {
@@ -77,7 +81,7 @@ const ContactInfoForm = ({ onSubmit }: ContactInfoFormProps) => {
           type='submit'
           disabled={isSubmitting}
           className="h-14 w-56 md:w-64 rounded-[10px] bg-primary text-lg md:text-xl font-bold text-secondary">
-          {isSubmitting ? 'Skickar...' : 'Skicka'}
+          {isSubmitting ? t('form.sendCTALoading') : t('form.sendCTA')}
         </button>
       </div>
     </form>
