@@ -70,7 +70,9 @@ export default function VerksamhetCards({
                     width={22}
                     height={22}
                   />
-                  <p className={styles.badgeLabel}>{t("verksamhet.badges", lang)}</p>
+                  <p className={styles.badgeLabel}>
+                    {t("verksamhet.badges", lang)}
+                  </p>
                 </div>
                 <ul className={styles.badgeList}>
                   {expandedGroup.badges.map((badge) => (
@@ -121,7 +123,7 @@ export default function VerksamhetCards({
           <div
             className={styles.cardBg}
             style={{
-              background: `linear-gradient(to right, ${group.bulletColor} 0%, ${group.bulletColor}CC 15%, ${group.bulletColor}66 30%, ${group.bulletColor}22 50%, ${group.bulletColor}08 70%, transparent 100%)`,
+              background: `linear-gradient(to right, ${group.bulletColor} 0%, ${group.bulletColor}77 18%, ${group.bulletColor}66 30%, ${group.bulletColor}22 50%, transparent 82%)`,
             }}
           />
 
