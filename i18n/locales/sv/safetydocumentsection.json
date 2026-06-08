@@ -1,0 +1,46 @@
+{
+    "safetysecurity": {
+        "title": "Trygga Möten & Säkerhet",
+        "subtitle": "Vi arbetar aktivt för att skapa en trygg och säker miljö för alla scouter.",
+        "cards": {
+            "trainedLeaders": {
+                "title": "Utbildade Ledare",
+                "description": "Alla ledare genomgår utbildning i Trygga Möten och första hjälpen."
+            },
+            "safetyRoutines": {
+                "title": "Säkerhetsrutiner",
+                "description": "Tydliga rutiner för segling, läger och alla aktiviteter följs strikt."
+            },
+            "insurance": {
+                "title": "Försäkring",
+                "description": "Alla scouter omfattas av Sveriges Scoutförbunds gruppförsäkring."
+            }
+        },
+        "policyBanner": {
+            "title": "Flytväst Policy",
+            "description": "Alla scouter ska alltid använda godkänd flytväst vid aktiviteter på eller vid vatten. Flytvästen ska vara rätt storlek och korrekt påtagen."
+        },
+        "buttons": {
+            "webTraining": "Våra utbildningar på webben",
+            "scoutTraining": "Utbildningar för scouter och scoutledare"
+        }
+    },
+    "documents": {
+        "title": "Dokument & Nedladdningar",
+        "documentscard": {
+            "preview": "Förhandsvisa",
+            "download": "Ladda ner",
+            "documents": {
+                "annualReport": "Årsredovisning",
+                "auditReport": "Revisionsberättelse",
+                "activityPlan": "Verksamhetsplan",
+                "budget": "Budget 2025-2026",
+                "seaScoutGroup": "Sjöscoutkår",
+                "instructions": "Anvisningar",
+                "annualMeetingMinutes": "Kårstämma protokoll",
+                "feeProposal": "Förslag på avgifter",
+                "activityReport": "Verksamhetsberättelse"
+            }
+        }
+    }
+}
