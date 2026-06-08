@@ -30,9 +30,9 @@ const LanguageSwitcher = () => {
         flex flex-col items-center justify-center
         px-2 py-1
         rounded-full
-        text-[#00355F]
-        hover:bg-[#00355F]
-        hover:text-white
+        text-primary
+        hover:bg-primary
+        hover:text-background
         transition-all duration-200
         min-w-[44px]
       "

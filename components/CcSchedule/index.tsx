@@ -21,16 +21,16 @@ export default function CcSchedule({ groups }: Props) {
         }}
       >
         <div className="grid grid-cols-3 md:grid-cols-4 text-center mb-5">
-          <p className="text-[#00355F] font-bold text-[15px] md:text-[20px]">
+          <p className="text-primary font-bold text-[15px] md:text-[20px]">
             {t("verksamhet.day", lang)}
           </p>
-          <p className="text-[#00355F] font-bold text-[15px] md:text-[20px]">
+          <p className="text-primary font-bold text-[15px] md:text-[20px]">
             {t("verksamhet.division", lang)}
           </p>
-          <p className="text-[#00355F] font-bold text-[15px] md:text-[20px]">
+          <p className="text-primary font-bold text-[15px] md:text-[20px]">
             {t("verksamhet.time", lang)}
           </p>
-          <p className="text-[#00355F] font-bold hidden md:block md:text-[20px]">
+          <p className="text-primary font-bold hidden md:block md:text-[20px]">
             {t("verksamhet.place", lang)}
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function CcSchedule({ groups }: Props) {
               key={item.id}
               className="grid grid-cols-3 md:grid-cols-4 text-center items-center"
             >
-              <p className="text-[#00355F] font-semibold text-[13px] md:text-[18px]">
+              <p className="text-primary font-semibold text-[13px] md:text-[18px]">
                 {item.meetingDays}
               </p>
               <p
@@ -50,10 +50,10 @@ export default function CcSchedule({ groups }: Props) {
               >
                 {item.title}
               </p>
-              <p className="text-[#00355F] font-semibold text-[13px] md:text-[18px]">
+              <p className="text-primary font-semibold text-[13px] md:text-[18px]">
                 {item.meetingTime}
               </p>
-              <p className="text-[#00355F] font-semibold hidden md:block md:text-[18px]">
+              <p className="text-primary font-semibold hidden md:block md:text-[18px]">
                 {t("verksamhet.meetingPlace", lang)}
               </p>
             </div>
