@@ -1,7 +1,7 @@
-import HomeHero from "@/components/HomeComponents/Hero";
-import ScoutGroupsSection from "@/components/HomeComponents/ScoutGroups/ScoutGroupsSection";
-import SectionBanner from "@/components/HomeComponents/SectionBanner";
-import ServicesSection from "@/components/HomeComponents/Services/ServicesSection";
+import HomeHero from "@/components/Home/Hero";
+import ScoutGroupsSection from "@/components/Home/ScoutGroups/ScoutGroupsSection";
+import SectionBanner from "@/components/Home/SectionBanner";
+import ServicesSection from "@/components/Home/Services/ServicesSection";
 
 const Home = () => {
   return (

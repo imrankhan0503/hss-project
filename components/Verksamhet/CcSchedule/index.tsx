@@ -1,6 +1,6 @@
 "use client";
 
-import { VerksamhetGroup } from "../../data/hssdata";
+import { VerksamhetGroup } from "@/data/hssdata";
 import { t } from "@/i18n/t";
 import { useLang } from "@/i18n/useLang";
 

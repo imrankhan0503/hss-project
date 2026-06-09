@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { VerksamhetGroup } from "../../data/hssdata";
+import { VerksamhetGroup } from "@/data/hssdata";
 import styles from "./verksamhetcards.module.css";
 import { t } from "@/i18n/t";
 import { useLang } from "@/i18n/useLang";

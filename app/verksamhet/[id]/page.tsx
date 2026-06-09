@@ -2,7 +2,7 @@
 
 import { getGroups} from "@/data/hssdata"
 import { notFound } from "next/navigation";
-import styles from '@/components/VerksamhetCards/verksamhetcards.module.css'
+import styles from '@/components/Verksamhet/VerksamhetCards/verksamhetcards.module.css'
 import Image from "next/image";
 import { t } from "@/i18n/t";
 import { useLang } from "@/i18n/useLang";

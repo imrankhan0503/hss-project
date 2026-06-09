@@ -1,7 +1,5 @@
 'use client'
 
-import BackgroundImage from '@/assets/images/background/home-bg.png'
-import Image from 'next/image';
 import Link from 'next/link';
 import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang";

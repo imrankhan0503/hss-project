@@ -1,8 +1,8 @@
 "use client";
 
-import VerksamhetCards from "../../components/VerksamhetCards";
-import CcSchedule from "../../components/CcSchedule";
-import { getGroups } from "../../data/hssdata";
+import VerksamhetCards from "@/components/Verksamhet/VerksamhetCards";
+import CcSchedule from "@/components/Verksamhet/CcSchedule";
+import { getGroups } from "@/data/hssdata";
 import HeroSection from "@/components/shared/HeroSection";
 import { heroSectionData } from "@/data/heroSectionData";
 import { t } from "@/i18n/t"
