@@ -4,8 +4,8 @@ import { useEffect, useState } from "react"
 import { getLang, setLang } from "@/i18n/langStore"
 import Image from "next/image"
 
-import EnglishLang from "../../assets/images/icons/circle-flags_lang-en.svg"
-import SwedishLang from "../../assets/images/icons/circle-flags_lang-sv.svg"
+import EnglishLang from "@/assets/images/icons/circle-flags_lang-en.svg"
+import SwedishLang from "@/assets/images/icons/circle-flags_lang-sv.svg"
 
 const LanguageSwitcher = () => {
   const [lang, setLangState] = useState("sv")
