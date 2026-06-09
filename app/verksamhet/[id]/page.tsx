@@ -1,6 +1,6 @@
 'use client'
 
-import { getGroups, VerksamhetGroup } from "@/data/hssdata"
+import { getGroups} from "@/data/hssdata"
 import { notFound } from "next/navigation";
 import styles from '@/components/VerksamhetCards/verksamhetcards.module.css'
 import Image from "next/image";
