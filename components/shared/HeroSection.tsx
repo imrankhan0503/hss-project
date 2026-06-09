@@ -22,7 +22,7 @@ const HeroSection = ({
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-primary/60 z-10" />
+        <div className="absolute inset-0 bg-primary/50 z-10" />
 
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-secondary text-3xl md:text-5xl font-semibold">
