@@ -35,6 +35,7 @@ const LanguageSwitcher = () => {
         hover:text-background
         transition-all duration-200
         min-w-[44px]
+        cursor-pointer
       "
     >
       {/* FLAG TOP */}

@@ -1,5 +1,5 @@
 import VarFlottaTop from "@/assets/images/background/var-flotta-bg.jpg";
-import VerksamhetTop from "@/assets/images/background/for-verksamhet-bg.jpg";
+import VerksamhetTop from "@/assets/images/background/verksamhet-top.jpg";
 import ForaldrarTop from "@/assets/images/background/foraldrar-top.png"
 import ContantUsTop from "@/assets/images/background/contact-us.png"
 
