@@ -9,29 +9,29 @@ import { useLang } from "@/i18n/useLang";
 import { t } from "@/i18n/t";
 
 const ServicesSection = () => {
-  useLang()
+  const lang = useLang()
 
   const servicesSectionData: ServiceCardData[] = [
-  {
-    id: 1,
-    title: t('homepage.services.sailing.title'),
-    description: t('homepage.services.sailing.description'),
-    icon: SailingIcon,
-    resize: true
-  },
-  {
-    id: 2,
-    title: t('homepage.services.community.title'),
-    description: t('homepage.services.community.description'),
-    icon: PeopleIcon
-  },
-  {
-    id: 3,
-    title: t('homepage.services.development.title'),
-    description: t('homepage.services.development.description'),
-    icon: GrowthIcon
-  },
-]
+    {
+      id: 1,
+      title: t('homepage.services.sailing.title', lang),
+      description: t('homepage.services.sailing.description', lang),
+      icon: SailingIcon,
+      resize: true
+    },
+    {
+      id: 2,
+      title: t('homepage.services.community.title', lang),
+      description: t('homepage.services.community.description', lang),
+      icon: PeopleIcon
+    },
+    {
+      id: 3,
+      title: t('homepage.services.development.title', lang),
+      description: t('homepage.services.development.description', lang),
+      icon: GrowthIcon
+    },
+  ]
 
   return (
     <section className="py-16 px-6">
