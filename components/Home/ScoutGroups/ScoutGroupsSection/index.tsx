@@ -18,7 +18,7 @@ const ScoutGroupsSection = () => {
       title: "Sjöhumlor",
       description: t("homepage.groups.sjöhumlor.description"),
       color: "bg-card-one",
-      href: "/verksamhet?expand=sjohumlor",
+      href: "/verksamhet/sjohumlor",
       icon: SjohumlorIcon,
     },
     {
@@ -26,7 +26,7 @@ const ScoutGroupsSection = () => {
       title: "Kaparna",
       description: t("homepage.groups.kaparna.description"),
       color: "bg-card-two",
-      href: "/verksamhet?expand=kaparna",
+      href: "/verksamhet/kaparna",
       icon: KaparnaIcon,
     },
     {
@@ -34,7 +34,7 @@ const ScoutGroupsSection = () => {
       title: "Konvojen",
       description: t("homepage.groups.konvojen.description"),
       color: "bg-card-three",
-      href: "/verksamhet?expand=konvojen",
+      href: "/verksamhet/konvojen",
       icon: KonvojenIcon,
     },
     {
@@ -42,7 +42,7 @@ const ScoutGroupsSection = () => {
       title: "Utmanare",
       description: t("homepage.groups.utmanare.description"),
       color: "bg-card-four",
-      href: "/verksamhet?expand=utmanare",
+      href: "/verksamhet/utmanare",
       icon: UtmanareIcon,
     },
     {
@@ -50,7 +50,7 @@ const ScoutGroupsSection = () => {
       title: t("homepage.groups.familyscout.title"),
       description: t("homepage.groups.familyscout.description"),
       color: "bg-card-five",
-      href: "/verksamhet?expand=familjescout",
+      href: "/verksamhet/familjescout",
       icon: FamiljescoutIcon,
     },
   ];
