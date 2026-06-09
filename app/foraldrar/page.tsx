@@ -9,16 +9,16 @@ import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang";
 
 const ForaldrarPage = () => {
-  useLang()
+  const lang = useLang()
   const data = heroSectionData.foraldrar
   return (
     <main>
-      <HeroSection  title={t(data.titleKey)}
-        subtitle={t(data.subtitleKey)}
-        image={data.image} /> 
+      <HeroSection title={t(data.titleKey, lang)}
+        subtitle={t(data.subtitleKey, lang)}
+        image={data.image} />
 
       <SafetySection />
-      <GeneralQuestions/>
+      <GeneralQuestions />
       <DocumentsStorage />
     </main>
   );

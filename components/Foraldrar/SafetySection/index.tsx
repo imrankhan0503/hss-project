@@ -13,25 +13,25 @@ import { t } from '@/i18n/t'
 import { useLang } from '@/i18n/useLang'
 
 const SafetySection = () => {
-  useLang()
+  const lang = useLang()
 
   const cardsData: InformationCardsData[] = [
     {
       id: 1,
-      title: t('safetydocuments.cards.trainedLeaders.title'),
-      description: t('safetydocuments.safetysecurity.cards.trainedLeaders.description'),
+      title: t('safetydocuments.cards.trainedLeaders.title', lang),
+      description: t('safetydocuments.safetysecurity.cards.trainedLeaders.description', lang),
       icon: EducationLogo,
     },
     {
       id: 2,
-      title: t('safetydocuments.safetysecurity.cards.safetyRoutines.title'),
-      description: t('safetydocuments.safetysecurity.cards.safetyRoutines.description'),
+      title: t('safetydocuments.safetysecurity.cards.safetyRoutines.title', lang),
+      description: t('safetydocuments.safetysecurity.cards.safetyRoutines.description', lang),
       icon: SecurityRoutineLogo,
     },
     {
       id: 3,
-      title: t('safetydocuments.safetysecurity.cards.insurance.title'),
-      description: t('safetydocuments.safetysecurity.cards.insurance.description'),
+      title: t('safetydocuments.safetysecurity.cards.insurance.title', lang),
+      description: t('safetydocuments.safetysecurity.cards.insurance.description', lang),
       icon: InsuranceLogo,
     },
   ]
@@ -46,11 +46,11 @@ const SafetySection = () => {
 
           <div>
             <h2 className="text-xl md:text-2xl font-bold text-primary">
-              {t('safetydocuments.safetysecurity.title')}
+              {t('safetydocuments.safetysecurity.title', lang)}
             </h2>
 
             <p className="text-base text-primary/80 mt-2 hidden md:block">
-              {t('safetydocuments.safetysecurity.subtitle')}
+              {t('safetydocuments.safetysecurity.subtitle', lang)}
             </p>
           </div>
         </div>
@@ -64,20 +64,20 @@ const SafetySection = () => {
         <div className="mt-6">
           <InformationCards
             icon={VestLogo}
-            title={t('safetydocuments.safetysecurity.policyBanner.title')}
-            description={t('safetydocuments.safetysecurity.policyBanner.description')}
+            title={t('safetydocuments.safetysecurity.policyBanner.title', lang)}
+            description={t('safetydocuments.safetysecurity.policyBanner.description', lang)}
             isPolicyBanner
           />
         </div>
 
         <div className="mt-10 flex flex-col gap-4 md:flex-row md:justify-center md:items-center md:gap-12">
           <ButtonLinks
-            text={t('safetydocuments.safetysecurity.buttons.webTraining')}
+            text={t('safetydocuments.safetysecurity.buttons.webTraining', lang)}
             link="https://www.scouternasfolkhogskola.se/kurser-utbildningar/webbutbildningar/"
           />
 
           <ButtonLinks
-            text={t('safetydocuments.safetysecurity.buttons.scoutTraining')}
+            text={t('safetydocuments.safetysecurity.buttons.scoutTraining', lang)}
             link="https://www.scouternasfolkhogskola.se/kurser-utbildningar/scoututbildningar/"
           />
         </div>
