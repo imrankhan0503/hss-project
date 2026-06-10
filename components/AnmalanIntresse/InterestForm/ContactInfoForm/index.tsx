@@ -11,41 +11,41 @@ type ContactInfoFormProps = {
 }
 
 const ContactInfoForm = ({ onSubmit }: ContactInfoFormProps) => {
-  useLang()
+  const lang = useLang()
 
   const formSectionData: FormSectionDataField[] = [
     {
       id: 1,
       name: 'name',
-      label: t('form.fields.name'),
+      label: t('form.fields.name', lang),
       type: 'text',
       required: true
     },
     {
       id: 2,
       name: 'email',
-      label: t('form.fields.email'),
+      label: t('form.fields.email', lang),
       type: 'email',
       required: true
     },
     {
       id: 3,
       name: 'locality',
-      label: t('form.fields.locality'),
+      label: t('form.fields.locality', lang),
       type: 'text',
       required: false
     },
     {
       id: 4,
       name: 'mobileNumber',
-      label: t('form.fields.mobileNumber'),
+      label: t('form.fields.mobileNumber', lang),
       type: 'tel',
       required: false
     },
     {
       id: 5,
       name: 'message',
-      label: t('form.fields.message'),
+      label: t('form.fields.message', lang),
       required: false
     }
   ]
@@ -81,7 +81,7 @@ const ContactInfoForm = ({ onSubmit }: ContactInfoFormProps) => {
           type='submit'
           disabled={isSubmitting}
           className="h-14 w-56 md:w-64 rounded-[10px] bg-primary text-lg md:text-xl font-bold text-secondary">
-          {isSubmitting ? t('form.sendCTALoading') : t('form.sendCTA')}
+          {isSubmitting ? t('form.sendCTALoading', lang) : t('form.sendCTA', lang)}
         </button>
       </div>
     </form>

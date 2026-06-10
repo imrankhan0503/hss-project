@@ -10,13 +10,13 @@ import { t } from "@/i18n/t";
 import { useLang } from "@/i18n/useLang";
 
 const ScoutGroupsSection = () => {
-  useLang()
+  const lang = useLang()
 
   const scoutGroupsSectionData: ScoutGroupCardData[] = [
     {
       id: 1,
       title: "Sjöhumlor",
-      description: t("homepage.groups.sjöhumlor.description"),
+      description: t("homepage.groups.sjöhumlor.description", lang),
       color: "bg-card-one",
       href: "/verksamhet/sjohumlor",
       icon: SjohumlorIcon,
@@ -24,7 +24,7 @@ const ScoutGroupsSection = () => {
     {
       id: 2,
       title: "Kaparna",
-      description: t("homepage.groups.kaparna.description"),
+      description: t("homepage.groups.kaparna.description", lang),
       color: "bg-card-two",
       href: "/verksamhet/kaparna",
       icon: KaparnaIcon,
@@ -32,7 +32,7 @@ const ScoutGroupsSection = () => {
     {
       id: 3,
       title: "Konvojen",
-      description: t("homepage.groups.konvojen.description"),
+      description: t("homepage.groups.konvojen.description", lang),
       color: "bg-card-three",
       href: "/verksamhet/konvojen",
       icon: KonvojenIcon,
@@ -40,15 +40,15 @@ const ScoutGroupsSection = () => {
     {
       id: 4,
       title: "Utmanare",
-      description: t("homepage.groups.utmanare.description"),
+      description: t("homepage.groups.utmanare.description", lang),
       color: "bg-card-four",
       href: "/verksamhet/utmanare",
       icon: UtmanareIcon,
     },
     {
       id: 5,
-      title: t("homepage.groups.familyscout.title"),
-      description: t("homepage.groups.familyscout.description"),
+      title: t("homepage.groups.familyscout.title", lang),
+      description: t("homepage.groups.familyscout.description", lang),
       color: "bg-card-five",
       href: "/verksamhet/familjescout",
       icon: FamiljescoutIcon,

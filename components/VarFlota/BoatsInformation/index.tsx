@@ -10,36 +10,36 @@ import { useLang } from '@/i18n/useLang'
 
 const BoatsInformation = () => {
 
-  useLang()
+  const lang = useLang()
 
   const boatsInformationSectionData = [
     {
       id: 1,
       icon: Icon,
-      title: t('fleetsection.information.title'),
-      description: t('fleetsection.information.description'),
+      title: t('fleetsection.information.title', lang),
+      description: t('fleetsection.information.description', lang),
       bulletPoints: [
-        t('fleetsection.information.bulletPoints.trainingDinghies'),
-        t('fleetsection.information.bulletPoints.keelboats'),
-        t('fleetsection.information.bulletPoints.motorboat'),
+        t('fleetsection.information.bulletPoints.trainingDinghies', lang),
+        t('fleetsection.information.bulletPoints.keelboats', lang),
+        t('fleetsection.information.bulletPoints.motorboat', lang),
       ],
     },
     {
       id: 2,
-      title: t('fleetsection.boats.optimist.title'),
-      subtitle: t('fleetsection.boats.optimist.subtitle'),
+      title: t('fleetsection.boats.optimist.title', lang),
+      subtitle: t('fleetsection.boats.optimist.subtitle', lang),
       image: BoatOneBG,
     },
     {
       id: 3,
-      title: t('fleetsection.boats.twoKronor.title'),
-      subtitle: t('fleetsection.boats.twoKronor.subtitle'),
+      title: t('fleetsection.boats.twoKronor.title', lang),
+      subtitle: t('fleetsection.boats.twoKronor.subtitle', lang),
       image: BoatTwoBG,
     },
     {
       id: 4,
-      title: t('fleetsection.boats.keelboats.title'),
-      subtitle: t('fleetsection.boats.keelboats.subtitle'),
+      title: t('fleetsection.boats.keelboats.title', lang),
+      subtitle: t('fleetsection.boats.keelboats.subtitle', lang),
       image: BoatThreeBG,
     }
   ]
@@ -47,7 +47,7 @@ const BoatsInformation = () => {
 
   return (
     <section className="w-full px-6 py-12 md:px-28">
-     <div className="mx-auto grid max-w-300 gap-y-12 gap-x-14 md:grid-cols-2 md:auto-rows-fr">
+      <div className="mx-auto grid max-w-300 gap-y-12 gap-x-14 md:grid-cols-2 md:auto-rows-fr">
         {boatsInformationSectionData.map((card) => (
           <FleetCard key={card.id} {...card} />
         ))}
