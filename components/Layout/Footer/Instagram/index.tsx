@@ -61,7 +61,7 @@ const InstagramSection = () => {
   //LOADING  and ERROR states
   if (loading) {
     return (
-      <section className="w-full px-6 py-12 md:px-[70px]">
+      <section className="w-full px-6 py-12 md:px-[70px] text-center">
         <p>Loading instagram posts..</p>
       </section>
     )
@@ -69,7 +69,7 @@ const InstagramSection = () => {
 
   if (error) {
     return (
-      <section className="w-full px-6 py-12 md:px-[70px]">
+      <section className="w-full px-6 py-12 md:px-[70px] text-center">
         <p>Instagram feed temporarily unavailable.</p>
       </section>
     )
