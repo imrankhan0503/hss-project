@@ -16,17 +16,29 @@ const InstagramSection = () => {
   const lang = useLang()
 
   const [posts, setPosts] = useState<PostDataProps[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" })
   const [selectedIndex, setSelectedIndex] = useState(0)
 
-
   useEffect(() => {
     async function load() {
-      const res = await fetch(FEED_URL)
-      const data = await res.json()
-      setPosts(data.posts || [])
+      try {
+        setLoading(true)
+        setError(false)
+        const res = await fetch(FEED_URL)
+        if (!res.ok) {
+          throw new Error('Failed to fetch feed')
+        }
+        const data = await res.json()
+        setPosts(data.posts || [])
+      } catch (err) {
+        console.error('Instagram fetch error:', err)
+        setError(true)
+      } finally {
+        setLoading(false)
+      }
     }
-
     load()
   }, [])
 
@@ -46,6 +58,23 @@ const InstagramSection = () => {
     }
   }, [emblaApi, onSelect])
 
+  //LOADING  and ERROR states
+  if (loading) {
+    return (
+      <section className="w-full px-6 py-12 md:px-[70px]">
+        <p>Loading instagram posts..</p>
+      </section>
+    )
+  }
+
+  if (error) {
+    return (
+      <section className="w-full px-6 py-12 md:px-[70px]">
+        <p>Instagram feed temporarily unavailable.</p>
+      </section>
+    )
+  }
+
   return (
     <section className="w-full px-6 py-12 md:px-[70px]">
       <div className="flex items-center justify-center md:justify-start gap-2 mb-8">
@@ -55,7 +84,7 @@ const InstagramSection = () => {
         </h2>
       </div>
       {posts.length > 0 &&
-       (
+        (
           <>
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
@@ -75,7 +104,8 @@ const InstagramSection = () => {
               ))}
             </div>
           </>
-        )}
+        )
+      }
     </section>
   )
 }
