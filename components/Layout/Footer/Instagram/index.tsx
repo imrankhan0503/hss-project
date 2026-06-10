@@ -71,7 +71,7 @@ const instagramDummyImages: PostDataProps[] = [
 ]
 
 const InstagramSection = () => {
-  useLang()
+  const lang = useLang()
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'start' })
   const [selectedIndex, setSelectedIndex] = useState(0)
 
@@ -92,7 +92,7 @@ const InstagramSection = () => {
       <div className="flex items-center justify-center md:justify-start gap-2 mb-8">
         <Image src={InstagramLogo} alt="instagram logo" className="w-9 md:w-12 h-9 md:h-12" />
         <h2 className="text-xl md:text-2xl font-bold text-primary">
-          {t('homepage.instagramText')}
+          {t('homepage.instagramText', lang)}
         </h2>
       </div>
       <div className="overflow-hidden" ref={emblaRef}>
