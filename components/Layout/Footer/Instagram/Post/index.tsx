@@ -1,13 +1,12 @@
 import { PostProps } from "@/types/instagram";
-import Image from "next/image";
 import Link from "next/link";
 
-const Post = ({ media_url ,permalink ,caption }: PostProps) => {
+const Post = ({ mediaUrl ,permalink ,caption }: PostProps) => {
   return (
     <div className="px-3 flex-[0_0_100%] md:flex-[0_0_25%]">
       <Link href={permalink} target="_blank" rel="noopener noreferrer" className="block">
         <div className="relative aspect-square max-w-[250px] rounded-2xl overflow-hidden mx-auto">
-          <Image src={media_url} alt={caption} fill className="object-cover transition-transform duration-300 hover:scale-105" />
+          <img src={mediaUrl} alt={caption} className="object-cover transition-transform duration-300 hover:scale-105 w-full h-full" />
         </div>
       </Link>
     </div>
