@@ -5,7 +5,7 @@ import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang";
 
 const SuccessForm = () => {
-  useLang()
+  const lang = useLang()
   return (
     <div className="flex min-h-120 flex-col items-center justify-center px-4 py-4 text-center text-primary">
       <Image
@@ -21,11 +21,11 @@ const SuccessForm = () => {
       />
 
       <h2 className="mb-8 text-2xl font-bold">
-        {t('form.successPage.heading')}
+        {t('form.successPage.heading', lang)}
       </h2>
 
       <p className="max-w-md text-lg leading-10">
-        {t('form.successPage.subHeading')}
+        {t('form.successPage.subHeading', lang)}
       </p>
     </div>
   )

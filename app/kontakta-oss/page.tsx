@@ -7,12 +7,12 @@ import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang";
 
 const ContactPage = () => {
-  useLang()
+  const lang = useLang()
   const data = heroSectionData.kontaktaOss
   return (
     <div className="w-full">
-      <HeroSection title={t(data.titleKey)}
-        subtitle={t(data.subtitleKey)}
+      <HeroSection title={t(data.titleKey, lang)}
+        subtitle={t(data.subtitleKey, lang)}
         image={data.image}
       />
 

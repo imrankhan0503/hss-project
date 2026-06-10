@@ -6,7 +6,7 @@ import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang";
 
 const InterestForm = () => {
-  useLang()
+  const lang = useLang()
   const [step, setStep] = useState(1)
 
   return (
@@ -16,14 +16,14 @@ const InterestForm = () => {
       <div className="mb-2 flex items-center justify-between">
         <h1
           className={`text-3xl font-bold text-primary ${step === 2 ? "hidden md:block" : ""}`}>
-          {t("form.header.title")}
+          {t("form.header.title", lang)}
         </h1>
         {step === 2 && (
           <button
             type="button"
             onClick={() => setStep(1)}
             className="mx-auto h-11 rounded-[50px] bg-secondary px-6 text-base font-bold text-primary md:mx-0">
-            {t("form.header.buttonText")}
+            {t("form.header.buttonText", lang)}
           </button>
         )}
       </div>
@@ -33,7 +33,7 @@ const InterestForm = () => {
 
             <span
               className='font-bold text-primary'>
-              {t("form.stepsLabel")}
+              {t("form.stepsLabel", lang)}
             </span>
           </div>
 
