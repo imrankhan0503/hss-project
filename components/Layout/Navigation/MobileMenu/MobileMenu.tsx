@@ -28,7 +28,7 @@ const MobileMenu = ({
 
   return (
     <div
-      className={`fixed left-0 right-0 bottom-0 z-[9998] md:hidden top-[72px] sm:top-[76px] bg-background backdrop-blur-md transition-all duration-500 ease-in-out ${
+      className={`fixed left-0 right-0 bottom-0 z-[9998] lg:hidden top-[72px] sm:top-[76px] bg-background backdrop-blur-md transition-all duration-500 ease-in-out ${
         isOpen
           ? "translate-x-0 opacity-100 pointer-events-auto"
           : "-translate-x-full opacity-0 pointer-events-none"
