@@ -10,7 +10,7 @@ import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang";
 import { PostDataProps } from "@/types/instagram";
 
-const FEED_URL = process.env.NEXT_PUBLIC_BEHOLD_DUMMY_API!
+const FEED_URL = 'https://feeds.behold.so/au47cEddhn57lA49VlAe'!
 
 const InstagramSection = () => {
   const lang = useLang()
