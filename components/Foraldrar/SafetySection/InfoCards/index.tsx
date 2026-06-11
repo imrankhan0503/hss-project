@@ -13,7 +13,7 @@ const InformationCards = ({ title, description, icon, isPolicyBanner }: Informat
     <div className="rounded-3xl border border-primary/10 bg-[linear-gradient(to_right,rgba(8,47,73,0.05)_0%,rgba(8,47,73,0.05)_33%,transparent_100%)] p-6">
       {isPolicyBanner ?
         <div className="flex flex-col items-center text-center pb-4">
-          <div className="flex items-center  justify-center gap-2 md:gap-4">
+          <div className="flex items-center w-full justify-between md:justify-center gap-2 md:gap-4">
             <a href='/documents/flytvästpolicy-2025.pdf'
               target="_blank"
               rel="noopener noreferrer"
