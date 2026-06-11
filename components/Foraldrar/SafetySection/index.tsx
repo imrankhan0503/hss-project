@@ -18,7 +18,7 @@ const SafetySection = () => {
   const cardsData: InformationCardsData[] = [
     {
       id: 1,
-      title: t('safetydocuments.cards.trainedLeaders.title', lang),
+      title: t('safetydocuments.safetysecurity.cards.trainedLeaders.title', lang),
       description: t('safetydocuments.safetysecurity.cards.trainedLeaders.description', lang),
       icon: EducationLogo,
     },
