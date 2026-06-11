@@ -55,7 +55,7 @@ const Navigation = () => {
             </div>
           </Link>
 
-          <div className="hidden min-w-0 flex-1 items-center justify-center md:flex">
+          <div className="hidden min-w-0 flex-1 items-center justify-center lg:flex">
             <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-5">
               {navLinks.map((item) => (
                 <NavItem
@@ -76,7 +76,7 @@ const Navigation = () => {
               <LanguageSwitcher />
             </div>
           </div>
-          <div className="ml-auto flex shrink-0 items-center gap-1 md:hidden">
+          <div className="ml-auto flex shrink-0 items-center gap-1 lg:hidden">
             <div className="text-sm scale-90">
               <NavItem
                 title={t("nav.join", lang)}
