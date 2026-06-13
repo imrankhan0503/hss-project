@@ -10,14 +10,66 @@ import { t } from "@/i18n/t"
 import { useLang } from "@/i18n/useLang";
 import { PostDataProps } from "@/types/instagram";
 
-const FEED_URL = 'https://feeds.behold.so/au47cEddhn57lA49VlAe'!
+const FEED_URL = process.env.NEXT_PUBLIC_BEHOLD_DUMMY_API!
+
+const instagramDummyImages: PostDataProps[] = [
+  {
+    id: 1,
+    mediaUrl: '/instagram/running.jpg',
+    permalink: 'https://www.instagram.com/p/DZABmSriAD_/',
+    caption: 'Kids marathon'
+  },
+  {
+    id: 2,
+    mediaUrl: '/instagram/sailingboat_one.jpg',
+    permalink: 'https://www.instagram.com/p/DZABgHnCDOq/',
+    caption: 'Sailing boat in stockholm'
+  },
+  {
+    id: 3,
+    mediaUrl: '/instagram/outdoor_climbing.jpg',
+    permalink: 'https://www.instagram.com/p/DZABYd-iJaj/',
+    caption: 'Outdoor climbing'
+  },
+  {
+    id: 4,
+    mediaUrl: '/instagram/knitting.jpg',
+    permalink: 'https://www.instagram.com/p/DZABRUKCDqg/',
+    caption: 'Knitting activity'
+  },
+  {
+    id: 5,
+    mediaUrl: '/instagram/sailingboat_2.jpg',
+    permalink: 'https://www.instagram.com/p/DZABLihiAc8/',
+    caption: 'Sailboats'
+  },
+  {
+    id: 6,
+    mediaUrl: '/instagram/indoor_climbing.jpg',
+    permalink: 'https://www.instagram.com/p/DZABEERCBWs/',
+    caption: 'Rock climbing'
+  },
+  {
+    id: 7,
+    mediaUrl: '/instagram/tents.jpg',
+    permalink: 'https://www.instagram.com/p/DZAA4ZaiKb3/',
+    caption: 'Our camping site'
+  },
+  {
+    id: 8,
+    mediaUrl: '/instagram/arts.jpg',
+    permalink: 'https://www.instagram.com/p/DZAAyEMCNki/',
+    caption: 'Kids doing crafts'
+  }
+
+]
+
 
 const InstagramSection = () => {
   const lang = useLang()
 
   const [posts, setPosts] = useState<PostDataProps[]>([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" })
   const [selectedIndex, setSelectedIndex] = useState(0)
 
@@ -25,7 +77,6 @@ const InstagramSection = () => {
     async function load() {
       try {
         setLoading(true)
-        setError(false)
         const res = await fetch(FEED_URL)
         if (!res.ok) {
           throw new Error('Failed to fetch feed')
@@ -34,7 +85,7 @@ const InstagramSection = () => {
         setPosts(data.posts || [])
       } catch (err) {
         console.error('Instagram fetch error:', err)
-        setError(true)
+        setPosts(instagramDummyImages)
       } finally {
         setLoading(false)
       }
@@ -58,19 +109,11 @@ const InstagramSection = () => {
     }
   }, [emblaApi, onSelect])
 
-  //LOADING  and ERROR states
+  //LOADING states
   if (loading) {
     return (
       <section className="w-full px-6 py-12 md:px-[70px] text-center">
         <p>Loading instagram posts..</p>
-      </section>
-    )
-  }
-
-  if (error) {
-    return (
-      <section className="w-full px-6 py-12 md:px-[70px] text-center">
-        <p>Instagram feed temporarily unavailable.</p>
       </section>
     )
   }
