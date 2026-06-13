@@ -16,5 +16,10 @@
   "successPage": {
     "heading": " We have received your message!",
     "subHeading": "We will get back to you shortly."
+  },
+  "validation": {
+    "mobileNumber": "Invalid phone number",
+    "name": "Only letters are allowed",
+    "requiredField": "This field is required"
   }
 }
