@@ -113,7 +113,7 @@ const InstagramSection = () => {
   if (loading) {
     return (
       <section className="w-full px-6 py-12 md:px-[70px] text-center">
-        <p>Loading instagram posts..</p>
+        <p>{t('instagram.loadingState', lang)}</p>
       </section>
     )
   }

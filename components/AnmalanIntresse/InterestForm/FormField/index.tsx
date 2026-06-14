@@ -1,6 +1,12 @@
+'use client'
+
 import { FormFieldProps } from "@/types/form";
+import { t } from "@/i18n/t"
+import { useLang } from "@/i18n/useLang";
 
 const FormField = ({ name, type, label, required, register, errors }: FormFieldProps) => {
+  const lang = useLang()
+
   return (
     <>
       <div>
@@ -26,20 +32,20 @@ const FormField = ({ name, type, label, required, register, errors }: FormFieldP
               required, ...(name === "mobileNumber" && {
                 pattern: {
                   value: /^[0-9+() -]{7,}$/,
-                  message: "Ogiltigt telefonnummer"
+                  message: t('form.validation.mobileNumber', lang)
                 }
               }),
               ...(name === "name" && {
                 pattern: {
                   value: /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/,
-                  message: "Endast bokstäver är tillåtna"
+                  message: t('form.validation.name', lang)
                 }
               })
             })} />
         }
         {errors[name] && (
           <p className="text-red-500 text-sm mt-1">
-            {errors[name].message || 'Detta fält är obligatoriskt.'}
+            {errors[name].message || t('form.validation.requiredField', lang)}
           </p>
         )}
       </div>
