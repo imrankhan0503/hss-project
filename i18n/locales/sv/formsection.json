@@ -16,5 +16,10 @@
   "successPage": {
     "heading": " Vi har mottagit ditt meddelande!",
     "subHeading": "Vi svarar så fort vi kan."
+  },
+  "validation": {
+    "mobileNumber": "Ogiltigt telefonnummer",
+    "name": "Endast bokstäver är tillåtna",
+    "requiredField": "Detta fält är obligatoriskt"
   }
 }

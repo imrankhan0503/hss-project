@@ -9,6 +9,8 @@ import enVerksamhet from "./locales/en/verksamhet.json";
 import enFormSection from './locales/en/formsection.json';
 import enSafetyAndDocumentsSection from './locales/en/safetydocumentsection.json'
 import enFAQ from './locales/en/faq.json'
+import enInstagramSection from './locales/en/instagram.json'
+import enNotFound from './locales/en/not-found.json'
 
 import svNav from "./locales/sv/navigation.json";
 import svLogo from "./locales/sv/logo.json";
@@ -21,6 +23,8 @@ import svVerksamhet from "./locales/sv/verksamhet.json";
 import svFormSection from './locales/sv/formsection.json'
 import svSafetyAndDocumentsSection from './locales/sv/safetydocumentsection.json'
 import svFAQ from './locales/sv/faq.json'
+import svInstagramSection from './locales/sv/instagram.json'
+import svNotFound from './locales/sv/not-found.json'
 
 import { getLang } from "./langStore";
 
@@ -36,7 +40,9 @@ const dict = {
     verksamhet: enVerksamhet,
     form: enFormSection,
     safetydocuments: enSafetyAndDocumentsSection,
-    faq: enFAQ
+    faq: enFAQ,
+    instagram: enInstagramSection,
+    notFound: enNotFound
   },
   sv: {
     nav: svNav,
@@ -49,7 +55,9 @@ const dict = {
     verksamhet: svVerksamhet,
     form: svFormSection,
     safetydocuments: svSafetyAndDocumentsSection,
-    faq: svFAQ
+    faq: svFAQ,
+    instagram: svInstagramSection,
+    notFound: svNotFound
   },
 };
 
